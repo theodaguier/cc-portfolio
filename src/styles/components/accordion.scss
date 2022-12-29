@@ -1,0 +1,33 @@
+@import "/src/styles/base/partial.scss";
+
+.accordion-container {
+  width: 100%;
+  .accordion {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding-left: 28px;
+    .accordion-i {
+      padding-right: 25px;
+      img {
+        width: 18px;
+        height: 27px;
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+  }
+}
+
+.acccordion-content {
+  display: flex;
+  padding-top: 35px;
+  padding-left: 32px;
+  padding-right: 32px;
+  font-size: $font-base;
+  .bloc {
+    width: 30%;
+  }
+  .description {
+    width: 70%;
+  }
+}

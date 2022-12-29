@@ -1,0 +1,55 @@
+@import "../base/base.scss";
+
+.menu-container {
+  font-size: $font-XS;
+  padding-top: 24px;
+  position: sticky;
+  width: 100%;
+  z-index: 999;
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+
+  .line {
+    height: 23px;
+    border-bottom: solid 1px black;
+    padding-left: 32px;
+    padding-right: 32px;
+    .lang {
+      display: flex;
+    }
+  }
+  .flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
+
+.icon {
+  width: 16.44px;
+  height: 16.44px;
+  margin-bottom: 4px;
+}
+
+.typewriter {
+  margin-left: 3px;
+}
+
+.cursor {
+  background-color: transparent;
+  border-left: 1px solid #000;
+  animation: cursor-blink 1s infinite;
+}
+
+@keyframes cursor-blink {
+  0% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #000;
+  }
+  100% {
+    border-color: transparent;
+  }
+}

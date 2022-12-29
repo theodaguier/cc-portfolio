@@ -1,0 +1,40 @@
+// Import fonts
+
+@font-face {
+  font-family: "Editorial New Regular";
+  src: url("../../assets/fonts/Editorial_New_Regular_400.otf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Editorial New Ultrabold";
+  src: url("../../assets/fonts/Editorial_New_Ultrabold_800.otf");
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "Editorial New Ultralight";
+  src: url("../../assets/fonts/Editorial_New_Ultralight_200.otf");
+  font-weight: 200;
+}
+
+// Background colors
+
+$background-dark: #0c0d0d;
+$background-light: #fcfeff;
+
+// Colors
+
+$color-pink: #ff82d5;
+$color-light-beige: #fdf9f5;
+$color-beige: #fde9c0;
+
+// Scale font
+
+$font-XL: 20px;
+$font-base: 16px;
+$font-XS: 12px;
+
+body {
+  font-size: $font-XL;
+}

@@ -1,0 +1,12 @@
+body {
+  /* autres propriétés de style */
+  transition: background-color 0.5s;
+}
+
+body.dark {
+  background-color: $background-dark;
+  color: white;
+  .line {
+    border-bottom: solid 1px white;
+  }
+}

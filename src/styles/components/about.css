@@ -1,0 +1,9 @@
+.about {
+  width: 25%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  background-color: white;
+}/*# sourceMappingURL=about.css.map */
