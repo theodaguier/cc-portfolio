@@ -4,9 +4,10 @@ import "./../styles/components/accordion.scss";
 
 import AccordionContent from "./AccordionContent";
 
-import chevron from "./../assets/icons/chevron-b.svg";
+import chevronDark from "./../assets/icons/chevron-b.svg";
+import chevronLight from "./../assets/icons/chevron-w.svg";
 
-function Accordion({ project }) {
+function Accordion({ isLight, setLight, project }) {
   const [isExpanded, setIsExpanded] = useState(false);
   return (
     <div
@@ -17,7 +18,7 @@ function Accordion({ project }) {
         <div className="accordion-i">
           <img
             className="chevron"
-            src={chevron}
+            src={isLight ? chevronDark : chevronLight}
             alt="chevron"
             style={{ transform: `rotate(${isExpanded ? 90 : 0}deg)` }}
           />

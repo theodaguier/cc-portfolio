@@ -2,7 +2,7 @@
 
 .menu-container {
   font-size: $font-XS;
-  padding-top: 24px;
+  padding-top: 11px;
   position: sticky;
   width: 100%;
   z-index: 999;
@@ -11,9 +11,9 @@
 
   .line {
     height: 23px;
-    border-bottom: solid 1px black;
     padding-left: 32px;
     padding-right: 32px;
+    cursor: pointer;
     .lang {
       display: flex;
     }
@@ -30,6 +30,9 @@
   width: 16.44px;
   height: 16.44px;
   margin-bottom: 4px;
+  position: absolute;
+  right: 0;
+  margin-right: 32px;
 }
 
 .typewriter {
@@ -52,4 +55,10 @@
   100% {
     border-color: transparent;
   }
+}
+
+.close {
+  position: absolute;
+  left: 25%;
+  margin-left: 12px;
 }

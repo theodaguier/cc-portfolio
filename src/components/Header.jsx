@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import { useState, useEffect } from "react";
 
 import "../styles/components/header.scss";
 import Typewriter from "./Typewriter";
+
 import sun from "./../assets/icons/sun.svg";
 import moon from "./../assets/icons/moon.svg";
 
@@ -9,36 +10,54 @@ import { Link } from "react-router-dom";
 
 import About from "./About";
 
-function Header({ setShowAbout }) {
-  const [isDark, setDark] = React.useState(
-    localStorage.getItem("isDark") === "true"
-  );
+function Header({ isLight, setLight, setShowAbout, showAbout }) {
+  const [isHovered, setIsHovered] = useState(false);
 
-  function handleAboutClick() {
+  const toggleLight = () => {
+    setLight(!isLight);
+    if (isLight) {
+      document.querySelector(".App").classList.remove("light");
+    } else {
+      document.querySelector(".App").classList.add("light");
+    }
+    localStorage.setItem("isLight", !isLight.toString());
+  };
+
+  const handleAboutClick = () => {
     setShowAbout(true);
-  }
+  };
 
-  function toggleDark() {
-    setDark(!isDark);
-    document.body.classList.toggle("dark");
-    localStorage.setItem("isDark", !isDark.toString());
-  }
+  useEffect(() => {
+    setIsHovered(false);
+  }, [showAbout]);
 
   return (
     <nav className="menu-container">
       <div className="menu">
         <div className="line flex">
-          <p className="flex">
-            <Link to="/">
-              Cristina Casañas <Typewriter />
-            </Link>
-          </p>
-
+          {!showAbout ? (
+            <p className="flex">
+              <Link
+                className={isHovered ? "hovered" : ""}
+                to="/"
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+              >
+                {isHovered && "Home"}
+                {isHovered ? null : "Cristina Casañas"}
+                {isHovered ? null : <Typewriter />}
+              </Link>
+            </p>
+          ) : (
+            <div className="close" onClick={() => setShowAbout(false)}>
+              close
+            </div>
+          )}
           <img
             className="icon"
-            src={isDark ? sun : moon}
+            src={isLight ? moon : sun}
             alt="sun"
-            onClick={toggleDark}
+            onClick={toggleLight}
           />
         </div>
         <div className="line flex">

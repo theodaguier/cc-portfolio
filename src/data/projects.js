@@ -7,6 +7,7 @@ const projects_data = [
     year: 2020,
     size: "Large",
     author: "John Doe",
+    tag: "Editorial",
   },
   {
     name: "Project 2",
@@ -16,6 +17,7 @@ const projects_data = [
     year: 2020,
     size: "Large",
     author: "John Doe",
+    tag: "Packaging",
   },
 ];
 

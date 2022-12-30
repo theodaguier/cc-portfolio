@@ -1,0 +1,17 @@
+.App {
+  /* autres propriétés de style */
+  color: white;
+  transition: background-color 0.5s;
+  background-color: $background-dark;
+  .line {
+    border-bottom: solid 1px white;
+  }
+}
+
+.light {
+  color: black;
+  background-color: $background-light;
+  .line {
+    border-bottom: solid 1px black;
+  }
+}
