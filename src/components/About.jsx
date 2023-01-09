@@ -40,11 +40,31 @@ function About({ isLight, setLight }) {
             />{" "}
             Contact
           </p>
-          <p className="paragraph">info@cristinacasanas.com </p>
-          <p className="paragraph">FR +33 0656698355</p>
-          <p className="paragraph">ES +34 638419385</p>
-          <p className="paragraph">instagram</p>
-          <p className="paragraph">resume (download here)</p>
+          <div className="paragraph">
+            <a href="">info@cristinacasanas.com </a>
+          </div>
+          <div className="paragraph">
+            <a href=""> FR +33 0656698355</a>
+          </div>
+          <div className="paragraph">
+            <a href=""> ES +34 638419385</a>
+          </div>
+          <div className="paragraph">
+            <a
+              href="https://www.instagram.com/casanascristine/"
+              target="_blank"
+            >
+              instagram
+            </a>
+          </div>
+          <div className="paragraph">
+            <a
+              href="https://drive.google.com/file/d/1Xe_lj7vFDpEHbnSB_pa5nhwnSu2FmMpq/view?usp=sharing"
+              target="_blank"
+            >
+              resume (download here)
+            </a>
+          </div>
         </div>
         <div className="section">
           <p className="paragraph">
@@ -55,7 +75,14 @@ function About({ isLight, setLight }) {
             />{" "}
             Awards
           </p>
-          <p className="paragraph">Etiqueta News 2020</p>
+          <p className="paragraph">
+            <a
+              href="https://news.baued.es/index.php/2020/10/21/cristina-casanas-5o-premio-en-el-concurso-etiquetanews/"
+              target="_blank"
+            >
+              Etiqueta News 2020
+            </a>
+          </p>
         </div>
         <div className="section">
           <p className="paragraph">
@@ -66,11 +93,23 @@ function About({ isLight, setLight }) {
             />{" "}
             Press
           </p>
-          <p className="paragraph">Bau News</p>
+          <div className="paragraph">
+            <a
+              href="https://news.baued.es/index.php/2020/11/02/las-etiquetas-de-vino-mas-inspiradoras-reunidas-en-una-exposicion/"
+              target="_blank"
+            >
+              Bau News
+            </a>
+          </div>
         </div>
         <div className="section">
           <p className="paragraph">
-            Web Developer: <span className="underline">Théo Daguier</span>
+            Web Developer:{" "}
+            <span className="underline">
+              <a href="https://www.theodaguier.com" target="_blank">
+                Théo Daguier
+              </a>
+            </span>
           </p>
         </div>
         <div className="section">

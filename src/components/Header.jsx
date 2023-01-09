@@ -50,7 +50,7 @@ function Header({ isLight, setLight, setShowAbout, showAbout }) {
             </p>
           ) : (
             <div className="close" onClick={() => setShowAbout(false)}>
-              close
+              Close
             </div>
           )}
           <img

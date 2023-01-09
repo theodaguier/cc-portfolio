@@ -9,6 +9,14 @@
   z-index: 99999;
   background: $background-dark;
   border-right: solid 1px white;
+  a:hover {
+    color: $color-pink; /* couleur rouge */
+  }
+
+  a.active {
+    color: $color-pink; /* couleur bleue */
+  }
+
   .text-container {
     font-size: $font-XS;
     padding-left: 34px;
