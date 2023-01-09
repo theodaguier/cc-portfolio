@@ -74,7 +74,7 @@ function About({ isLight, setLight }) {
           </p>
         </div>
         <div className="section">
-          <p className="paragraph">
+          <div className="paragraph">
             © 2023 Cristina Casañas.
             <p className="paragraph">
               All rights reserved All designs, concepts, and artwork produced by
@@ -83,7 +83,7 @@ function About({ isLight, setLight }) {
               permission of the artist. Unauthorized use of these materials will
               be subject to legal action.
             </p>
-          </p>
+          </div>
         </div>
       </div>
     </div>

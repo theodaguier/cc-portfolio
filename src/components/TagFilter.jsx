@@ -33,7 +33,7 @@ function TagFilter({
           className={`tag ${tag === selectedTag ? "active" : ""}`}
           onClick={() => handleTagClick(tag)}
         >
-          ( {tag})
+          ({tag})
         </li>
       ))}
     </ul>
