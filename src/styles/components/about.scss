@@ -1,3 +1,5 @@
+@import "/src/styles/base/partial.scss";
+
 .about {
   width: 25%;
   height: 100vh;
@@ -5,5 +7,31 @@
   top: 0;
   left: 0;
   z-index: 99999;
-  background-color: white;
+  background: $background-dark;
+  border-right: solid 1px white;
+  .text-container {
+    font-size: $font-XS;
+    padding-left: 34px;
+    padding-right: 8px;
+    padding-top: 21px;
+    line-height: 15px;
+  }
+}
+
+.presentation {
+  p {
+    padding-bottom: 30px;
+  }
+}
+
+.arrow {
+  width: 8px;
+}
+
+.section {
+  padding-bottom: 30px;
+}
+
+.underline {
+  text-decoration: underline;
 }
