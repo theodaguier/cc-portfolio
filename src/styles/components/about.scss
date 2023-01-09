@@ -35,3 +35,12 @@
 .underline {
   text-decoration: underline;
 }
+
+.white {
+  background-color: $background-dark;
+}
+
+.black {
+  background-color: $background-light;
+  border-right: solid 1px black;
+}

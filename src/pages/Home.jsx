@@ -17,7 +17,7 @@ function Home({ isLight, setLight }) {
         showAbout={showAbout}
       />
       <Projects isLight={isLight} setLight={setLight} />
-      {showAbout && <About />}
+      {showAbout && <About isLight={isLight} setLight={setLight} />}
     </div>
   );
 }

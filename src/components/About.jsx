@@ -3,9 +3,9 @@ import "./../styles/components/about.scss";
 import arrowDRB from "./../assets/icons/arrow.up.right.black.svg";
 import arrowDRW from "./../assets/icons/arrow.up.right.white.svg";
 
-function About() {
+function About({ isLight, setLight }) {
   return (
-    <div className="about">
+    <div className={`about ${!isLight ? "white" : "black"}`}>
       <div className="text-container">
         <div className="presentation">
           <p className="paragraph">
@@ -33,7 +33,12 @@ function About() {
         </div>
         <div className="section">
           <p className="paragraph">
-            <img className="arrow" src={arrowDRW} alt="icon" /> Contact
+            <img
+              className="arrow"
+              src={!isLight ? arrowDRW : arrowDRB}
+              alt="icon"
+            />{" "}
+            Contact
           </p>
           <p className="paragraph">info@cristinacasanas.com </p>
           <p className="paragraph">FR +33 0656698355</p>
@@ -43,13 +48,23 @@ function About() {
         </div>
         <div className="section">
           <p className="paragraph">
-            <img className="arrow" src={arrowDRW} alt="icon" /> Awards
+            <img
+              className="arrow"
+              src={!isLight ? arrowDRW : arrowDRB}
+              alt="icon"
+            />{" "}
+            Awards
           </p>
           <p className="paragraph">Etiqueta News 2020</p>
         </div>
         <div className="section">
           <p className="paragraph">
-            <img className="arrow" src={arrowDRW} alt="icon" /> Press
+            <img
+              className="arrow"
+              src={!isLight ? arrowDRW : arrowDRB}
+              alt="icon"
+            />{" "}
+            Press
           </p>
           <p className="paragraph">Bau News</p>
         </div>
