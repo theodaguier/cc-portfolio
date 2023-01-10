@@ -3,9 +3,33 @@ import "./../styles/components/about.scss";
 import arrowDRB from "./../assets/icons/arrow.up.right.black.svg";
 import arrowDRW from "./../assets/icons/arrow.up.right.white.svg";
 
-function About({ isLight, setLight }) {
+import sun from "./../assets/icons/sun.svg";
+import moon from "./../assets/icons/moon.svg";
+
+function About({ isLight, setLight, showAbout, setShowAbout }) {
+  const toggleLight = () => {
+    setLight(!isLight);
+    if (isLight) {
+      document.querySelector(".App").classList.remove("light");
+    } else {
+      document.querySelector(".App").classList.add("light");
+    }
+    localStorage.setItem("isLight", !isLight.toString());
+  };
+
   return (
-    <div className={`about ${isLight ? "white" : "black"}`}>
+    <div className="about">
+      <div className="about-buttons">
+        <div className="close-mobile">
+          <p onClick={() => setShowAbout(!showAbout)}>Close</p>
+        </div>
+        <img
+          className="icon about"
+          src={isLight ? moon : sun}
+          alt="sun"
+          onClick={toggleLight}
+        />
+      </div>
       <div className="text-container">
         <div className="presentation">
           <p className="paragraph">

@@ -11,7 +11,7 @@
   -webkit-backdrop-filter: blur(2px);
   backdrop-filter: blur(2px);
   position: sticky;
-
+  transition: all 0.8s;
   .line {
     height: 23px;
     padding-left: 32px;
@@ -70,4 +70,18 @@
   p {
     padding-right: 6px;
   }
+}
+
+.light {
+  .menu-container {
+    background: linear-gradient(white 0%, rgba(255, 255, 255, 0.8));
+  }
+}
+
+.menu-container {
+  background: linear-gradient(rgba(12, 13, 13, 13), rgba(12, 13, 13, 0.8));
+}
+
+.light .menu-container {
+  transition: all 0.8s;
 }

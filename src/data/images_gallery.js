@@ -35,24 +35,6 @@ const images_gallery = [
   {
     src: "src/assets/img/i12.jpg",
   },
-  {
-    src: "src/assets/img/i13.jpg",
-  },
-  {
-    src: "src/assets/img/i14.jpg",
-  },
-  {
-    src: "src/assets/img/i15.jpg",
-  },
-  {
-    src: "src/assets/img/i15.jpg",
-  },
-  {
-    src: "src/assets/img/i16.jpg",
-  },
-  {
-    src: "src/assets/img/i17.jpg",
-  },
 ];
 
 export default images_gallery;

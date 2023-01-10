@@ -6,9 +6,7 @@ import Header from "../components/Header";
 import Projects from "../components/Projects";
 import Footer from "../components/Footer";
 
-function Home({ isLight, setLight }) {
-  const [showAbout, setShowAbout] = useState(false);
-
+function Home({ showAbout, setShowAbout, isLight, setLight }) {
   return (
     <div className="home">
       <Header
@@ -18,7 +16,14 @@ function Home({ isLight, setLight }) {
         showAbout={showAbout}
       />
       <Projects isLight={isLight} setLight={setLight} />
-      {showAbout && <About isLight={isLight} setLight={setLight} />}
+      {showAbout && (
+        <About
+          isLight={isLight}
+          setLight={setLight}
+          setShowAbout={setShowAbout}
+          showAbout={showAbout}
+        />
+      )}
       <Footer isLight={isLight} />
     </div>
   );

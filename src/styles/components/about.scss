@@ -7,15 +7,15 @@
   top: 0;
   left: 0;
   z-index: 99999;
-  background: $background-dark;
+  background: linear-gradient(rgba(12, 13, 13, 13), rgba(12, 13, 13, 0.96));
   border-right: solid 1px white;
+  transition: all 0.5s;
   a:hover {
     color: $color-pink; /* couleur rouge */
   }
   a.active {
     color: $color-pink; /* couleur bleue */
   }
-
   .text-container {
     font-size: $font-XS;
     padding-left: 17px;
@@ -43,11 +43,57 @@
   text-decoration: underline;
 }
 
-.black {
-  background: linear-gradient(rgba(12, 13, 13, 13), rgba(12, 13, 13, 0.96));
+.light {
+  .about {
+    background: linear-gradient(white 80%, rgba(255, 255, 255, 0.6));
+    border-right: solid 1px black;
+    transition: background-color 0.5s ease;
+  }
 }
 
-.white {
-  background: linear-gradient(white 80%, rgba(255, 255, 255, 0.6));
-  border-right: solid 1px black;
+.light {
+  .about-buttons {
+    border-bottom: solid 1px black;
+  }
+}
+
+.about-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: $font-XS;
+  height: 23px;
+  border-bottom: solid 1px white;
+  padding-left: 17px;
+  padding-right: 17px;
+  .close-mobile {
+    cursor: pointer;
+  }
+}
+
+.icon.about {
+  width: 16.44px;
+  height: 16.44px;
+  position: relative;
+  margin-right: 32px;
+  margin: 0;
+  border: none;
+}
+
+// Responsive
+
+.light .about {
+  transition: all 0.5s;
+}
+
+@media (max-width: 680px) {
+  .about {
+    width: 100%;
+  }
+}
+
+@media (min-width: 680px) {
+  .about-buttons {
+    display: none;
+  }
 }

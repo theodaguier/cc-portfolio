@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 
 import About from "./About";
 
-function Header({ isLight, setLight, setShowAbout, showAbout }) {
+function Header({ isLight, setLight, showAbout, setShowAbout }) {
   const [isHovered, setIsHovered] = useState(false);
 
   const toggleLight = () => {
