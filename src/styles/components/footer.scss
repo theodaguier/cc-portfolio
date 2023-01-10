@@ -1,0 +1,16 @@
+@import "/src/styles/base/partial.scss";
+
+.footer {
+  height: 17px;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 40px;
+  padding-right: 40px;
+  font-size: $font-XS;
+  .icon-up {
+    width: 9px;
+  }
+}

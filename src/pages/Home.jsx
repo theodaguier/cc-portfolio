@@ -4,6 +4,7 @@ import Accordion from "../components/Accordion";
 import About from "../components/About";
 import Header from "../components/Header";
 import Projects from "../components/Projects";
+import Footer from "../components/Footer";
 
 function Home({ isLight, setLight }) {
   const [showAbout, setShowAbout] = useState(false);
@@ -18,6 +19,7 @@ function Home({ isLight, setLight }) {
       />
       <Projects isLight={isLight} setLight={setLight} />
       {showAbout && <About isLight={isLight} setLight={setLight} />}
+      <Footer />
     </div>
   );
 }

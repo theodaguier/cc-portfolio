@@ -5,7 +5,7 @@ import arrowDRW from "./../assets/icons/arrow.up.right.white.svg";
 
 function About({ isLight, setLight }) {
   return (
-    <div className={`about ${!isLight ? "white" : "black"}`}>
+    <div className={`about ${isLight ? "white" : "black"}`}>
       <div className="text-container">
         <div className="presentation">
           <p className="paragraph">

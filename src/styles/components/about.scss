@@ -43,11 +43,11 @@
   text-decoration: underline;
 }
 
-.white {
-  background-color: $background-dark;
+.black {
+  background: linear-gradient(rgba(12, 13, 13, 13), rgba(12, 13, 13, 0.96));
 }
 
-.black {
-  background-color: $background-light;
+.white {
+  background: linear-gradient(white 80%, rgba(255, 255, 255, 0.6));
   border-right: solid 1px black;
 }
