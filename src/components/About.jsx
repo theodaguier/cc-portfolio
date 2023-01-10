@@ -41,13 +41,15 @@ function About({ isLight, setLight }) {
             Contact
           </p>
           <div className="paragraph">
-            <a href="">info@cristinacasanas.com </a>
+            <a href="mailto:info@cristinacasanas.com">
+              info@cristinacasanas.com{" "}
+            </a>
           </div>
           <div className="paragraph">
-            <a href=""> FR +33 0656698355</a>
+            <a href="sms:/+33656698355"> FR +33 0656698355</a>
           </div>
           <div className="paragraph">
-            <a href=""> ES +34 638419385</a>
+            <a href="sms:/+34638419385"> ES +34 638419385</a>
           </div>
           <div className="paragraph">
             <a
@@ -116,8 +118,8 @@ function About({ isLight, setLight }) {
           <div className="paragraph">
             © 2023 Cristina Casañas.
             <p className="paragraph">
-              All rights reserved All designs, concepts, and artwork produced by
-              Cristina Casañas are protected by copyright law and may not be
+              All rights reserved. All designs, concepts, and artwork produced
+              by Cristina Casañas are protected by copyright law and may not be
               used, reproduced, or distributed without the express written
               permission of the artist. Unauthorized use of these materials will
               be subject to legal action.

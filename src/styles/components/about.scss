@@ -12,14 +12,13 @@
   a:hover {
     color: $color-pink; /* couleur rouge */
   }
-
   a.active {
     color: $color-pink; /* couleur bleue */
   }
 
   .text-container {
     font-size: $font-XS;
-    padding-left: 34px;
+    padding-left: 17px;
     padding-right: 8px;
     padding-top: 21px;
     line-height: 15px;
@@ -27,7 +26,6 @@
 }
 
 .presentation {
-  padding-bottom: 15px;
   p {
     padding-bottom: 15px;
   }
@@ -38,7 +36,7 @@
 }
 
 .section {
-  padding-bottom: 30px;
+  padding-bottom: 15px;
 }
 
 .underline {
