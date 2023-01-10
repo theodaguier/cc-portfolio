@@ -19,7 +19,7 @@ function Home({ isLight, setLight }) {
       />
       <Projects isLight={isLight} setLight={setLight} />
       {showAbout && <About isLight={isLight} setLight={setLight} />}
-      <Footer />
+      <Footer isLight={isLight} />
     </div>
   );
 }

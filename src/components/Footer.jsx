@@ -3,13 +3,18 @@ import "./../styles/components/footer.scss";
 import arrowUB from "./../assets/icons/arrow.up.black.svg";
 import arrowUW from "./../assets/icons/arrow.up.white.svg";
 
-function Footer() {
+function Footer({ isLight }) {
   return (
     <div className="footer">
       <p>© 2023 Cristina Casañas. All rights reserved </p>
-      <p>
-        Back to top <img className="icon-up" src={arrowUW} alt="arrow" />
-      </p>
+      <div className="back-to-top">
+        Back to top{" "}
+        <img
+          className="icon-up"
+          src={!isLight ? arrowUW : arrowUB}
+          alt="arrow"
+        />
+      </div>
     </div>
   );
 }
