@@ -3,10 +3,18 @@ import "./../styles/pages/gallery.scss";
 import ScrollGalleryImage from "../components/ScrollGalleryImage";
 import SelectedImage from "../components/SelectedImage";
 import { useState } from "react";
+
 import Header from "../components/Header";
 import About from "../components/About";
 
-function Gallery({ isLight, setLight, showAbout, setShowAbout }) {
+function Gallery({
+  isLight,
+  setLight,
+  showAbout,
+  setShowAbout,
+  isHovering,
+  setIsHovering,
+}) {
   const [selectedImage, setSelectedImage] = useState(null);
 
   const handleImageClick = (image) => {
@@ -29,8 +37,16 @@ function Gallery({ isLight, setLight, showAbout, setShowAbout }) {
           showAbout={showAbout}
         />
       )}
-      <SelectedImage selectedImage={selectedImage} />
-      <ScrollGalleryImage onImageClick={handleImageClick} />
+      <SelectedImage
+        isHovering={isHovering}
+        setIsHovering={setIsHovering}
+        selectedImage={selectedImage}
+      />
+      <ScrollGalleryImage
+        isHovering={isHovering}
+        setIsHovering={setIsHovering}
+        onImageClick={handleImageClick}
+      />
     </div>
   );
 }

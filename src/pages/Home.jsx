@@ -6,7 +6,14 @@ import Header from "../components/Header";
 import Projects from "../components/Projects";
 import Footer from "../components/Footer";
 
-function Home({ showAbout, setShowAbout, isLight, setLight }) {
+function Home({
+  showAbout,
+  setShowAbout,
+  isLight,
+  setLight,
+  isHovering,
+  setIsHovering,
+}) {
   return (
     <div className="home">
       <Header
@@ -15,7 +22,12 @@ function Home({ showAbout, setShowAbout, isLight, setLight }) {
         setShowAbout={setShowAbout}
         showAbout={showAbout}
       />
-      <Projects isLight={isLight} setLight={setLight} />
+      <Projects
+        isHovering={isHovering}
+        setIsHovering={setIsHovering}
+        isLight={isLight}
+        setLight={setLight}
+      />
       {showAbout && (
         <About
           isLight={isLight}

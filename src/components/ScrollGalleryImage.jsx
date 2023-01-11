@@ -4,7 +4,7 @@ import shortid from "shortid";
 
 import images_gallery from "../data/images_gallery.js";
 
-function ScrollGalleryImage({ onImageClick }) {
+function ScrollGalleryImage({ onImageClick, isHovering, setIsHovering }) {
   const [images, setImages] = useState(images_gallery);
   const [currentIndex, setCurrentIndex] = useState(0);
   const scrollableElement = useRef(null);
@@ -38,6 +38,8 @@ function ScrollGalleryImage({ onImageClick }) {
     <div className="scroll-gallery" ref={scrollableElement}>
       {images.map((image, index) => (
         <img
+          onMouseOver={() => setIsHovering(true)}
+          onMouseOut={() => setIsHovering(false)}
           key={shortid.generate()}
           src={image.src}
           onClick={() => handleClick(image)}

@@ -6,18 +6,23 @@ import "./styles/base/base.scss";
 import Header from "./components/Header";
 import Home from "./pages/Home";
 import Gallery from "./pages/Gallery";
-
 import CustomCursor from "./utils/CustomCursor";
 
-function App() {
-  const appRef = useRef(); // création de la référence de l'élément .App
+const App = () => {
+  const appRef = useRef();
   const [isLight, setLight] = useState(
     localStorage.getItem("isLight") === "true"
   );
   const [showAbout, setShowAbout] = useState(false);
+  const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
+  const [isHovering, setIsHovering] = useState(false);
+
+  const handleMouseMove = (event) => {
+    setCursorPosition({ x: event.pageX, y: event.pageY });
+  };
 
   return (
-    <div className="App" ref={appRef}>
+    <div className="App" ref={appRef} onMouseMove={handleMouseMove}>
       <Routes>
         <Route
           path="/"
@@ -27,6 +32,8 @@ function App() {
               setShowAbout={setShowAbout}
               isLight={isLight}
               setLight={setLight}
+              isHovering={isHovering}
+              setIsHovering={setIsHovering}
             />
           }
         />
@@ -38,13 +45,21 @@ function App() {
               setShowAbout={setShowAbout}
               isLight={isLight}
               setLight={setLight}
+              isHovering={isHovering}
+              setIsHovering={setIsHovering}
             />
           }
         />
       </Routes>
-      <CustomCursor />
+      <CustomCursor
+        isHovering={isHovering}
+        setIsHovering={setIsHovering}
+        cursorPosition={cursorPosition}
+        isLight={isLight}
+        setCursorPosition={setCursorPosition}
+      />
     </div>
   );
-}
+};
 
 export default App;

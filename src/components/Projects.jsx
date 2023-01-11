@@ -8,7 +8,7 @@ import TagFilter from "./TagFilter";
 import Accordion from "./Accordion";
 import ProjectsPhoto from "./ProjectsPhoto";
 
-function Projects({ isLight, setLight }) {
+function Projects({ isLight, setLight, isHovering, setIsHovering }) {
   const [currentTag, setCurrentTag] = useState("All"); // état pour le tag sélectionné
 
   function handleTagClick(tag) {
@@ -53,7 +53,11 @@ function Projects({ isLight, setLight }) {
                   isLight={isLight}
                   setLight={setLight}
                 />
-                <ProjectsPhoto project={project} />
+                <ProjectsPhoto
+                  isHovering={isHovering}
+                  setIsHovering={setIsHovering}
+                  project={project}
+                />
               </>
             ) : null}
           </div>
