@@ -1,50 +1,57 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
+
 import "../styles/pages/gallery.scss";
 import shortid from "shortid";
 
 import images_gallery from "../data/images_gallery.js";
 
-function ScrollGalleryImage({ onImageClick, isHovering, setIsHovering }) {
+function ScrollGalleryImage({ onImageClick }) {
   const [images, setImages] = useState(images_gallery);
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const scrollableElement = useRef(null);
+  const imagesContainerRef = useRef(null);
+  const [index, setIndex] = useState(0);
+  const [hasMore, setHasMore] = useState(true);
 
   useEffect(() => {
-    const handleScroll = (e) => {
-      if (e.target.scrollTop === 0) {
-        setCurrentIndex((prevState) => prevState - 1);
-      } else if (
-        e.target.scrollHeight - e.target.scrollTop ===
-        e.target.clientHeight
-      ) {
-        setCurrentIndex((prevState) => prevState + 1);
-      }
-    };
-    if (scrollableElement.current) {
-      scrollableElement.current.addEventListener("scroll", handleScroll);
+    if (index >= images_gallery.length) {
+      setIndex(0);
     }
-    return () => {
-      if (scrollableElement.current) {
-        scrollableElement.current.removeEventListener("scroll", handleScroll);
-      }
-    };
-  }, [currentIndex]);
+  }, [index]);
 
-  const handleClick = (image) => {
-    onImageClick(image);
+  const fetchMore = () => {
+    if (index >= images_gallery.length) {
+      setIndex(0);
+      setHasMore(false);
+    } else {
+      setImages((prevImages) => [
+        ...prevImages,
+        ...images_gallery.slice(index, index + 12),
+      ]);
+      setIndex((prevIndex) => prevIndex + 12);
+    }
+  };
+
+  const handleScroll = () => {
+    const el = imagesContainerRef.current;
+    if (el) {
+      const { scrollTop, clientHeight, scrollHeight } = el;
+      if (scrollTop + clientHeight >= scrollHeight && hasMore) {
+        fetchMore();
+      }
+    }
   };
 
   return (
-    <div className="scroll-gallery" ref={scrollableElement}>
+    <div
+      className="scroll-gallery"
+      ref={imagesContainerRef}
+      onScroll={handleScroll}
+    >
       {images.map((image, index) => (
         <img
-          onMouseOver={() => setIsHovering(true)}
-          onMouseOut={() => setIsHovering(false)}
           key={shortid.generate()}
           src={image.src}
-          onClick={() => handleClick(image)}
+          onClick={() => onImageClick(image)}
           alt="image"
-          style={{ transform: `translateX(${currentIndex * 100}%)` }}
         />
       ))}
     </div>
