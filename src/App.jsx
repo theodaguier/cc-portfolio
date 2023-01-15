@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 
 import "./styles/base/base.scss";
@@ -10,15 +10,13 @@ import CustomCursor from "./utils/CustomCursor";
 
 const App = () => {
   const appRef = useRef();
-  const [isLight, setLight] = useState(
-    localStorage.getItem("isLight") === "true"
-  );
+  const [isLight, setLight] = useState(false);
   const [showAbout, setShowAbout] = useState(false);
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
 
   const handleMouseMove = (event) => {
-    setCursorPosition({ x: event.pageX, y: event.pageY });
+    setCursorPosition({ x: event.clientX, y: event.clientY });
   };
 
   return (

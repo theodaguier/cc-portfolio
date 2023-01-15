@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import "./../styles/cursor/cursor.scss";
 
 import cursorAW from "./../assets/cursor/CursorA_White.png";
@@ -14,25 +14,35 @@ const CustomCursor = ({
   setIsHovering,
   setCursorPosition,
 }) => {
+  const cursorRef = useRef({ x: 0, y: 0 });
+
   const handleMouseMove = (event) => {
-    setCursorPosition({ x: event.clientX, y: event.clientY });
+    cursorRef.current = { x: event.clientX, y: event.clientY };
   };
+
+  const handleScroll = () => {
+    cursorRef.current = {
+      x: cursorRef.current.x + window.scrollX,
+      y: cursorRef.current.y + window.scrollY,
+    };
+  };
+
   useEffect(() => {
-    window.addEventListener("scroll", handleMouseMove);
+    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener("scroll", handleMouseMove);
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
   return (
     <div
       className="custom-cursor"
       onMouseOver={() => setIsHovering(true)}
       onMouseOut={() => setIsHovering(false)}
       style={{
-        position: "absolute",
-        left: cursorPosition.x,
-        top: cursorPosition.y,
+        left: cursorRef.current.x,
+        top: cursorRef.current.y,
         width: "20px",
         height: "20px",
         backgroundImage: `url(${

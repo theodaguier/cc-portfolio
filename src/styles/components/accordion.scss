@@ -24,10 +24,20 @@
   padding-left: 32px;
   padding-right: 32px;
   font-size: $font-base;
+  height: 400px;
   .bloc {
-    width: 30%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   .description {
-    width: 70%;
+    width: 60%;
+    .space-between-paragraph {
+      padding-bottom: 35px;
+    }
+  }
+  .special-thanks {
+    padding-top: 35px;
   }
 }

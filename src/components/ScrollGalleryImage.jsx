@@ -5,7 +5,7 @@ import shortid from "shortid";
 
 import images_gallery from "../data/images_gallery.js";
 
-function ScrollGalleryImage({ onImageClick }) {
+function ScrollGalleryImage({ onImageClick, setIsHovering }) {
   const [images, setImages] = useState(images_gallery);
   const imagesContainerRef = useRef(null);
   const [index, setIndex] = useState(0);
@@ -30,6 +30,21 @@ function ScrollGalleryImage({ onImageClick }) {
     }
   };
 
+  const imageRefs = useRef([]).current;
+  const addImageRef = (imageRef) => {
+    imageRefs.push(imageRef);
+  };
+
+  const handleMouseOver = (index) => {
+    setIsHovering(true);
+    imageRefs[index].current.classList.add("hover");
+  };
+
+  const handleMouseOut = (index) => {
+    setIsHovering(false);
+    imageRefs[index].current.classList.remove("hover");
+  };
+
   const handleScroll = () => {
     const el = imagesContainerRef.current;
     if (el) {
@@ -46,14 +61,21 @@ function ScrollGalleryImage({ onImageClick }) {
       ref={imagesContainerRef}
       onScroll={handleScroll}
     >
-      {images.map((image, index) => (
-        <img
-          key={shortid.generate()}
-          src={image.src}
-          onClick={() => onImageClick(image)}
-          alt="image"
-        />
-      ))}
+      {images.map((image, index) => {
+        const imageRef = useRef(null);
+        addImageRef(imageRef);
+        return (
+          <img
+            ref={imageRef}
+            onMouseOver={() => handleMouseOver(index)}
+            onMouseOut={() => handleMouseOut(index)}
+            key={shortid.generate()}
+            src={image.src}
+            onClick={() => onImageClick(image)}
+            alt="image"
+          />
+        );
+      })}
     </div>
   );
 }
