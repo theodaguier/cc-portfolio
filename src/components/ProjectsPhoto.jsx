@@ -1,12 +1,14 @@
 function ProjectsPhoto({ project, isHovering, setIsHovering }) {
   return (
     <div className="project-photos">
-      <img
-        src={project.images}
-        alt={project.images}
-        onMouseOver={() => setIsHovering(true)}
-        onMouseOut={() => setIsHovering(false)}
-      />
+      {project.images.map((img, index) => (
+        <img
+          src={img}
+          alt={img}
+          onMouseOver={() => setIsHovering(true)}
+          onMouseOut={() => setIsHovering(false)}
+        />
+      ))}
     </div>
   );
 }
