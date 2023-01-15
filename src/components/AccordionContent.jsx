@@ -22,7 +22,7 @@ function AccordionContent({ project }) {
       </div>
       <div className="description">
         {project.description.map((desc, index) => (
-          <p>{desc}</p>
+          <p key={index}>{desc}</p>
         ))}
       </div>
     </div>

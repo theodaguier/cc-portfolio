@@ -1,7 +1,11 @@
 @import "/src/styles/base/partial.scss";
 
 .about {
-  width: 25%;
+  transition: height 0.5s, width 0.5s, opacity 0.5s;
+}
+
+.about {
+  width: 480px;
   height: 100vh;
   position: fixed;
   top: 0;
