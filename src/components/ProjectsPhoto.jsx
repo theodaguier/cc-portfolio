@@ -1,3 +1,5 @@
+import shortid from "shortid";
+
 function ProjectsPhoto({ project, isHovering, setIsHovering }) {
   const imagesArray = Object.values(project.images);
 
@@ -13,6 +15,7 @@ function ProjectsPhoto({ project, isHovering, setIsHovering }) {
                   className="image i1"
                   src={project.images.img1}
                   alt="image"
+                  key={shortid.generate()}
                 />
               </div>
               <div className="row-25">
@@ -21,6 +24,7 @@ function ProjectsPhoto({ project, isHovering, setIsHovering }) {
                   className="image i2"
                   src={project.images.img2}
                   alt="image"
+                  key={shortid.generate()}
                 />
               </div>
             </div>
@@ -33,26 +37,51 @@ function ProjectsPhoto({ project, isHovering, setIsHovering }) {
         <div className="col right">
           <div className="col-33">
             {/* Image 3 */}
-            <img className="image i3" src={project.images.img3} alt="image" />
+            <img
+              className="image i3"
+              src={project.images.img3}
+              alt="image"
+              key={shortid.generate()}
+            />
           </div>
           <div className="col-33 col5">
             {/* Image 5 */}
-            <img className="image i5" src={project.images.img5} alt="image" />
+            <img
+              className="image i5"
+              src={project.images.img5}
+              alt="image"
+              key={shortid.generate()}
+            />
           </div>
           <div className="col-33">
             <div className="row-25">
               {/* Image 6 */}
-              <img className="image i6" src={project.images.img6} alt="image" />
+              <img
+                className="image i6"
+                src={project.images.img6}
+                alt="image"
+                key={shortid.generate()}
+              />
             </div>
             <div className="row-25">
               {/* Image 7 */}
-              <img className="image i7" src={project.images.img7} alt="image" />
+              <img
+                className="image i7"
+                src={project.images.img7}
+                alt="image"
+                key={shortid.generate()}
+              />
             </div>
           </div>
         </div>
       </div>
       <div className="col-full">
-        <img className="full-image" src={project.images.img8} alt="image" />
+        <img
+          className="full-image"
+          src={project.images.img8}
+          alt="image"
+          key={shortid.generate()}
+        />
       </div>
     </div>
   );
