@@ -5,6 +5,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    overflow: hidden;
   }
 }
 
@@ -93,11 +94,13 @@
     width: 100%;
     display: flex;
     flex-direction: row;
+    justify-content: flex-end;
     height: 33.333333%;
     .row-25 {
       width: 50%;
       display: flex;
       align-items: center;
+      justify-content: flex-end;
     }
   }
 }

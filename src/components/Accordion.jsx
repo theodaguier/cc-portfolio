@@ -20,7 +20,11 @@ function Accordion({ isLight, setLight, project }) {
             className="chevron"
             src={isLight ? chevronDark : chevronLight}
             alt="chevron"
-            style={{ transform: `rotate(${isExpanded ? 90 : 0}deg)` }}
+            style={{
+              width: 16,
+              height: 20,
+              transform: `rotate(${isExpanded ? 90 : 0}deg)`,
+            }}
           />
         </div>
         <div className="title-project">

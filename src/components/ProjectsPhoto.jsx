@@ -16,6 +16,8 @@ function ProjectsPhoto({ project, isHovering, setIsHovering }) {
                   src={project.images.img1}
                   alt="image"
                   key={shortid.generate()}
+                  onMouseEnter={() => setIsHovering(true)}
+                  onMouseLeave={() => setIsHovering(false)}
                 />
               </div>
               <div className="row-25">
@@ -25,12 +27,20 @@ function ProjectsPhoto({ project, isHovering, setIsHovering }) {
                   src={project.images.img2}
                   alt="image"
                   key={shortid.generate()}
+                  onMouseEnter={() => setIsHovering(true)}
+                  onMouseLeave={() => setIsHovering(false)}
                 />
               </div>
             </div>
             <div className="row-100">
               {/* Image 4 */}
-              <img className="image i4" src={project.images.img4} alt="image" />
+              <img
+                className="image i4"
+                src={project.images.img4}
+                alt="image"
+                onMouseEnter={() => setIsHovering(true)}
+                onMouseLeave={() => setIsHovering(false)}
+              />
             </div>
           </div>
         </div>
@@ -42,6 +52,8 @@ function ProjectsPhoto({ project, isHovering, setIsHovering }) {
               src={project.images.img3}
               alt="image"
               key={shortid.generate()}
+              onMouseEnter={() => setIsHovering(true)}
+              onMouseLeave={() => setIsHovering(false)}
             />
           </div>
           <div className="col-33 col5">
@@ -51,6 +63,8 @@ function ProjectsPhoto({ project, isHovering, setIsHovering }) {
               src={project.images.img5}
               alt="image"
               key={shortid.generate()}
+              onMouseEnter={() => setIsHovering(true)}
+              onMouseLeave={() => setIsHovering(false)}
             />
           </div>
           <div className="col-33">
@@ -61,6 +75,8 @@ function ProjectsPhoto({ project, isHovering, setIsHovering }) {
                 src={project.images.img6}
                 alt="image"
                 key={shortid.generate()}
+                onMouseEnter={() => setIsHovering(true)}
+                onMouseLeave={() => setIsHovering(false)}
               />
             </div>
             <div className="row-25">
@@ -70,6 +86,8 @@ function ProjectsPhoto({ project, isHovering, setIsHovering }) {
                 src={project.images.img7}
                 alt="image"
                 key={shortid.generate()}
+                onMouseEnter={() => setIsHovering(true)}
+                onMouseLeave={() => setIsHovering(false)}
               />
             </div>
           </div>
@@ -81,6 +99,8 @@ function ProjectsPhoto({ project, isHovering, setIsHovering }) {
           src={project.images.img8}
           alt="image"
           key={shortid.generate()}
+          onMouseEnter={() => setIsHovering(true)}
+          onMouseLeave={() => setIsHovering(false)}
         />
       </div>
     </div>
