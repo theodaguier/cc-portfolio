@@ -43,25 +43,27 @@ function Projects({ isLight, setLight, isHovering, setIsHovering }) {
           selectedTag={selectedTag}
           setSelectedTag={setSelectedTag}
         />
-        {projects_data.map((project, index) => (
-          <div className="project" key={index}>
-            {/* filtre les projets en fonction du tag sélectionné */}
-            {currentTag === "All" || currentTag === project.tag ? (
-              <>
-                <Accordion
-                  project={project}
-                  isLight={isLight}
-                  setLight={setLight}
-                />
-                <ProjectsPhoto
-                  isHovering={isHovering}
-                  setIsHovering={setIsHovering}
-                  project={project}
-                />
-              </>
-            ) : null}
-          </div>
-        ))}
+        <div className="project-container">
+          {projects_data.map((project, index) => (
+            <div className="project" key={index}>
+              {/* filtre les projets en fonction du tag sélectionné */}
+              {currentTag === "All" || currentTag === project.tag ? (
+                <>
+                  <Accordion
+                    project={project}
+                    isLight={isLight}
+                    setLight={setLight}
+                  />
+                  <ProjectsPhoto
+                    isHovering={isHovering}
+                    setIsHovering={setIsHovering}
+                    project={project}
+                  />
+                </>
+              ) : null}
+            </div>
+          ))}
+        </div>
       </div>
     </>
   );
