@@ -11,77 +11,82 @@ function ProjectsPhoto({ project, isHovering, setIsHovering }) {
             <div className="col-25">
               <div className="row-25">
                 {/* Image 1 */}
-                <img
+                <div
                   className="image i1"
-                  src={project.images.img1}
-                  alt="image"
+                  style={{ backgroundImage: `url(${project.images.img1})` }}
+                  alt="image description"
                   key={shortid.generate()}
-                />
+                ></div>
               </div>
               <div className="row-25">
                 {/* Image 2 */}
-                <img
+                <div
                   className="image i2"
-                  src={project.images.img2}
-                  alt="image"
+                  style={{ backgroundImage: `url(${project.images.img2})` }}
+                  alt="image description"
                   key={shortid.generate()}
-                />
+                ></div>
               </div>
             </div>
             <div className="row-100">
               {/* Image 4 */}
-              <img className="image i4" src={project.images.img4} alt="image" />
+              <div
+                className="image i4"
+                style={{ backgroundImage: `url(${project.images.img4})` }}
+                alt="image description"
+                key={shortid.generate()}
+              ></div>
             </div>
           </div>
         </div>
         <div className="col right">
           <div className="col-33">
             {/* Image 3 */}
-            <img
+            <div
               className="image i3"
-              src={project.images.img3}
-              alt="image"
+              style={{ backgroundImage: `url(${project.images.img3})` }}
+              alt="image description"
               key={shortid.generate()}
-            />
+            ></div>
           </div>
           <div className="col-33 col5">
             {/* Image 5 */}
-            <img
-              className="image i5"
-              src={project.images.img5}
-              alt="image"
+            <div
+              className="image i4"
+              style={{ backgroundImage: `url(${project.images.img5})` }}
+              alt="image description"
               key={shortid.generate()}
-            />
+            ></div>
           </div>
           <div className="col-33">
             <div className="row-25">
               {/* Image 6 */}
-              <img
+              <div
                 className="image i6"
-                src={project.images.img6}
-                alt="image"
+                style={{ backgroundImage: `url(${project.images.img6})` }}
+                alt="image description"
                 key={shortid.generate()}
-              />
+              ></div>
             </div>
             <div className="row-25">
               {/* Image 7 */}
-              <img
+              <div
                 className="image i7"
-                src={project.images.img7}
-                alt="image"
+                style={{ backgroundImage: `url(${project.images.img7})` }}
+                alt="image description"
                 key={shortid.generate()}
-              />
+              ></div>
             </div>
           </div>
         </div>
       </div>
       <div className="col-full">
-        <img
-          className="full-image"
-          src={project.images.img8}
-          alt="image"
+        <div
+          className="image i8"
+          style={{ backgroundImage: `url(${project.images.img8})` }}
+          alt="image description"
           key={shortid.generate()}
-        />
+        ></div>
       </div>
     </div>
   );
