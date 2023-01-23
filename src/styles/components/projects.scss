@@ -141,17 +141,34 @@
 #item-0 {
   img {
     height: 100%;
+    position: relative;
+    right: 12%;
   }
 }
 #item-1 {
   img {
     height: 100%;
+    position: relative;
+    left: 12%;
+  }
+}
+
+#item-4 {
+  img {
+    position: relative;
+    left: 18.5%;
   }
 }
 
 #item-6 {
   img {
     height: 82%;
+  }
+}
+#item-7 {
+  img {
+    position: relative;
+    bottom: 30%;
   }
 }
 
