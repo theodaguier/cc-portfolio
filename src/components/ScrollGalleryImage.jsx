@@ -6,21 +6,19 @@ import shortid from "shortid";
 
 import images_gallery from "../data/images_gallery.js";
 
-function ScrollGalleryImage({ onImageClick, setIsHovering }) {
-  const [images, setImages] = useState(images_gallery.slice(0, 12));
-  const [imageIndex, setImageIndex] = useState(0);
+const LIMIT = 20;
 
-  const [items, setItems] = useState(images.slice(0, 20));
+function ScrollGalleryImage({ onImageClick, setIsHovering }) {
+  const [images, setImages] = useState(images_gallery);
+  const [items, setItems] = useState(images.slice(0, LIMIT));
 
   const loadMore = () => {
     setTimeout(() => {
-      setItems((prevState) => [
-        ...prevState,
-        ...images.slice(
-          prevState.length % images.length,
-          (prevState.length % images.length) + 20
-        ),
-      ]);
+      setItems((prevState) => {
+        const newImages = prevState.concat(images.slice(0, LIMIT));
+        setImages(images.slice(LIMIT));
+        return newImages;
+      });
     }, 500);
   };
 
@@ -28,7 +26,7 @@ function ScrollGalleryImage({ onImageClick, setIsHovering }) {
     <InfiniteScroll
       pageStart={0}
       loadMore={loadMore}
-      hasMore={true}
+      hasMore={images.length > 0}
       loader={
         <div className="loader" key={0}>
           Loading ...
