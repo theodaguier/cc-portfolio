@@ -17,16 +17,19 @@
     width: 184px;
     height: 138px;
     object-fit: cover;
-  }
-  img {
     filter: grayscale(1);
     -webkit-filter: grayscale(1);
     transition: all 0.3s ease-in-out;
   }
-  img:hover {
-    filter: grayscale(0);
-    -webkit-filter: grayscale(0);
-  }
+
+  // img {
+  //   filter: grayscale(0);
+  //   -webkit-filter: grayscale(1);
+  //   &:hover {
+  //     filter: grayscale(1);
+  //     -webkit-filter: grayscale(0);
+  //   }
+  // }
 }
 
 ::-webkit-scrollbar {
@@ -62,4 +65,15 @@
   filter: grayscale(1);
   -webkit-filter: grayscale(1);
   transition: all 0.3s ease-in-out;
+}
+
+// Transition pour l'effet Hover grayscale
+
+.scroll-gallery img {
+  filter: grayscale(1);
+  transition: filter 0.3s ease-in-out;
+}
+
+.scroll-gallery img:hover {
+  filter: grayscale(0);
 }

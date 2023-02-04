@@ -8,9 +8,10 @@ import images_gallery from "../data/images_gallery.js";
 
 const LIMIT = 20;
 
-function ScrollGalleryImage({ onImageClick, setIsHovering }) {
+function ScrollGalleryImage({ onImageClick }) {
   const [images, setImages] = useState(images_gallery);
   const [items, setItems] = useState(images.slice(0, LIMIT));
+  const [hoverIndex, setHoverIndex] = useState(-1);
 
   const loadMore = () => {
     setTimeout(() => {
@@ -20,6 +21,14 @@ function ScrollGalleryImage({ onImageClick, setIsHovering }) {
         return newImages;
       });
     }, 500);
+  };
+
+  const handleMouseEnter = (index) => {
+    setHoverIndex(index);
+  };
+
+  const handleMouseLeave = () => {
+    setHoverIndex(-1);
   };
 
   return (
@@ -40,6 +49,13 @@ function ScrollGalleryImage({ onImageClick, setIsHovering }) {
               key={shortid.generate()}
               src={image.src}
               onClick={() => onImageClick(image)}
+              style={{
+                filter: hoverIndex === index ? "grayscale(0)" : "grayscale(1)",
+                WebkitFilter:
+                  hoverIndex === index ? "grayscale(0)" : "grayscale(1)",
+              }}
+              onMouseEnter={() => handleMouseEnter(index)}
+              onMouseLeave={handleMouseLeave}
               alt="image"
             />
           );
