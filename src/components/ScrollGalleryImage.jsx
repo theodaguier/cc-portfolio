@@ -1,68 +1,66 @@
-import { useState } from "react";
-import InfiniteScroll from "react-infinite-scroller";
-
-import "../styles/pages/gallery.scss";
+import React, { useEffect, useRef } from "react";
 import shortid from "shortid";
-
+import Lenis from "@studio-freight/lenis";
 import images_gallery from "../data/images_gallery.js";
 
-const LIMIT = 20;
+const ScrollGalleryImage = ({ children, smooth, infinite }) => {
+  const rafRef = useRef(null);
 
-function ScrollGalleryImage({ onImageClick }) {
-  const [images, setImages] = useState(images_gallery);
-  const [items, setItems] = useState(images.slice(0, LIMIT));
-  const [hoverIndex, setHoverIndex] = useState(-1);
+  useEffect(() => {
+    const lenis = new Lenis({
+      smooth,
+      infinite,
+    });
 
-  const loadMore = () => {
-    setTimeout(() => {
-      setItems((prevState) => {
-        const newImages = prevState.concat(images.slice(0, LIMIT));
-        setImages(images.slice(LIMIT));
-        return newImages;
-      });
-    }, 500);
-  };
+    rafRef.current = (time) => {
+      lenis.raf(time);
+      requestAnimationFrame(rafRef.current);
+    };
 
-  const handleMouseEnter = (index) => {
-    setHoverIndex(index);
-  };
+    requestAnimationFrame(rafRef.current);
 
-  const handleMouseLeave = () => {
-    setHoverIndex(-1);
-  };
+    return () => {
+      cancelAnimationFrame(rafRef.current);
+    };
+  }, [smooth, infinite]);
 
   return (
-    <InfiniteScroll
-      pageStart={0}
-      loadMore={loadMore}
-      hasMore={images.length > 0}
-      loader={
-        <div className="loader" key={0}>
-          Loading ...
-        </div>
-      }
+    <div
+      className="scroll-gallery lenis"
+      ref={rafRef}
+      data-lenis-scroll
+      data-lenis-prevent
     >
-      <div className="scroll-gallery">
-        {items.map((image, index) => {
-          return (
-            <img
-              key={shortid.generate()}
-              src={image.src}
-              onClick={() => onImageClick(image)}
-              style={{
-                filter: hoverIndex === index ? "grayscale(0)" : "grayscale(1)",
-                WebkitFilter:
-                  hoverIndex === index ? "grayscale(0)" : "grayscale(1)",
-              }}
-              onMouseEnter={() => handleMouseEnter(index)}
-              onMouseLeave={handleMouseLeave}
-              alt="image"
-            />
-          );
-        })}
-      </div>
-    </InfiniteScroll>
+      {children}
+    </div>
   );
-}
+};
 
-export default ScrollGalleryImage;
+const RepeatItems = () => {
+  const parentElRef = useRef(null);
+
+  useEffect(() => {
+    const items = [...parentElRef.current.children];
+    for (let i = 0; i <= 6 - 1; ++i) {
+      const cln = items[i].cloneNode(true);
+      parentElRef.current.appendChild(cln);
+    }
+  }, []);
+
+  return (
+    <ScrollGalleryImage smooth={true} infinite={true}>
+      <div
+        className="scroll-gallery lenis"
+        ref={parentElRef}
+        data-lenis-scroll
+        data-lenis-prevent
+      >
+        {images_gallery.map((img) => (
+          <img src={img.src} key={shortid.generate()} />
+        ))}
+      </div>
+    </ScrollGalleryImage>
+  );
+};
+
+export default RepeatItems;

@@ -22,10 +22,6 @@
 .acccordion-content {
   display: flex;
   justify-content: space-between;
-  padding-top: 35px;
-  padding-left: 32px;
-  padding-right: 32px;
-  font-size: $font-base;
   height: 400px;
   .bloc {
     width: 40%;
@@ -42,4 +38,11 @@
   .special-thanks {
     padding-top: 35px;
   }
+}
+.txt-container {
+  line-height: 26px;
+  font-size: $font-base;
+  padding-top: 35px;
+  padding-left: 32px;
+  padding-right: 32px;
 }

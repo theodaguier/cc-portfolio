@@ -1,10 +1,8 @@
 const projects_data = [
   {
     name: "Feminae",
-    description: [
-      "This project presents an oracle that is designed to celebrate the important women in our lives and the role they play in guiding and nurturing us. The oracle aims to rescue the memory of these women from obscurity and to serve as a source of inspiration and empowerment for other women. The oracle takes the form of a book that is packaged in a unique and meaningful way, allowing for an interactive experience.",
-      "The book contains illustrations and stories of important women from history, as well as interactive elements such as questions and prompts that allow the reader to reflect on their own personal experiences. This oracle is a powerful tool for personal growth and self-discovery, and serves as a reminder of the invaluable contributions of women throughout history.",
-    ],
+    description:
+      "This project presents an oracle that is designed to celebrate the important women in our lives\nand the role they play in guiding and nurturing us. The oracle aims to rescue the memory of\nthese women from obscurity and to serve as a source of inspiration and empowerment for other\nwomen. The oracle takes the form of a book that is packaged in a unique and meaningful way,\nallowing for an interactive experience.\nThe book contains illustrations and stories of important women from history, as well as\ninteractive elements such as questions and prompts that allow the reader to reflect on their own\npersonal experiences. This oracle is a powerful tool for personal growth and self-discovery, and\nserves as a reminder of the invaluable contributions of women throughout history.",
     images: {
       img1: "https://res.cloudinary.com/dj9n9pffx/image/upload/q_auto:best/v1673896408/fem-1_u7qnxl.webp",
       img2: "https://res.cloudinary.com/dj9n9pffx/image/upload/q_auto:best/v1673896427/fem-2_yqcfgh.png",

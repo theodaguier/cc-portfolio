@@ -31,8 +31,13 @@ $color-beige: #fde9c0;
 
 // Scale font
 
+html {
+  font-family: "Editorial New Ultralight";
+  font-size: 72.9%;
+}
+
 $font-XL: 20px;
-$font-base: 16px;
+$font-base: 1.5rem;
 $font-XS: 12px;
 
 body {

@@ -66,7 +66,7 @@ function ProjectsPhoto({ project, isHovering, setIsHovering }) {
             alt="image"
           />
         </div>
-        <div id="item-7">
+        <div id="banner" style={{ gridColumn: "1 / 5" }}>
           <img
             src={project.images.img8}
             onMouseEnter={() => setIsHovering(true)}
