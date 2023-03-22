@@ -1,79 +1,52 @@
-import shortid from "shortid";
 import { useState } from "react";
+import shortid from "shortid";
 
-function ProjectsPhoto({ project, isHovering, setIsHovering }) {
-  const imagesArray = Object.values(project.images);
+import Accordion from "./Accordion";
+
+function ProjectsPhoto({
+  project,
+  isHovering,
+  setIsHovering,
+  isLight,
+  setLight,
+  backToTop,
+}) {
+  const imagesArray = project ? Object.values(project.images) : [];
 
   const [xRotate, setXRotate] = useState(0);
   const [yRotate, setYRotate] = useState(0);
 
   return (
-    <div className="gallery-container">
-      <div className="angry-grid">
-        <div id="item-0">
+    <div className="grid">
+      {project && (
+        <div className="presentation">
           <img
-            src={project.images.img1}
+            className="image-cover"
+            src={project.cover}
             onMouseEnter={() => setIsHovering(true)}
             onMouseLeave={() => setIsHovering(false)}
             alt="image"
           />
+          <Accordion project={project} />
         </div>
-        <div id="item-1">
-          <img
-            src={project.images.img2}
-            onMouseEnter={() => setIsHovering(true)}
-            onMouseLeave={() => setIsHovering(false)}
-            alt="image"
-          />
-        </div>
-        <div id="item-2">
-          <img
-            src={project.images.img3}
-            onMouseEnter={() => setIsHovering(true)}
-            onMouseLeave={() => setIsHovering(false)}
-            alt="image"
-          />
-        </div>
-        <div id="item-3">
-          <img
-            src={project.images.img5}
-            onMouseEnter={() => setIsHovering(true)}
-            onMouseLeave={() => setIsHovering(false)}
-            alt="image"
-          />
-        </div>
-        <div id="item-4">
-          <img
-            src={project.images.img6}
-            onMouseEnter={() => setIsHovering(true)}
-            onMouseLeave={() => setIsHovering(false)}
-            alt="image"
-          />
-        </div>
-        <div id="item-5">
-          <img
-            src={project.images.img7}
-            onMouseEnter={() => setIsHovering(true)}
-            onMouseLeave={() => setIsHovering(false)}
-            alt="image"
-          />
-        </div>
-        <div id="item-6">
-          <img
-            src={project.images.img4}
-            onMouseEnter={() => setIsHovering(true)}
-            onMouseLeave={() => setIsHovering(false)}
-            alt="image"
-          />
-        </div>
-        <div id="banner" style={{ gridColumn: "1 / 5" }}>
-          <img
-            src={project.images.img8}
-            onMouseEnter={() => setIsHovering(true)}
-            onMouseLeave={() => setIsHovering(false)}
-            alt="image"
-          />
-        </div>
+      )}
+      <div className="images-projects">
+        {imagesArray.map((image, index) => (
+          <div
+            className="image-wrapper"
+            key={shortid.generate()}
+            id={`item-${index + 2}`}
+          >
+            {image && (
+              <img
+                src={image}
+                onMouseEnter={() => setIsHovering(true)}
+                onMouseLeave={() => setIsHovering(false)}
+                alt={`Image ${index + 2}`}
+              />
+            )}
+          </div>
+        ))}
       </div>
     </div>
   );

@@ -25,12 +25,12 @@ function About({ isLight, setLight, showAbout, setShowAbout }) {
         <div className="close-mobile">
           <p onClick={() => setShowAbout(!showAbout)}>Close</p>
         </div>
-        <img
+        {/* <img
           className="icon about"
           src={isLight ? moon : sun}
           alt="sun"
           onClick={toggleLight}
-        />
+        /> */}
       </div>
       <div className="text-container">
         <div className="presentation">

@@ -1,0 +1,41 @@
+@import "./../base/partial.scss";
+
+.menu-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 15%;
+  height: 95vh;
+  color: white;
+  padding: 15px;
+  font-size: 16px;
+  h1 {
+    font-size: 16px;
+    font-weight: 100;
+  }
+  ul {
+    padding-top: 10px;
+    color: white;
+    gap: 5px;
+    .tag-nav {
+      padding-left: 15px;
+    }
+  }
+  .work {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-end;
+  }
+  .social-media {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+}
+
+.typewriter {
+  width: 100%;
+  font-size: 10px;
+}

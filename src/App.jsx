@@ -25,14 +25,17 @@ const App = () => {
         <Route
           path="/"
           element={
-            <Home
-              showAbout={showAbout}
-              setShowAbout={setShowAbout}
-              isLight={isLight}
-              setLight={setLight}
-              isHovering={isHovering}
-              setIsHovering={setIsHovering}
-            />
+            <>
+              <Header showAbout={showAbout} setShowAbout={setShowAbout} />
+              <Home
+                showAbout={showAbout}
+                setShowAbout={setShowAbout}
+                isLight={isLight}
+                setLight={setLight}
+                isHovering={isHovering}
+                setIsHovering={setIsHovering}
+              />
+            </>
           }
         />
         <Route

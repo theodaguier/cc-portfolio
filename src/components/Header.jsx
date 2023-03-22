@@ -34,42 +34,42 @@ function Header({ isLight, setLight, showAbout, setShowAbout }) {
   return (
     <nav className="menu-container">
       <div className="menu">
-        <div className="line flex">
-          {!showAbout ? (
-            <p className="flex">
-              <Link
-                className={isHovered ? "hovered" : ""}
-                to="/"
-                onMouseEnter={() => setIsHovered(true)}
-                onMouseLeave={() => setIsHovered(false)}
-              >
-                {isHovered && "Home"}
-                {isHovered ? null : "Cristina Casañas"}
-                {isHovered ? null : <Typewriter />}
-              </Link>
-            </p>
-          ) : (
-            <div className="close" onClick={() => setShowAbout(false)}>
-              Close
-            </div>
-          )}
+        <p className="flex" style={{ width: "100%" }}>
+          <Link
+            className={isHovered ? "hovered" : ""}
+            to="/"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          >
+            {isHovered ? "Home" : "Cristina Casañas"}
+
+            {/* {isHovered ? null : <Typewriter />} */}
+          </Link>
+        </p>
+        {!showAbout ? (
+          <p onClick={() => setShowAbout(true)} style={{ width: "100%" }}>
+            About
+          </p>
+        ) : (
+          <p onClick={() => setShowAbout(false)} style={{ width: "100%" }}>
+            Close
+          </p>
+        )}
+        <Link to="/gallery" style={{ width: "100%" }}>
+          Gallery
+        </Link>
+        <div className="buttons">
+          <div className="lang">
+            <p>En</p>
+            <p>Fr</p>
+            <p>Es</p>
+          </div>
           <img
             className="icon"
             src={isLight ? moon : sun}
             alt="sun"
             onClick={toggleLight}
           />
-        </div>
-        <div className="line flex">
-          <p onClick={handleAboutClick}>About</p>
-        </div>
-        <div className="line flex">
-          <Link to="/gallery">Gallery</Link>
-          <div className="lang">
-            <p>English,</p>
-            <p>French,</p>
-            <p>Spanish</p>
-          </div>
         </div>
       </div>
     </nav>

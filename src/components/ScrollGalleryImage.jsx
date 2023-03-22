@@ -1,47 +1,89 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useLayoutEffect } from "react";
 import shortid from "shortid";
 import images_gallery from "../data/images_gallery.js";
 
+import { gsap } from "gsap";
+import ScrollTrigger from "gsap/dist/ScrollTrigger.js";
+gsap.registerPlugin(ScrollTrigger);
+
+import "./../styles/pages/gallery.scss";
+
 const ScrollGalleryImage = () => {
-  const [images, setImages] = useState(images_gallery);
-  const scrollGallery = useRef(null);
-  const imageHeight = 300; // ajustez la hauteur des images selon vos besoins
-  const [scrollOffset, setScrollOffset] = useState(0);
+  const [images, setImages] = useState([...images_gallery, ...images_gallery]); // duplicate the array of images
+  const containerRef = useRef(null);
+  const imageHeight = 200; // height of each image in pixels
 
   useEffect(() => {
-    const scrollGalleryRef = scrollGallery.current;
+    const container = containerRef.current;
+    const containerHeight = container.getBoundingClientRect().height;
 
-    const handleScroll = () => {
-      const { scrollTop, clientHeight, scrollHeight } = scrollGalleryRef;
+    // Wait for the DOM to be loaded before initializing Locomotive Scroll
+    window.addEventListener("load", () => {
+      // set initial scroll position to show the images from the top
+      container.scrollTop = 0;
 
-      if (
-        scrollTop + clientHeight >= scrollHeight &&
-        images.length < images_gallery.length * 2
-      ) {
-        setImages((prevImages) => [...prevImages, ...images_gallery]);
-      }
-    };
-
-    scrollGalleryRef.addEventListener("scroll", handleScroll);
-
-    return () => {
-      scrollGalleryRef.removeEventListener("scroll", handleScroll);
-    };
+      // Scroll to the beginning of the container when we reach the end
+      container.addEventListener("scroll", () => {
+        if (container.scrollTop === 0) {
+          container.scrollTop = container.scrollHeight / 2;
+        } else if (
+          container.scrollTop + containerHeight >=
+          container.scrollHeight
+        ) {
+          container.scrollTop = container.scrollHeight / 2 - containerHeight;
+        }
+      });
+    });
   }, []);
+
+  useEffect(() => {
+    const container = containerRef.current;
+    const containerHeight = container.getBoundingClientRect().height;
+    const imagesHeight = images.length * imageHeight;
+
+    gsap.to(container, {
+      y: `+=${imagesHeight}`,
+      ease: "none",
+      scrollTrigger: {
+        trigger: container,
+        start: "top top",
+        end: `+=${imagesHeight - containerHeight}`,
+        scrub: true,
+      },
+    });
+
+    // Add a simple rotation animation to the first image in the list
+    gsap.to(images[0], {
+      duration: 2,
+      rotate: 360,
+      repeat: -1,
+      ease: "none",
+    });
+  }, [images]);
 
   return (
     <div
       className="scroll-gallery"
-      ref={scrollGallery}
+      ref={containerRef}
       style={{
-        transform: `translateY(-${scrollOffset}px)`,
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        overflowY: "auto",
+        height: "100vh",
       }}
     >
+      <div style={{ height: `${imageHeight}px` }} />{" "}
+      {/* empty div to adjust the top position */}
       {images.map((img) => (
         <img
           src={img.src}
           key={shortid.generate()}
-          style={{ height: `${imageHeight}px` }}
+          style={{
+            height: `${imageHeight}px`,
+            width: "100%",
+            marginBottom: "10px",
+          }}
         />
       ))}
     </div>

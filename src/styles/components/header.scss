@@ -1,7 +1,7 @@
 @import "../base/base.scss";
 
 .menu-container {
-  font-size: $font-XS;
+  font-size: 16px;
   padding-top: 11px;
   position: sticky;
   top: 0;
@@ -12,14 +12,23 @@
   backdrop-filter: blur(2px);
   position: sticky;
   transition: all 0.8s;
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-left: 15px;
+    padding-right: 15px;
+    .buttons {
+      display: flex;
+      .lang {
+        display: flex;
+      }
+    }
+  }
   .line {
     height: 23px;
     padding-left: 32px;
     padding-right: 32px;
-
-    .lang {
-      display: flex;
-    }
   }
   .flex {
     display: flex;
@@ -33,8 +42,6 @@
   width: 16.44px;
   height: 16.44px;
   margin-bottom: 4px;
-  position: absolute;
-  right: 0;
   margin-right: 32px;
 }
 

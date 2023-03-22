@@ -1,110 +1,42 @@
-.angry-grid {
-  display: grid;
-  grid-template-rows: 20vw 20vw 20vw 20vw;
-  padding-left: 131px;
-  padding-right: 131px;
+.tag-filter {
+  width: 75%;
+  overflow-y: scroll;
 }
 
-#item-0 {
-  grid-row-start: 1;
-  grid-column-start: 1;
-
-  grid-row-end: 2;
-  grid-column-end: 2;
-}
-#item-1 {
-  grid-row-start: 1;
-  grid-column-start: 2;
-
-  grid-row-end: 2;
-  grid-column-end: 3;
-}
-#item-2 {
-  grid-row-start: 1;
-  grid-column-start: 3;
-
-  grid-row-end: 2;
-  grid-column-end: 5;
-}
-#item-3 {
-  grid-row-start: 2;
-  grid-column-start: 3;
-
-  grid-row-end: 3;
-  grid-column-end: 5;
-}
-#item-4 {
-  grid-row-start: 3;
-  grid-column-start: 3;
-
-  grid-row-end: 4;
-  grid-column-end: 4;
-}
-#item-5 {
-  grid-row-start: 3;
-  grid-column-start: 4;
-
-  grid-row-end: 4;
-  grid-column-end: 5;
-}
-#item-6 {
-  grid-row-start: 2;
-  grid-column-start: 1;
-
-  grid-row-end: 4;
-  grid-column-end: 3;
-}
-#item-7 {
-  grid-row-start: 4;
-  grid-column-start: 1;
-
-  grid-row-end: 6;
-  grid-column-end: 5;
-}
-
-#item-0 {
-  position: relative;
-  right: 6%;
-  img {
-    height: 100%;
-  }
-}
-#item-1 {
-  position: relative;
-  right: 20%;
-  img {
-    height: 100%;
-  }
-}
-
-#item-4 {
-  img {
-    position: relative;
-    left: 18.5%;
-  }
-}
-
-#item-6 {
-  img {
-    height: 100%;
-  }
-}
-#item-7 {
-  img {
-    position: relative;
-    bottom: 30%;
-  }
-}
-
-img {
-  width: 90%;
-  height: auto;
-  object-fit: cover;
-}
-
-.banner {
-  height: 585px;
-  img {
-    height: 100%;
+.project {
+  width: 100%;
+  .grid {
+    display: flex;
+    flex-direction: column;
+    .presentation {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      .image-cover {
+        width: 100%;
+        height: 60%;
+        object-fit: contain;
+      }
+      .accordion {
+        width: 100%;
+        height: 25%;
+      }
+    }
+    .images-projects {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      .image-wrapper {
+        width: 50%;
+        height: 33.33%;
+        padding: 10px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
   }
 }

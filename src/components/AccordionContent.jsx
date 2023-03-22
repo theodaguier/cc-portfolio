@@ -1,7 +1,6 @@
 import "./../styles/components/accordion.scss";
 
 function AccordionContent({ project }) {
-  console.log(project.description);
   return (
     <>
       <div className="txt-container">
@@ -26,9 +25,12 @@ function AccordionContent({ project }) {
             </div>
           </div>
           <div className="description">
-            {project.description.split("\n").map((line) => (
-              <p>{line}</p>
-            ))}
+            {project.description
+              .toString()
+              .split("\n")
+              .map((line) => (
+                <p>{line}</p>
+              ))}
           </div>
         </div>
       </div>

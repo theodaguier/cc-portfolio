@@ -5,7 +5,7 @@
 }
 
 .about {
-  width: 480px;
+  width: 445px;
   height: 100vh;
   position: fixed;
   top: 0;
@@ -15,10 +15,10 @@
   border-right: solid 1px white;
   transition: all 0.5s;
   a:hover {
-    color: $color-pink; /* couleur rouge */
+    color: $color-pink;
   }
   a.active {
-    color: $color-pink; /* couleur bleue */
+    color: $color-pink;
   }
   .text-container {
     font-size: $font-XS;
@@ -67,9 +67,10 @@
   align-items: center;
   font-size: $font-XS;
   height: 23px;
-  border-bottom: solid 1px white;
   padding-left: 17px;
   padding-right: 17px;
+  padding-top: 17px;
+  text-decoration: underline;
 }
 
 .icon.about {
@@ -93,8 +94,6 @@
   }
 }
 
-@media (min-width: 680px) {
-  .about-buttons {
-    display: none;
-  }
+.about-buttons {
+  display: block;
 }

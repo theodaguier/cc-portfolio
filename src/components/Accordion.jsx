@@ -8,7 +8,7 @@ import chevronDark from "./../assets/icons/chevron-b.svg";
 import chevronLight from "./../assets/icons/chevron-w.svg";
 
 function Accordion({ isLight, setLight, project }) {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(true);
   return (
     <div
       className="accordion-container"

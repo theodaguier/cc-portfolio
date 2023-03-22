@@ -20,6 +20,7 @@ function TagFilter({
   setIsTransitioning,
   selectedTag,
   setSelectedTag,
+  tag,
 }) {
   const handleSelectedTag = () => {
     setSelectedTag(tag);
@@ -31,7 +32,10 @@ function TagFilter({
         <li
           key={index}
           className={`tag ${tag === selectedTag ? "active" : ""}`}
-          onClick={() => handleTagClick(tag)}
+          onClick={() => {
+            handleTagClick(tag);
+            handleSelectedTag(tag);
+          }}
         >
           ({tag})
         </li>
