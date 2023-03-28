@@ -12,6 +12,7 @@ import About from "./About";
 
 function Header({ isLight, setLight, showAbout, setShowAbout }) {
   const [isHovered, setIsHovered] = useState(false);
+  const [homeHovered, setHomeHovered] = useState(false);
 
   const toggleLight = () => {
     setLight(!isLight);
@@ -22,9 +23,16 @@ function Header({ isLight, setLight, showAbout, setShowAbout }) {
     }
     localStorage.setItem("isLight", !isLight.toString());
   };
-
   const handleAboutClick = () => {
     setShowAbout(true);
+  };
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
   };
 
   useEffect(() => {
@@ -32,20 +40,19 @@ function Header({ isLight, setLight, showAbout, setShowAbout }) {
   }, [showAbout]);
 
   return (
-    <nav className="menu-container">
+    <nav className="menu-container" style={{ display: "flex", width: "100%" }}>
       <div className="menu">
-        <p className="flex" style={{ width: "100%" }}>
+        <div className="flex" style={{ width: "100%" }}>
           <Link
-            className={isHovered ? "hovered" : ""}
             to="/"
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
           >
-            {isHovered ? "Home" : "Cristina Casañas"}
-
-            {/* {isHovered ? null : <Typewriter />} */}
+            <p style={{ width: "112px" }}>
+              {isHovered ? "Home" : "Cristina Casañas"}
+            </p>
           </Link>
-        </p>
+        </div>
         {!showAbout ? (
           <p onClick={() => setShowAbout(true)} style={{ width: "100%" }}>
             About
@@ -58,19 +65,19 @@ function Header({ isLight, setLight, showAbout, setShowAbout }) {
         <Link to="/gallery" style={{ width: "100%" }}>
           Gallery
         </Link>
-        <div className="buttons">
-          <div className="lang">
-            <p>En</p>
-            <p>Fr</p>
-            <p>Es</p>
-          </div>
-          <img
-            className="icon"
-            src={isLight ? moon : sun}
-            alt="sun"
-            onClick={toggleLight}
-          />
+      </div>
+      <div className="buttons">
+        <div className="lang">
+          <p>(En)</p>
+          <p>(Fr)</p>
+          <p>(Es)</p>
         </div>
+        <img
+          className="icon"
+          src={isLight ? moon : sun}
+          alt="sun"
+          onClick={toggleLight}
+        />
       </div>
     </nav>
   );

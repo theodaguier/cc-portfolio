@@ -44,6 +44,7 @@ function Home({
         showAbout={showAbout}
         isProjectSelected={isProjectSelected}
         setIsProjectSelected={setIsProjectSelected}
+        isLight={isLight}
       />
       <Projects
         currentTag={currentTag}

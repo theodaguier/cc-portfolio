@@ -26,7 +26,12 @@ const App = () => {
           path="/"
           element={
             <>
-              <Header showAbout={showAbout} setShowAbout={setShowAbout} />
+              <Header
+                showAbout={showAbout}
+                setShowAbout={setShowAbout}
+                isLight={isLight}
+                setLight={setLight}
+              />
               <Home
                 showAbout={showAbout}
                 setShowAbout={setShowAbout}

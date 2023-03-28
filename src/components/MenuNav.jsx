@@ -33,6 +33,7 @@ const MenuNav = ({
   //     }, 300); // délai de 300 ms
   //   }
   // }, [isTransitioning]);
+  console.log(isLight);
 
   return (
     <div className="menu-nav" onClick={() => setIsProjectSelected(false)}>

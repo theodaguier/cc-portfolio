@@ -30,7 +30,7 @@ function Projects({
         behavior: "smooth",
       });
     }
-  }, [selectedProject]);
+  }, [selectedProject, scrollContainerRef.current]); // ajouter scrollContainerRef.current à la liste de dépendances
 
   const handleClick = (project) => {
     setSelectedProject(project);
@@ -56,17 +56,19 @@ function Projects({
         ? currentTag === "All"
           ? [...projects_data]
           : projects_data.filter(
-              (project) => project.tags && project.tags.includes(currentTag)
+              (project) =>
+                project.tags &&
+                project.tags.includes(currentTag) &&
+                project.images
             )
         : [...projects_data]
     );
+    setSelectedProject(null); // Réinitialise selectedProject
   }, [currentTag]);
 
-  // console.log(currentTag);
-  // console.log(selectedProject);
   const handleTagClick = (tag) => {
     setCurrentTag(tag);
-    setIsSelected(false);
+    setIsProjectSelected(false);
   };
 
   return (
@@ -92,7 +94,7 @@ function Projects({
                     <div
                       onClick={() => {
                         handleClick(project);
-                        setIsProjectSelected(true);
+                        // setIsProjectSelected(true);
                       }}
                     >
                       <ProjectsPhoto
@@ -115,13 +117,15 @@ function Projects({
         className="scroll-projects-menu"
         onClick={() => setIsProjectSelected(true)}
       >
-        <SelectProjectPreview
-          projects={filteredProjects}
-          selectedProject={selectedProjectPreview}
-          setSelectedProject={setSelectedProjectPreview}
-          handleProjectSelect={handleProjectSelect}
-          scrollContainerRef={scrollContainerRef}
-        />
+        <div onClick={() => scrollContainerRef.current.scrollTo({ top: 0 })}>
+          <SelectProjectPreview
+            projects={filteredProjects}
+            selectedProject={selectedProjectPreview}
+            setSelectedProject={setSelectedProjectPreview}
+            handleProjectSelect={handleProjectSelect}
+            isLight={isLight}
+          />
+        </div>
       </div>
     </>
   );

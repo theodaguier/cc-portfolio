@@ -12,26 +12,35 @@ function AccordionContent({ project }) {
             <div className="info">
               <p>{project.tag}</p>
               <p>Design/Concept: {project.author}</p>
-              <p>Cover Collage: {project.coverCollage}</p>
-              <p>Typeface: {project.typeface}</p>
-              <p>Paper: {project.paper}</p>
-              <p>Print: {project.print}</p>
-              <p>Bind: {project.bind}</p>
-              <p>Size: {project.size}</p>
-              <p>Supervisor: {project.supervisor}</p>
+              {project.coverCollage && (
+                <p>Cover Collage: {project.coverCollage}</p>
+              )}
+              {project.typeface && <p>Typeface: {project.typeface}</p>}
+              {project.paper && <p>Paper: {project.paper}</p>}
+              {project.print && <p>Print: {project.print}</p>}
+              {project.bind && <p>Bind: {project.bind}</p>}
+              {project.size && <p>Size: {project.size}</p>}
+              {project.supervisor && <p>Supervisor: {project.supervisor}</p>}
             </div>
-            <div className="image-collected">
-              <p>All images were collected from {project.imageCollected}</p>
+            {project.imageCollected && (
+              <div
+                className="image-collected"
+                style={{ lineHeight: "15px", marginTop: "17px" }}
+              >
+                <p>All images were collected from {project.imageCollected}</p>
+              </div>
+            )}
+          </div>
+          {project.description && (
+            <div className="description" style={{ lineHeight: "" }}>
+              {project.description
+                .toString()
+                .split("\n")
+                .map((line) => (
+                  <p>{line}</p>
+                ))}
             </div>
-          </div>
-          <div className="description">
-            {project.description
-              .toString()
-              .split("\n")
-              .map((line) => (
-                <p>{line}</p>
-              ))}
-          </div>
+          )}
         </div>
       </div>
     </>

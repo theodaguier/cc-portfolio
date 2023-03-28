@@ -6,14 +6,16 @@
   position: sticky;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 85%;
   z-index: 999;
   -webkit-backdrop-filter: blur(2px);
   backdrop-filter: blur(2px);
   position: sticky;
   transition: all 0.8s;
+  border-bottom: solid 1px;
   .menu {
     display: flex;
+    width: 85%;
     justify-content: space-between;
     align-items: baseline;
     padding-left: 15px;
@@ -42,7 +44,7 @@
   width: 16.44px;
   height: 16.44px;
   margin-bottom: 4px;
-  margin-right: 32px;
+  margin-right: 15px;
 }
 
 .typewriter {
@@ -73,9 +75,15 @@
   margin-left: 12px;
 }
 
-.lang {
-  p {
-    padding-right: 6px;
+.buttons {
+  width: 15%;
+  display: flex;
+  justify-content: space-between;
+  .lang {
+    display: flex;
+    p {
+      padding-right: 6px;
+    }
   }
 }
 

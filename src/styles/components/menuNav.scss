@@ -9,13 +9,13 @@
   color: white;
   padding: 15px;
   font-size: 16px;
+  border-right: solid 1px;
   h1 {
     font-size: 16px;
     font-weight: 100;
   }
   ul {
     padding-top: 10px;
-    color: white;
     gap: 5px;
     .tag-nav {
       padding-left: 15px;
@@ -24,7 +24,6 @@
   .work {
     display: flex;
     flex-direction: column;
-    height: 100%;
     justify-content: flex-end;
   }
   .social-media {
@@ -38,4 +37,11 @@
 .typewriter {
   width: 100%;
   font-size: 10px;
+}
+
+.light {
+  .menu-nav {
+    color: black;
+    border-right: solid 1px black;
+  }
 }

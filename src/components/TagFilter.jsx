@@ -9,7 +9,7 @@ const tags = [
   "Art Direction",
   "Packaging",
   "Objects",
-  "Visual Communication",
+  // "Visual Communication",
 ];
 
 function TagFilter({
