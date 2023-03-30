@@ -59,3 +59,30 @@
   flex-direction: column;
   gap: 5px;
 }
+
+.sliderTop {
+  padding-top: 75px;
+  position: relative;
+  // background:green;
+}
+
+.sliderTopUnique_IMG {
+  // background:green;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.sliderTopUnique {
+  height: 208px;
+  width: 100%;
+  // background:red;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+}

@@ -100,3 +100,22 @@
 .light .menu-container {
   transition: all 0.8s;
 }
+
+// Mobile
+
+@media screen and (max-width: 768px) {
+  .menu-container {
+    flex-direction: column;
+    .menu {
+      width: 100%;
+      .buttons {
+        display: none;
+      }
+    }
+  }
+  .line2 {
+    padding-top: 5px;
+    border-top: solid 1px;
+    display: flex;
+  }
+}

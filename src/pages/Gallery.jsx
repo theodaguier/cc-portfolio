@@ -6,6 +6,8 @@ import { useState } from "react";
 
 import Header from "../components/Header";
 import About from "../components/About";
+import Footer from "../components/Footer";
+import { GalleryImages } from "../components/GalleryImages";
 
 function Gallery({
   isLight,
@@ -37,16 +39,18 @@ function Gallery({
           showAbout={showAbout}
         />
       )}
-      <SelectedImage
+      <GalleryImages />
+      {/* <SelectedImage
         isHovering={isHovering}
         setIsHovering={setIsHovering}
         selectedImage={selectedImage}
-      />
-      <ScrollGalleryImage
+      /> */}
+      {/* <ScrollGalleryImage
         isHovering={isHovering}
         setIsHovering={setIsHovering}
         onImageClick={handleImageClick}
-      />
+      /> */}
+      <Footer />
     </div>
   );
 }

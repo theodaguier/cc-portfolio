@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Media from "react-media";
 
 import "./../styles/pages/home.scss";
 
@@ -19,52 +20,75 @@ function Home({
   setLight,
   isHovering,
   setIsHovering,
+  currentTag,
+  setCurrentTag,
+  selectedTag,
+  setSelectedTag,
+  isProjectSelected,
+  setIsProjectSelected,
 }) {
-  const [currentTag, setCurrentTag] = useState("All");
-  // const [isTransitioning, setIsTransitioning] = useState(false);
-  const [selectedTag, setSelectedTag] = useState(null);
-  const [isProjectSelected, setIsProjectSelected] = useState(false);
-
   useLocoScroll();
 
   return (
     <div className="home" id="main-container">
-      {/* <Header
-        isLight={isLight}
-        setLight={setLight}
-        setShowAbout={setShowAbout}
-        showAbout={showAbout}
-      /> */}
-      <MenuNav
-        currentTag={currentTag}
-        setCurrentTag={setCurrentTag}
-        selectedTag={selectedTag}
-        setSelectedTag={setSelectedTag}
-        setShowAbout={setShowAbout}
-        showAbout={showAbout}
-        isProjectSelected={isProjectSelected}
-        setIsProjectSelected={setIsProjectSelected}
-        isLight={isLight}
-      />
-      <Projects
-        currentTag={currentTag}
-        setCurrentTag={setCurrentTag}
-        isHovering={isHovering}
-        setIsHovering={setIsHovering}
-        isLight={isLight}
-        setLight={setLight}
-        isProjectSelected={isProjectSelected}
-        setIsProjectSelected={setIsProjectSelected}
-      />
-      {showAbout && (
-        <About
-          isLight={isLight}
-          setLight={setLight}
-          setShowAbout={setShowAbout}
-          showAbout={showAbout}
-        />
-      )}
-      {/* <Footer isLight={isLight} /> */}
+      <Media query="(max-width: 768px)">
+        {(matches) =>
+          !matches ? (
+            <>
+              <MenuNav
+                currentTag={currentTag}
+                setCurrentTag={setCurrentTag}
+                selectedTag={selectedTag}
+                setSelectedTag={setSelectedTag}
+                setShowAbout={setShowAbout}
+                showAbout={showAbout}
+                isProjectSelected={isProjectSelected}
+                setIsProjectSelected={setIsProjectSelected}
+                isLight={isLight}
+              />
+              <Projects
+                currentTag={currentTag}
+                setCurrentTag={setCurrentTag}
+                isHovering={isHovering}
+                setIsHovering={setIsHovering}
+                isLight={isLight}
+                setLight={setLight}
+                isProjectSelected={isProjectSelected}
+                setIsProjectSelected={setIsProjectSelected}
+              />
+              {showAbout && (
+                <About
+                  isLight={isLight}
+                  setLight={setLight}
+                  setShowAbout={setShowAbout}
+                  showAbout={showAbout}
+                />
+              )}
+            </>
+          ) : (
+            <div className="home mobile">
+              <Projects
+                currentTag={currentTag}
+                setCurrentTag={setCurrentTag}
+                isHovering={isHovering}
+                setIsHovering={setIsHovering}
+                isLight={isLight}
+                setLight={setLight}
+                isProjectSelected={isProjectSelected}
+                setIsProjectSelected={setIsProjectSelected}
+              />
+              {showAbout && (
+                <About
+                  isLight={isLight}
+                  setLight={setLight}
+                  setShowAbout={setShowAbout}
+                  showAbout={showAbout}
+                />
+              )}
+            </div>
+          )
+        }
+      </Media>
     </div>
   );
 }

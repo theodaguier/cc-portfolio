@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Media from "react-media";
 
 import "./../styles/components/menuNav.scss";
 
@@ -36,46 +37,63 @@ const MenuNav = ({
   console.log(isLight);
 
   return (
-    <div className="menu-nav" onClick={() => setIsProjectSelected(false)}>
-      {/* <Typewriter /> */}
-      <ul className="work">
-        <li>Work</li>
-        <TagFilter
-          currentTag={currentTag}
-          setSelectedTag={setSelectedTag}
-          handleTagClick={handleTagClick} // passe la fonction de rappel à TagFilter
-        />
-      </ul>
-      <ul className="social-media">
-        <li>
-          {" "}
-          <img
-            className="arrow"
-            src={!isLight ? arrowDRW : arrowDRB}
-            alt="icon"
-          />{" "}
-          Instagram
-        </li>
-        <li>
-          {" "}
-          <img
-            className="arrow"
-            src={!isLight ? arrowDRW : arrowDRB}
-            alt="icon"
-          />{" "}
-          Mail
-        </li>
-        <li>
-          {" "}
-          <img
-            className="arrow"
-            src={!isLight ? arrowDRW : arrowDRB}
-            alt="icon"
-          />{" "}
-          Numero
-        </li>
-      </ul>
-    </div>
+    <Media query="(max-width: 768px)">
+      {(matches) =>
+        !matches ? (
+          <>
+            <div
+              className="menu-nav"
+              onClick={() => setIsProjectSelected(false)}
+            >
+              {/* <Typewriter /> */}
+              <ul className="work">
+                <li>Work</li>
+                <TagFilter
+                  currentTag={currentTag}
+                  setSelectedTag={setSelectedTag}
+                  handleTagClick={handleTagClick} // passe la fonction de rappel à TagFilter
+                />
+              </ul>
+              <ul className="social-media">
+                <li>
+                  {" "}
+                  <img
+                    className="arrow"
+                    src={!isLight ? arrowDRW : arrowDRB}
+                    alt="icon"
+                  />{" "}
+                  Instagram
+                </li>
+                <li>
+                  {" "}
+                  <img
+                    className="arrow"
+                    src={!isLight ? arrowDRW : arrowDRB}
+                    alt="icon"
+                  />{" "}
+                  Mail
+                </li>
+                <li>
+                  {" "}
+                  <img
+                    className="arrow"
+                    src={!isLight ? arrowDRW : arrowDRB}
+                    alt="icon"
+                  />{" "}
+                  Numero
+                </li>
+              </ul>
+            </div>
+          </>
+        ) : (
+          <TagFilter
+            currentTag={currentTag}
+            setSelectedTag={setSelectedTag}
+            handleTagClick={handleTagClick} // passe la fonction de rappel à TagFilter
+          />
+        )
+      }
+    </Media>
   );
 };
 

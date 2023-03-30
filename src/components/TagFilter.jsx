@@ -24,6 +24,7 @@ function TagFilter({
 }) {
   const handleSelectedTag = () => {
     setSelectedTag(tag);
+    setCurrentTag(tag);
   };
 
   return (

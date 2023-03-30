@@ -19,33 +19,32 @@ function ProjectsPhoto({
   setLight,
   backToTop,
 }) {
+  const sliderTop = useRef();
+  const sliderBot = useRef();
+
   const imagesArray = project ? Object.values(project.images) : [];
 
   const [activeIndex, setActiveIndex] = useState(0);
-  const [xRotate, setXRotate] = useState(0);
-  const [yRotate, setYRotate] = useState(0);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  const nextImage = () => {
-    const nextIndex = currentImageIndex + 1;
-    if (nextIndex + 1 === imagesArray.length) {
-      setActiveIndex(0);
-      setCurrentImageIndex(0);
-    } else {
-      setCurrentImageIndex(nextIndex);
-      if (nextIndex > imagesArray.length - 2) {
-        setActiveIndex(activeIndex + 1);
-      }
-    }
+  const sliderTopSettings = {
+    dots: false,
+    arrows: false,
+    infinite: true,
+    speed: 700,
+    slidesToShow: 2, // affiche deux images à la fois
+    slidesToScroll: 1, // fait défiler deux images à la fois
+    autoplay: true,
+    autoplaySpeed: 2500,
   };
-  const prevImage = () => {
-    const prevIndex = currentImageIndex - 1;
-    if (prevIndex < 0) {
-      setActiveIndex(Math.floor((imagesArray.length - 1) / 2));
-      setCurrentImageIndex(Math.floor((imagesArray.length - 1) / 2));
-    } else {
-      setActiveIndex(activeIndex - 1);
-      setCurrentImageIndex(prevIndex);
+
+  const sliderTopNav = (direction) => {
+    if (sliderTop && sliderTop.current) {
+      if (direction === "prec") {
+        sliderTop.current.slickPrev();
+      }
+      if (direction === "suiv") {
+        sliderTop.current.slickNext();
+      }
     }
   };
 
@@ -65,15 +64,18 @@ function ProjectsPhoto({
       )}
       <div className="images-projects">
         <div className="carousel">
-          <div
-            className="inner"
-            style={{ transform: `translate(-${activeIndex * 50}%)` }}
-          >
-            {imagesArray
-              .slice(currentImageIndex, currentImageIndex + imagesArray.length)
-              .map((item) => {
-                return <CarouselItem item={item} width={"50%"} />;
-              })}
+          <div className="inner">
+            <Slider
+              {...sliderTopSettings}
+              ref={sliderTop}
+              className="SliderTop"
+            >
+              {imagesArray.map((item, index) => (
+                <div key={shortid.generate()} className="column">
+                  <img className="sliderTopUnique_IMG" src={item} />
+                </div>
+              ))}
+            </Slider>
           </div>
 
           <div
@@ -90,7 +92,7 @@ function ProjectsPhoto({
             <img
               className="button-arrow"
               onClick={() => {
-                prevImage();
+                sliderTopNav("prec");
               }}
               src={!isLight === true ? ArrowLeftWhite : ArrowLeftBlack}
               alt=""
@@ -99,7 +101,7 @@ function ProjectsPhoto({
             <img
               className="button-arrow"
               onClick={() => {
-                nextImage();
+                sliderTopNav("suiv");
               }}
               src={!isLight === true ? ArrowRightWhite : ArrowRightBlack}
               alt=""

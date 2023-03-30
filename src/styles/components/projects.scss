@@ -85,12 +85,6 @@
   justify-content: center;
 }
 
-.inner {
-  height: 100%;
-  white-space: nowrap;
-  transition: transform 0.3s;
-}
-
 .carousel-item {
   display: inline-flex;
   align-items: center;
@@ -98,14 +92,28 @@
   height: 100%;
 }
 
-.carousel-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  padding: 0 20px 0 20px;
-}
-
 .project-container {
   overflow-y: scroll;
   height: 100%;
+}
+
+.carousel .inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.carousel .inner .column {
+  width: 50%; /* ou une autre valeur */
+  margin: 0 auto; /* ou une autre valeur */
+}
+
+.carousel .inner .column .sliderTopUnique_IMG {
+  width: 100%;
+  height: auto;
+}
+
+.slick-track {
+  display: flex;
+  flex-direction: row;
 }

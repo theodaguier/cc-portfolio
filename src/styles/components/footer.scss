@@ -1,14 +1,15 @@
 @import "/src/styles/base/partial.scss";
 
 .footer {
+  width: 100%;
   height: 20px;
-  position: sticky;
+  position: fixed;
   bottom: 0;
   left: 0;
   display: flex;
   justify-content: space-between;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 15px;
+  padding-right: 15px;
   font-size: $font-XS;
   .icon-up {
     width: 9px;

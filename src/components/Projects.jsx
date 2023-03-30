@@ -1,4 +1,6 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
+import Media from "react-media";
+
 import projects_data from "./../data/projects.js";
 import "./../styles/components/projects.scss";
 
@@ -73,60 +75,119 @@ function Projects({
 
   return (
     <>
-      <div className="tag-filter" ref={scrollContainerRef}>
-        <div className="project-container" data-scroll-section>
-          {isProjectSelected && selectedProject ? (
-            <div className="project">
-              <ProjectsPhoto
-                isHovering={isHovering}
-                setIsHovering={setIsHovering}
-                project={selectedProject}
-                selectedProject={selectedProject}
-                isLight={isLight}
-                setLight={setLight}
-              />
-            </div>
-          ) : (
-            !isProjectSelected && (
+      <Media query="(max-width: 768px)">
+        {(matches) => (
+          <>
+            {!matches ? (
               <>
-                {filteredProjects.map((project) => (
-                  <div className="project" key={project.id}>
-                    <div
-                      onClick={() => {
-                        handleClick(project);
-                        // setIsProjectSelected(true);
-                      }}
-                    >
+                <div className="tag-filter" ref={scrollContainerRef}>
+                  <div className="project-container" data-scroll-section>
+                    {isProjectSelected && selectedProject ? (
+                      <div className="project">
+                        <ProjectsPhoto
+                          isHovering={isHovering}
+                          setIsHovering={setIsHovering}
+                          project={selectedProject}
+                          selectedProject={selectedProject}
+                          isLight={isLight}
+                          setLight={setLight}
+                        />
+                      </div>
+                    ) : (
+                      !isProjectSelected && (
+                        <>
+                          {filteredProjects.map((project) => (
+                            <div className="project" key={project.id}>
+                              <div
+                                onClick={() => {
+                                  handleClick(project);
+                                  // setIsProjectSelected(true);
+                                }}
+                              >
+                                <ProjectsPhoto
+                                  isHovering={isHovering}
+                                  setIsHovering={setIsHovering}
+                                  project={project}
+                                  selectedProject={selectedProjectPreview}
+                                  isLight={isLight}
+                                  setLight={setLight}
+                                />
+                              </div>
+                            </div>
+                          ))}
+                        </>
+                      )
+                    )}
+                  </div>
+                </div>
+                <div
+                  className="scroll-projects-menu"
+                  onClick={() => setIsProjectSelected(true)}
+                >
+                  <div
+                    onClick={() =>
+                      scrollContainerRef.current.scrollTo({ top: 0 })
+                    }
+                  >
+                    <SelectProjectPreview
+                      projects={filteredProjects}
+                      selectedProject={selectedProjectPreview}
+                      setSelectedProject={setSelectedProjectPreview}
+                      handleProjectSelect={handleProjectSelect}
+                      isLight={isLight}
+                    />
+                  </div>
+                </div>
+              </>
+            ) : (
+              <div
+                className="tag-filter"
+                ref={scrollContainerRef}
+                style={{ width: "100%" }}
+              >
+                <div className="project-container" data-scroll-section>
+                  {isProjectSelected && selectedProject ? (
+                    <div className="project">
                       <ProjectsPhoto
                         isHovering={isHovering}
                         setIsHovering={setIsHovering}
-                        project={project}
-                        selectedProject={selectedProjectPreview}
+                        project={selectedProject}
+                        selectedProject={selectedProject}
                         isLight={isLight}
                         setLight={setLight}
                       />
                     </div>
-                  </div>
-                ))}
-              </>
-            )
-          )}
-        </div>
-      </div>
-      <div
-        className="scroll-projects-menu"
-        onClick={() => setIsProjectSelected(true)}
-      >
-        <div onClick={() => scrollContainerRef.current.scrollTo({ top: 0 })}>
-          <SelectProjectPreview
-            projects={filteredProjects}
-            selectedProject={selectedProjectPreview}
-            setSelectedProject={setSelectedProjectPreview}
-            handleProjectSelect={handleProjectSelect}
-            isLight={isLight}
-          />
-        </div>
-      </div>
+                  ) : (
+                    !isProjectSelected && (
+                      <>
+                        {filteredProjects.map((project) => (
+                          <div className="project" key={project.id}>
+                            <div
+                              onClick={() => {
+                                handleClick(project);
+                                // setIsProjectSelected(true);
+                              }}
+                            >
+                              <ProjectsPhoto
+                                isHovering={isHovering}
+                                setIsHovering={setIsHovering}
+                                project={project}
+                                selectedProject={selectedProjectPreview}
+                                isLight={isLight}
+                                setLight={setLight}
+                              />
+                            </div>
+                          </div>
+                        ))}
+                      </>
+                    )
+                  )}
+                </div>
+              </div>
+            )}
+          </>
+        )}
+      </Media>
     </>
   );
 }
