@@ -20,11 +20,13 @@ const App = () => {
   // const [isTransitioning, setIsTransitioning] = useState(false);
   const [selectedTag, setSelectedTag] = useState(null);
   const [isProjectSelected, setIsProjectSelected] = useState(false);
+  const [hoverProjectPreview, setHoverProjectPreview] = useState(false);
 
   const handleMouseMove = (event) => {
     setCursorPosition({ x: event.clientX, y: event.clientY });
   };
 
+  console.log("hover", hoverProjectPreview);
   return (
     <>
       <div className="App" ref={appRef} onMouseMove={handleMouseMove}>
@@ -90,6 +92,8 @@ const App = () => {
                         setSelectedTag={setSelectedTag}
                         isProjectSelected={isProjectSelected}
                         setIsProjectSelected={setIsProjectSelected}
+                        hoverProjectPreview={hoverProjectPreview}
+                        setHoverProjectPreview={setHoverProjectPreview}
                       />
                       <Home
                         showAbout={showAbout}
@@ -104,6 +108,7 @@ const App = () => {
                         setSelectedTag={setSelectedTag}
                         isProjectSelected={isProjectSelected}
                         setIsProjectSelected={setIsProjectSelected}
+                        hoverProjectPreview={hoverProjectPreview}
                       />
                     </>
                   }

@@ -26,6 +26,7 @@ function Home({
   setSelectedTag,
   isProjectSelected,
   setIsProjectSelected,
+  hoverProjectPreview,
 }) {
   useLocoScroll();
 
@@ -76,6 +77,7 @@ function Home({
                 setLight={setLight}
                 isProjectSelected={isProjectSelected}
                 setIsProjectSelected={setIsProjectSelected}
+                hoverProjectPreview={hoverProjectPreview}
               />
               {showAbout && (
                 <About

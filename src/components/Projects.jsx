@@ -18,6 +18,7 @@ function Projects({
   setCurrentTag,
   isProjectSelected,
   setIsProjectSelected,
+  hoverProjectPreview,
 }) {
   // nouvelle variable d'état
   const [selectedProject, setSelectedProject] = useState(null);
@@ -183,6 +184,15 @@ function Projects({
                     )
                   )}
                 </div>
+                {hoverProjectPreview === true && (
+                  <SelectProjectPreview
+                    projects={filteredProjects}
+                    selectedProject={selectedProjectPreview}
+                    setSelectedProject={setSelectedProjectPreview}
+                    handleProjectSelect={handleProjectSelect}
+                    isLight={isLight}
+                  />
+                )}
               </div>
             )}
           </>

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Media from "react-media";
 import "./../styles/components/SelectProjectPreview.scss";
 
 function SelectProjectPreview({
@@ -30,36 +31,75 @@ function SelectProjectPreview({
 
   return (
     <div className="container-scroll-preview">
-      {projects &&
-        projects.map((project, index) => (
-          <div
-            className={`project-preview ${
-              isSelected(project) ? "selected" : ""
-            }`}
-            key={index}
-            onClick={() => handleClick(project)}
-            onMouseEnter={() => setHoveredProject(project)}
-            onMouseLeave={() => setHoveredProject(null)}
-          >
-            <img
-              src={project.cover}
-              alt={`${project.name} preview`}
-              className={`project-preview-image ${
-                isSelected(project) ? "selected-image" : ""
-              }`}
-              onMouseEnter={(e) => e.target.classList.add("hovered")}
-              onMouseLeave={(e) => e.target.classList.remove("hovered")}
-              style={
-                isSelected(project)
-                  ? onHoverImageAnim === true
-                    ? { transform: "scale(1.1)", background: "none" }
-                    : { transform: "scale(1)" }
-                  : {}
-              }
-              key={`${project.cover}-${key}`}
-            />
-          </div>
-        ))}
+      <Media query="(max-width: 768px)">
+        {(matches) =>
+          !matches ? (
+            <>
+              {projects &&
+                projects.map((project, index) => (
+                  <div
+                    className={`project-preview ${
+                      isSelected(project) ? "selected" : ""
+                    }`}
+                    key={index}
+                    onClick={() => handleClick(project)}
+                    onMouseEnter={() => setHoveredProject(project)}
+                    onMouseLeave={() => setHoveredProject(null)}
+                  >
+                    <img
+                      src={project.cover}
+                      alt={`${project.name} preview`}
+                      className={`project-preview-image ${
+                        isSelected(project) ? "selected-image" : ""
+                      }`}
+                      onMouseEnter={(e) => e.target.classList.add("hovered")}
+                      onMouseLeave={(e) => e.target.classList.remove("hovered")}
+                      style={
+                        isSelected(project)
+                          ? onHoverImageAnim === true
+                            ? { transform: "scale(1.1)", background: "none" }
+                            : { transform: "scale(1)" }
+                          : {}
+                      }
+                      key={`${project.cover}-${key}`}
+                    />
+                  </div>
+                ))}
+            </>
+          ) : (
+            <>
+              {projects &&
+                projects.map((project, index) => (
+                  <div
+                    className={`project-preview ${
+                      isSelected(project) ? "selected" : ""
+                    }`}
+                    key={index}
+                    onClick={() => handleClick(project)}
+                    onMouseEnter={() => setHoveredProject(project)}
+                    onMouseLeave={() => setHoveredProject(null)}
+                  >
+                    <img
+                      src={project.cover}
+                      alt={`${project.name} preview`}
+                      className={`project-preview-image ${
+                        isSelected(project) ? "selected-image" : ""
+                      }`}
+                      style={
+                        isSelected(project)
+                          ? onHoverImageAnim === true
+                            ? { transform: "scale(1.1)", background: "none" }
+                            : { transform: "scale(1)" }
+                          : {}
+                      }
+                      key={`${project.cover}-${key}`}
+                    />
+                  </div>
+                ))}
+            </>
+          )
+        }
+      </Media>
     </div>
   );
 }

@@ -24,6 +24,8 @@ function Header({
   setSelectedTag,
   isProjectSelected,
   setIsProjectSelected,
+  hoverProjectPreview,
+  setHoverProjectPreview,
 }) {
   const [isHovered, setIsHovered] = useState(false);
   const [homeHovered, setHomeHovered] = useState(false);
@@ -52,6 +54,12 @@ function Header({
   useEffect(() => {
     setIsHovered(false);
   }, [showAbout]);
+
+  const displaySelectProjectPreview = () => {
+    hoverProjectPreview === true
+      ? setHoverProjectPreview(false)
+      : setHoverProjectPreview(true);
+  };
 
   return (
     <nav className="menu-container" style={{ display: "flex", width: "100%" }}>
@@ -121,7 +129,7 @@ function Header({
                 {!showAbout ? (
                   <p
                     onClick={() => setShowAbout(true)}
-                    style={{ width: "25%" }}
+                    style={{ width: "25%", textAlign: "center" }}
                   >
                     About
                   </p>
@@ -133,14 +141,22 @@ function Header({
                     Close
                   </p>
                 )}
-                <Link to="/gallery" style={{ width: "25%" }}>
+                <Link
+                  to="/gallery"
+                  style={{ width: "25%", textAlign: "center" }}
+                >
                   Gallery
                 </Link>
                 <div
                   className="button-menu-project-preview"
-                  style={{ width: "25%" }}
+                  style={{ width: "25%", textAlign: "right" }}
                 >
-                  <div className="button-open-menu">Bouton</div>
+                  <div
+                    onClick={displaySelectProjectPreview}
+                    className="button-open-menu"
+                  >
+                    Bouton
+                  </div>
                 </div>
               </div>
               <div className="menu line2">

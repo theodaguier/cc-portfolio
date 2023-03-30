@@ -34,7 +34,6 @@ const MenuNav = ({
   //     }, 300); // délai de 300 ms
   //   }
   // }, [isTransitioning]);
-  console.log(isLight);
 
   return (
     <Media query="(max-width: 768px)">
