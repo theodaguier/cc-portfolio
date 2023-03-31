@@ -12,3 +12,9 @@
 .App {
   cursor: none;
 }
+
+@media screen and (max-width: 768px) {
+  .App {
+    cursor: inherit;
+  }
+}

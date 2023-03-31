@@ -135,13 +135,20 @@ const App = () => {
           }
         </Media>
       </div>
-      <CustomCursor
-        isHovering={isHovering}
-        setIsHovering={setIsHovering}
-        cursorPosition={cursorPosition}
-        isLight={isLight}
-        setCursorPosition={setCursorPosition}
-      />
+
+      <Media query="(max-width: 768px)">
+        {(matches) =>
+          !matches ? (
+            <CustomCursor
+              isHovering={isHovering}
+              setIsHovering={setIsHovering}
+              cursorPosition={cursorPosition}
+              isLight={isLight}
+              setCursorPosition={setCursorPosition}
+            />
+          ) : null
+        }
+      </Media>
     </>
   );
 };
