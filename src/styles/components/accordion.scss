@@ -4,11 +4,11 @@
   width: 100%;
   user-select: none;
   .accordion {
-    height: 60px;
     display: flex;
     align-items: center;
-    padding-left: 28px;
+    padding-left: 32px;
     .accordion-i {
+      display: block;
       padding-right: 25px;
       img {
         width: 18px;
@@ -85,4 +85,33 @@
   align-items: center;
 
   text-align: center;
+}
+
+.accordion {
+  border-bottom: solid 1px;
+}
+
+.isLight {
+  .accordion {
+    border-bottom: solid 1px black;
+  }
+}
+
+@media (max-width: 768px) {
+  .acccordion-content {
+    flex-direction: column;
+    .bloc {
+      width: 100%;
+    }
+    .description {
+      width: 100%;
+      margin-top: 20px;
+    }
+  }
+  .accordion-i {
+    display: none;
+  }
+  .info {
+    gap: 0;
+  }
 }

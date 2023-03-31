@@ -68,21 +68,24 @@
 }
 
 @media screen and (max-width: 768px) {
-  .container-scroll-preview {
+  .scroll-projects-menu {
     width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    overflow-y: scroll;
-    border-left: none;
-    padding-left: 0;
-    margin-right: 0;
-    background: black;
-    padding-top: 66px;
-    img {
+    .container-scroll-preview {
       width: 100%;
-      height: 500px;
-      object-fit: contain;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      overflow-y: scroll;
+      border-left: none;
+      padding-left: 0;
+      margin-right: 0;
+      background: black;
+      padding-top: 66px;
     }
+  }
+  .scroll-projects-menu .container-scroll-preview .project-preview img {
+    width: 100%;
+    height: 373px;
+    object-fit: contain;
   }
 }

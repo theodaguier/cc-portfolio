@@ -24,7 +24,6 @@
       }
       .accordion {
         width: 100%;
-        height: 25%;
       }
     }
     .images-projects {
@@ -116,4 +115,32 @@
 .slick-track {
   display: flex;
   flex-direction: row;
+}
+
+// Reponsive
+
+@media (max-width: 768px) {
+  .project {
+    min-height: 100vh;
+  }
+  .project .grid .images-projects {
+    height: 60vh;
+  }
+  .project .grid .presentation .accordion-container {
+    height: auto;
+  }
+  .project .grid .presentation {
+    height: auto;
+  }
+  .accordion-container .accordion {
+    border-bottom: solid 1px;
+  }
+  .isLight {
+    .accordion-container .accordion {
+      border-bottom: solid 1px black;
+    }
+  }
+  .project .grid .presentation .image-cover {
+    height: 40vh;
+  }
 }

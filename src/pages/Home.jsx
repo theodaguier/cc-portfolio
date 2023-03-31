@@ -11,7 +11,7 @@ import Footer from "../components/Footer";
 import MenuNav from "../components/MenuNav";
 import SelectProjectPreview from "../components/SelectProjectPreview";
 
-import useLocoScroll from "./../hooks/useLocoScroll";
+import useLocoScroll from "../hooks/useLocoScroll";
 
 function Home({
   showAbout,
@@ -27,6 +27,7 @@ function Home({
   isProjectSelected,
   setIsProjectSelected,
   hoverProjectPreview,
+  setHoverProjectPreview,
 }) {
   useLocoScroll();
 
@@ -78,6 +79,7 @@ function Home({
                 isProjectSelected={isProjectSelected}
                 setIsProjectSelected={setIsProjectSelected}
                 hoverProjectPreview={hoverProjectPreview}
+                setHoverProjectPreview={setHoverProjectPreview}
               />
               {showAbout && (
                 <About

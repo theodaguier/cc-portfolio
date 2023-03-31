@@ -8,6 +8,8 @@ function SelectProjectPreview({
   setSelectedProject,
   handleProjectSelect,
   tag,
+  hoverProjectPreview,
+  setHoverProjectPreview,
 }) {
   const [key, setKey] = useState(0);
   const [hoveredProject, setHoveredProject] = useState(null);
@@ -16,9 +18,7 @@ function SelectProjectPreview({
   const handleClick = (project) => {
     setSelectedProject(project);
     handleProjectSelect(project.name);
-    if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollTo({ top: 0, behavior: "smooth" });
-    }
+    setHoverProjectPreview(false);
   };
 
   const isSelected = (project) => {
@@ -28,6 +28,8 @@ function SelectProjectPreview({
   const isHovered = (project) => {
     return project === hoveredProject;
   };
+
+  console.log("hoveredProject", hoveredProject);
 
   return (
     <div className="container-scroll-preview">

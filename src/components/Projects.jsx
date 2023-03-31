@@ -19,11 +19,12 @@ function Projects({
   isProjectSelected,
   setIsProjectSelected,
   hoverProjectPreview,
+  setHoverProjectPreview,
 }) {
   // nouvelle variable d'état
+  const scrollContainerRef = useRef(null);
   const [selectedProject, setSelectedProject] = useState(null);
   const [selectedProjectPreview, setSelectedProjectPreview] = useState(null);
-  const scrollContainerRef = useRef(null);
   const [filteredProjects, setFilteredProjects] = useState([...projects_data]); // initialiser filteredProjects avec la valeur par défaut allProjects
 
   useEffect(() => {
@@ -73,6 +74,13 @@ function Projects({
     setCurrentTag(tag);
     setIsProjectSelected(false);
   };
+
+  const handleClickSelectProjectPreview = () => {
+    setIsProjectSelected(true);
+    setHoverProjectPreview(false);
+  };
+
+  console.log("currentTag", currentTag);
 
   return (
     <>
@@ -136,6 +144,8 @@ function Projects({
                       setSelectedProject={setSelectedProjectPreview}
                       handleProjectSelect={handleProjectSelect}
                       isLight={isLight}
+                      hoverProjectPreview={hoverProjectPreview}
+                      setHoverProjectPreview={setHoverProjectPreview}
                     />
                   </div>
                 </div>
@@ -185,13 +195,26 @@ function Projects({
                   )}
                 </div>
                 {hoverProjectPreview === true && (
-                  <SelectProjectPreview
-                    projects={filteredProjects}
-                    selectedProject={selectedProjectPreview}
-                    setSelectedProject={setSelectedProjectPreview}
-                    handleProjectSelect={handleProjectSelect}
-                    isLight={isLight}
-                  />
+                  <div
+                    className="scroll-projects-menu"
+                    onClick={handleClickSelectProjectPreview}
+                  >
+                    <div
+                      onClick={() =>
+                        scrollContainerRef.current.scrollTo({ top: 0 })
+                      }
+                    >
+                      <SelectProjectPreview
+                        projects={filteredProjects}
+                        selectedProject={selectedProjectPreview}
+                        setSelectedProject={setSelectedProjectPreview}
+                        handleProjectSelect={handleProjectSelect}
+                        isLight={isLight}
+                        hoverProjectPreview={hoverProjectPreview}
+                        setHoverProjectPreview={setHoverProjectPreview}
+                      />
+                    </div>
+                  </div>
                 )}
               </div>
             )}

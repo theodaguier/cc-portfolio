@@ -15,9 +15,7 @@ const App = () => {
   const [showAbout, setShowAbout] = useState(false);
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
-
   const [currentTag, setCurrentTag] = useState("All");
-  // const [isTransitioning, setIsTransitioning] = useState(false);
   const [selectedTag, setSelectedTag] = useState(null);
   const [isProjectSelected, setIsProjectSelected] = useState(false);
   const [hoverProjectPreview, setHoverProjectPreview] = useState(false);
@@ -26,7 +24,6 @@ const App = () => {
     setCursorPosition({ x: event.clientX, y: event.clientY });
   };
 
-  console.log("hover", hoverProjectPreview);
   return (
     <>
       <div className="App" ref={appRef} onMouseMove={handleMouseMove}>
@@ -43,6 +40,10 @@ const App = () => {
                         setShowAbout={setShowAbout}
                         isLight={isLight}
                         setLight={setLight}
+                        currentTag={currentTag}
+                        setCurrentTag={setCurrentTag}
+                        isProjectSelected={isProjectSelected}
+                        setIsProjectSelected={setIsProjectSelected}
                       />
                       <Home
                         showAbout={showAbout}
@@ -94,6 +95,8 @@ const App = () => {
                         setIsProjectSelected={setIsProjectSelected}
                         hoverProjectPreview={hoverProjectPreview}
                         setHoverProjectPreview={setHoverProjectPreview}
+                        isProjectSelected={isProjectSelected}
+                        setIsProjectSelected={setIsProjectSelected}
                       />
                       <Home
                         showAbout={showAbout}
@@ -109,6 +112,7 @@ const App = () => {
                         isProjectSelected={isProjectSelected}
                         setIsProjectSelected={setIsProjectSelected}
                         hoverProjectPreview={hoverProjectPreview}
+                        setHoverProjectPreview={setHoverProjectPreview}
                       />
                     </>
                   }

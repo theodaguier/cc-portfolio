@@ -16,23 +16,20 @@ function TagFilter({
   currentTag,
   setCurrentTag,
   handleTagClick,
-  isTransitioning,
-  setIsTransitioning,
   selectedTag,
   setSelectedTag,
-  tag,
 }) {
-  const handleSelectedTag = () => {
+  const handleSelectedTag = (tag) => {
     setSelectedTag(tag);
     setCurrentTag(tag);
   };
 
   return (
-    <ul className="tag-nav" onClick={() => setIsTransitioning(true)}>
+    <ul className="tag-nav">
       {tags.map((tag, index) => (
         <li
           key={index}
-          className={`tag ${tag === selectedTag ? "active" : ""}`}
+          className={`tag ${tag === currentTag ? "active" : ""}`}
           onClick={() => {
             handleTagClick(tag);
             handleSelectedTag(tag);

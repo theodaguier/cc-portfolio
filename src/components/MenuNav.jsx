@@ -27,14 +27,6 @@ const MenuNav = ({
     setSelectedTag(tag);
   }
 
-  // useEffect(() => {
-  //   if (isTransitioning) {
-  //     setTimeout(() => {
-  //       setIsTransitioning(false); // retire la classe CSS de transition
-  //     }, 300); // délai de 300 ms
-  //   }
-  // }, [isTransitioning]);
-
   return (
     <Media query="(max-width: 768px)">
       {(matches) =>
@@ -49,6 +41,7 @@ const MenuNav = ({
                 <li>Work</li>
                 <TagFilter
                   currentTag={currentTag}
+                  setCurrentTag={setCurrentTag}
                   setSelectedTag={setSelectedTag}
                   handleTagClick={handleTagClick} // passe la fonction de rappel à TagFilter
                 />
@@ -85,11 +78,17 @@ const MenuNav = ({
             </div>
           </>
         ) : (
-          <TagFilter
-            currentTag={currentTag}
-            setSelectedTag={setSelectedTag}
-            handleTagClick={handleTagClick} // passe la fonction de rappel à TagFilter
-          />
+          <div
+            onClick={() => setIsProjectSelected(false)}
+            style={{ width: "100%" }}
+          >
+            <TagFilter
+              currentTag={currentTag}
+              setCurrentTag={setCurrentTag}
+              setSelectedTag={setSelectedTag}
+              handleTagClick={handleTagClick} // passe la fonction de rappel à TagFilter
+            />
+          </div>
         )
       }
     </Media>
