@@ -159,7 +159,10 @@ function Header({
                   </div>
                 </div>
               </div>
-              <div className="menu line2">
+              <div
+                className="menu line2"
+                style={{ position: "relative", top: "20px" }}
+              >
                 <MenuNav
                   currentTag={currentTag}
                   setCurrentTag={setCurrentTag}

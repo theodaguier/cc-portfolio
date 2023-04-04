@@ -101,12 +101,17 @@
   transition: all 0.8s;
 }
 
+.menu-mobile {
+  border-bottom: solid 1px;
+}
+
 // Mobile
 
 @media screen and (max-width: 768px) {
   .menu-container {
     font-size: 12px;
     flex-direction: column;
+    border-bottom: none;
     .menu {
       width: 100%;
       .buttons {
@@ -116,7 +121,6 @@
   }
   .line2 {
     padding-top: 5px;
-    border-top: solid 1px;
     display: flex;
   }
 }
