@@ -31,9 +31,9 @@ function ProjectsPhoto({
     arrows: false,
     infinite: true,
     speed: 700,
-    slidesToShow: 2, // affiche deux images à la fois
+    slidesToShow: 1, // affiche une image
     slidesToScroll: 1, // fait défiler deux images à la fois
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 2500,
   };
 
@@ -94,7 +94,7 @@ function ProjectsPhoto({
               onClick={() => {
                 sliderTopNav("prec");
               }}
-              src={!isLight === true ? ArrowLeftWhite : ArrowLeftBlack}
+              src={isLight === true ? ArrowLeftWhite : ArrowLeftBlack}
               alt=""
               style={{ width: "20px" }}
             />
@@ -103,7 +103,7 @@ function ProjectsPhoto({
               onClick={() => {
                 sliderTopNav("suiv");
               }}
-              src={!isLight === true ? ArrowRightWhite : ArrowRightBlack}
+              src={isLight === true ? ArrowRightWhite : ArrowRightBlack}
               alt=""
               style={{ width: "20px" }}
             />

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import i18n from "i18next";
 import Media from "react-media";
 
 import "../styles/components/header.scss";
@@ -29,13 +30,15 @@ function Header({
 }) {
   const [isHovered, setIsHovered] = useState(false);
   const [homeHovered, setHomeHovered] = useState(false);
+  const [selectedLanguage, setSelectedLanguage] = useState(i18n.language);
+  console.log("selectedLanguage", i18n.language);
 
   const toggleLight = () => {
     setLight(!isLight);
     if (isLight) {
-      document.querySelector(".App").classList.remove("light");
+      document.querySelector(".App").classList.remove("dark");
     } else {
-      document.querySelector(".App").classList.add("light");
+      document.querySelector(".App").classList.add("dark");
     }
     localStorage.setItem("isLight", !isLight.toString());
   };
@@ -61,6 +64,12 @@ function Header({
       : setHoverProjectPreview(true);
   };
 
+  // Changer de langue
+  const handleLanguageClick = (lang) => {
+    i18n.changeLanguage(lang);
+    setSelectedLanguage(lang);
+  };
+
   return (
     <nav className="menu-container" style={{ display: "flex", width: "100%" }}>
       <Media query="(max-width: 768px)">
@@ -82,31 +91,46 @@ function Header({
                 {!showAbout ? (
                   <p
                     onClick={() => setShowAbout(true)}
-                    style={{ width: "100%" }}
+                    style={{ width: "75%" }}
                   >
                     About
                   </p>
                 ) : (
                   <p
                     onClick={() => setShowAbout(false)}
-                    style={{ width: "100%" }}
+                    style={{ width: "75%" }}
                   >
                     Close
                   </p>
                 )}
-                <Link to="/gallery" style={{ width: "100%" }}>
+                <Link to="/gallery" style={{ width: "75%" }}>
                   Gallery
                 </Link>
               </div>
               <div className="buttons">
                 <div className="lang">
-                  <p>(En)</p>
-                  <p>(Fr)</p>
-                  <p>(Es)</p>
+                  <p
+                    onClick={() => handleLanguageClick("en")}
+                    className={selectedLanguage === "en" ? "active" : ""}
+                  >
+                    (En)
+                  </p>
+                  <p
+                    onClick={() => handleLanguageClick("fr")}
+                    className={selectedLanguage === "fr" ? "active" : ""}
+                  >
+                    (Fr)
+                  </p>
+                  <p
+                    onClick={() => handleLanguageClick("es")}
+                    className={selectedLanguage === "es" ? "active" : ""}
+                  >
+                    (Es)
+                  </p>
                 </div>
                 <img
                   className="icon"
-                  src={isLight ? moon : sun}
+                  src={isLight ? sun : moon}
                   alt="sun"
                   onClick={toggleLight}
                 />

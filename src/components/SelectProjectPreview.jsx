@@ -29,8 +29,6 @@ function SelectProjectPreview({
     return project === hoveredProject;
   };
 
-  console.log("hoveredProject", hoveredProject);
-
   return (
     <div className="container-scroll-preview">
       <Media query="(max-width: 768px)">
@@ -49,7 +47,7 @@ function SelectProjectPreview({
                     onMouseLeave={() => setHoveredProject(null)}
                   >
                     <img
-                      src={project.cover}
+                      src={project.thumbnail}
                       alt={`${project.name} preview`}
                       className={`project-preview-image ${
                         isSelected(project) ? "selected-image" : ""
@@ -82,7 +80,7 @@ function SelectProjectPreview({
                     onMouseLeave={() => setHoveredProject(null)}
                   >
                     <img
-                      src={project.cover}
+                      src={project.thumnail}
                       alt={`${project.name} preview`}
                       className={`project-preview-image ${
                         isSelected(project) ? "selected-image" : ""

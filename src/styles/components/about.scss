@@ -11,22 +11,19 @@
   top: 0;
   left: 0;
   z-index: 999;
-  background: linear-gradient(rgba(12, 13, 13, 13), rgba(12, 13, 13, 0.96));
-  border-right: solid 1px white;
+  background: linear-gradient(white 80%, rgba(255, 255, 255, 0.9));
+  border-right: solid 1px black;
   transition: all 0.5s;
+  padding: 17px;
+  font-size: $font-XS;
+  line-height: 15px;
   a:hover {
     color: $color-pink;
   }
   a.active {
     color: $color-pink;
   }
-  .text-container {
-    font-size: $font-XS;
-    padding-left: 17px;
-    padding-right: 17px;
-    padding-top: 21px;
-    line-height: 15px;
-  }
+
   .presentation {
     p {
       padding-bottom: 15px;
@@ -46,17 +43,18 @@
   text-decoration: underline;
 }
 
-.light {
+.dark {
   .about {
-    background: linear-gradient(white 80%, rgba(255, 255, 255, 0.6));
-    border-right: solid 1px black;
+    background: linear-gradient(rgba(12, 13, 13, 13), rgba(12, 13, 13, 0.96));
+    border-right: solid 1px white;
     transition: background-color 0.5s ease;
   }
 }
 
-.light {
+.dark {
   .about-buttons {
-    border-bottom: solid 1px black;
+    background: linear-gradient(rgba(12, 13, 13, 13), rgba(12, 13, 13, 0.96));
+    border-bottom: solid 1px white;
   }
 }
 
@@ -66,9 +64,6 @@
   align-items: center;
   font-size: $font-XS;
   height: 23px;
-  padding-left: 17px;
-  padding-right: 17px;
-  padding-top: 17px;
   text-decoration: underline;
 }
 
@@ -94,5 +89,17 @@
 }
 
 .about-buttons {
-  display: block;
+  display: none;
+}
+
+.row {
+  position: absolute;
+  bottom: 0;
+  padding-right: 17px;
+}
+
+@media screen and (max-width: 768px) {
+  .about-buttons {
+    display: block;
+  }
 }

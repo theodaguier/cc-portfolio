@@ -7,12 +7,14 @@
   top: 0;
   left: 0;
   width: 85%;
+  height: 4%;
   z-index: 999;
   -webkit-backdrop-filter: blur(2px);
   backdrop-filter: blur(2px);
   position: sticky;
   transition: all 0.8s;
-  border-bottom: solid 1px;
+  border-bottom: solid 1px black;
+  color: #000;
   .menu {
     display: flex;
     width: 85%;
@@ -87,14 +89,16 @@
   }
 }
 
-.light {
+.dark {
   .menu-container {
-    background: linear-gradient(white 0%, rgba(255, 255, 255, 0.8));
+    color: white;
+    border-bottom: solid 1px white;
+    background: linear-gradient(rgba(12, 13, 13, 13), rgba(12, 13, 13, 0.8));
   }
 }
 
 .menu-container {
-  background: linear-gradient(rgba(12, 13, 13, 13), rgba(12, 13, 13, 0.8));
+  background: linear-gradient(white 0%, rgba(255, 255, 255, 0.8));
 }
 
 .light .menu-container {
@@ -123,4 +127,18 @@
     padding-top: 5px;
     display: flex;
   }
+}
+
+p:hover {
+  color: $color-pink;
+}
+p.active {
+  color: $color-pink;
+}
+
+a:hover {
+  color: $color-pink;
+}
+a.active {
+  color: $color-pink;
 }

@@ -80,8 +80,6 @@ function Projects({
     setHoverProjectPreview(false);
   };
 
-  console.log("currentTag", currentTag);
-
   return (
     <>
       <Media query="(max-width: 768px)">

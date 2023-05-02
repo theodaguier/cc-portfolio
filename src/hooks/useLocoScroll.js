@@ -15,5 +15,3 @@ export default function useLocoScroll() {
 
   return scroll;
 }
-
-console.log("Hello World!");

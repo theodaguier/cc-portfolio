@@ -21,6 +21,7 @@ function AccordionContent({ project }) {
               {project.bind && <p>Bind: {project.bind}</p>}
               {project.size && <p>Size: {project.size}</p>}
               {project.supervisor && <p>Supervisor: {project.supervisor}</p>}
+              {project.talent && <p>Talents: {project.talent}</p>}
             </div>
             {project.imageCollected && (
               <div

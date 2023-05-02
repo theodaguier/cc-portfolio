@@ -22,11 +22,11 @@ function Accordion({ isLight, setLight, project }) {
                 <div className="accordion-i">
                   <img
                     className="chevron"
-                    src={isLight ? chevronDark : chevronLight}
+                    src={isLight ? chevronLight : chevronDark}
                     alt="chevron"
                     style={{
                       width: 16,
-                      height: 20,
+                      height: 16,
                       transform: `rotate(${isExpanded ? 90 : 0}deg)`,
                     }}
                   />

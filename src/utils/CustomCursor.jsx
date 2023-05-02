@@ -48,11 +48,11 @@ const CustomCursor = ({
         backgroundImage: `url(${
           isHovering
             ? isLight
-              ? cursorBB
-              : cursorBW
+              ? cursorBW
+              : cursorBB
             : isLight
-            ? cursorAB
-            : cursorAW
+            ? cursorAW
+            : cursorAB
         })`,
         backgroundRepeat: "no-repeat",
         zIndex: 9999,

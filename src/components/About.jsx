@@ -61,7 +61,7 @@ function About({ isLight, setLight, showAbout, setShowAbout }) {
           <p className="paragraph">
             <img
               className="arrow"
-              src={!isLight ? arrowDRW : arrowDRB}
+              src={!isLight ? arrowDRB : arrowDRW}
               alt="icon"
             />{" "}
             Contact
@@ -98,7 +98,7 @@ function About({ isLight, setLight, showAbout, setShowAbout }) {
           <p className="paragraph">
             <img
               className="arrow"
-              src={!isLight ? arrowDRW : arrowDRB}
+              src={!isLight ? arrowDRB : arrowDRW}
               alt="icon"
             />{" "}
             Awards
@@ -116,7 +116,7 @@ function About({ isLight, setLight, showAbout, setShowAbout }) {
           <p className="paragraph">
             <img
               className="arrow"
-              src={!isLight ? arrowDRW : arrowDRB}
+              src={!isLight ? arrowDRB : arrowDRW}
               alt="icon"
             />{" "}
             Press
@@ -140,6 +140,9 @@ function About({ isLight, setLight, showAbout, setShowAbout }) {
             </span>
           </p>
         </div>
+      </div>
+
+      <div className="row">
         <div className="section">
           <div className="paragraph">
             © 2023 Cristina Casañas.

@@ -144,3 +144,20 @@
     height: 40vh;
   }
 }
+
+.carousel {
+  position: relative; /* Ajouter un positionnement relatif */
+}
+
+.carousel-buttons {
+  position: absolute; /* Ajouter un positionnement absolu */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+*:focus-visible {
+  outline: none;
+}
