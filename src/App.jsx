@@ -8,6 +8,7 @@ import Header from "./components/Header";
 import Home from "./pages/Home";
 import Gallery from "./pages/Gallery";
 import CustomCursor from "./utils/CustomCursor";
+import AdminPage from "./admin/adminPage";
 
 const App = () => {
   const appRef = useRef();
@@ -27,6 +28,9 @@ const App = () => {
   return (
     <>
       <div className="App" ref={appRef} onMouseMove={handleMouseMove}>
+        <Routes>
+          <Route path="/admin" element={<AdminPage />} />
+        </Routes>
         <Media query="(max-width: 768px)">
           {(matches) =>
             !matches ? (

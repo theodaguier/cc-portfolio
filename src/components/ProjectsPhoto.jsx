@@ -23,6 +23,9 @@ function ProjectsPhoto({
   const sliderBot = useRef();
 
   const imagesArray = project ? Object.values(project.images) : [];
+  const videosArray = project ? [project.video] : [];
+
+  console.log("video array", videosArray);
 
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -76,38 +79,53 @@ function ProjectsPhoto({
                 </div>
               ))}
             </Slider>
+            {project.video && (
+              <div className="carousel">
+                <div className="inner">
+                  {videosArray.map((item, index) => (
+                    <div key={shortid.generate()} className="column">
+                      <video width="320" height="240" controls>
+                        <source src={item} type="video/mp4" />
+                      </video>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
 
-          <div
-            className="carousel-buttons"
-            style={{
-              position: "absolute",
-              width: "100%",
-              display: "flex",
-              justifyContent: "space-between",
-              paddingLeft: "20px",
-              paddingRight: "20px",
-            }}
-          >
-            <img
-              className="button-arrow"
-              onClick={() => {
-                sliderTopNav("prec");
+          {imagesArray.length > 1 && (
+            <div
+              className="carousel-buttons"
+              style={{
+                position: "absolute",
+                width: "100%",
+                display: "flex",
+                justifyContent: "space-between",
+                paddingLeft: "20px",
+                paddingRight: "20px",
               }}
-              src={isLight === true ? ArrowLeftWhite : ArrowLeftBlack}
-              alt=""
-              style={{ width: "20px" }}
-            />
-            <img
-              className="button-arrow"
-              onClick={() => {
-                sliderTopNav("suiv");
-              }}
-              src={isLight === true ? ArrowRightWhite : ArrowRightBlack}
-              alt=""
-              style={{ width: "20px" }}
-            />
-          </div>
+            >
+              <img
+                className="button-arrow"
+                onClick={() => {
+                  sliderTopNav("prec");
+                }}
+                src={isLight === true ? ArrowLeftWhite : ArrowLeftBlack}
+                alt=""
+                style={{ width: "20px" }}
+              />
+              <img
+                className="button-arrow"
+                onClick={() => {
+                  sliderTopNav("suiv");
+                }}
+                src={isLight === true ? ArrowRightWhite : ArrowRightBlack}
+                alt=""
+                style={{ width: "20px" }}
+              />
+            </div>
+          )}
         </div>
       </div>
     </div>

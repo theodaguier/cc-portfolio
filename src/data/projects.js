@@ -89,6 +89,8 @@ const projects_data = [
       img1: "./../assets/vid/COVER_SHEMOVES_SHE.mov",
       img2: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1678317578/CC_Portfolio/OENA/oe_3_aliyqf.png",
     },
+    video:
+      "https://res.cloudinary.com/dj9n9pffx/video/upload/v1684961628/CC_Portfolio/She%20moves%20she/Fashionfilm_1_iepfeg.mp4",
     year: 2021,
     author: "C. Casañas",
     tags: ["All", "Art Direction", "Photography", "Graphic Design"],

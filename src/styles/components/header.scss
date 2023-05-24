@@ -129,16 +129,18 @@
   }
 }
 
-p:hover {
-  color: $color-pink;
-}
-p.active {
-  color: $color-pink;
-}
+.menu-container {
+  p:hover {
+    color: $color-pink;
+  }
+  p.active {
+    color: $color-pink;
+  }
 
-a:hover {
-  color: $color-pink;
-}
-a.active {
-  color: $color-pink;
+  a:hover {
+    color: $color-pink;
+  }
+  a.active {
+    color: $color-pink;
+  }
 }
