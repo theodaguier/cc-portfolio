@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import shortid from "shortid";
 
 import Slider from "react-slick";
@@ -23,9 +23,6 @@ function ProjectsPhoto({
   const sliderBot = useRef();
 
   const imagesArray = project ? Object.values(project.images) : [];
-  const videosArray = project ? [project.video] : [];
-
-  console.log("video array", videosArray);
 
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -34,13 +31,15 @@ function ProjectsPhoto({
     arrows: false,
     infinite: true,
     speed: 700,
-    slidesToShow: 1, // affiche une image
-    slidesToScroll: 1, // fait défiler deux images à la fois
+    slidesToShow: 1,
+    slidesToScroll: 1,
     autoplay: false,
     autoplaySpeed: 2500,
   };
 
-  const sliderTopNav = (direction) => {
+  const sliderTopNav = (direction, event) => {
+    event.preventDefault(); // Prevent the default anchor tag behavior
+    event.stopPropagation();
     if (sliderTop && sliderTop.current) {
       if (direction === "prec") {
         sliderTop.current.slickPrev();
@@ -52,7 +51,7 @@ function ProjectsPhoto({
   };
 
   return (
-    <div className="grid">
+    <div className="grid" onClick={(event) => event.stopPropagation()}>
       {project && (
         <div className="presentation">
           <img
@@ -65,36 +64,26 @@ function ProjectsPhoto({
           <Accordion project={project} />
         </div>
       )}
-      <div className="images-projects">
-        <div className="carousel">
-          <div className="inner">
-            <Slider
-              {...sliderTopSettings}
-              ref={sliderTop}
-              className="SliderTop"
-            >
-              {imagesArray.map((item, index) => (
-                <div key={shortid.generate()} className="column">
-                  <img className="sliderTopUnique_IMG" src={item} />
-                </div>
-              ))}
-            </Slider>
-            {project.video && (
-              <div className="carousel">
-                <div className="inner">
-                  {videosArray.map((item, index) => (
-                    <div key={shortid.generate()} className="column">
-                      <video width="320" height="240" controls>
-                        <source src={item} type="video/mp4" />
-                      </video>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-          </div>
 
-          {imagesArray.length > 1 && (
+      <div className="images-projects">
+        {project.video ? ( // Check if the project has a video URL
+          <video className="video" src={project.video} controls />
+        ) : (
+          <div className="carousel">
+            <div className="inner">
+              <Slider
+                {...sliderTopSettings}
+                ref={sliderTop}
+                className="SliderTop"
+              >
+                {imagesArray.map((item, index) => (
+                  <div key={shortid.generate()} className="column">
+                    <img className="sliderTopUnique_IMG" src={item} />
+                  </div>
+                ))}
+              </Slider>
+            </div>
+
             <div
               className="carousel-buttons"
               style={{
@@ -108,8 +97,9 @@ function ProjectsPhoto({
             >
               <img
                 className="button-arrow"
-                onClick={() => {
-                  sliderTopNav("prec");
+                onClick={(event) => {
+                  event.preventDefault(); // Prevent the default anchor tag behavior
+                  sliderTopNav("prec", event);
                 }}
                 src={isLight === true ? ArrowLeftWhite : ArrowLeftBlack}
                 alt=""
@@ -117,16 +107,17 @@ function ProjectsPhoto({
               />
               <img
                 className="button-arrow"
-                onClick={() => {
-                  sliderTopNav("suiv");
+                onClick={(event) => {
+                  event.preventDefault(); // Prevent the default anchor tag behavior
+                  sliderTopNav("suiv", event);
                 }}
                 src={isLight === true ? ArrowRightWhite : ArrowRightBlack}
                 alt=""
                 style={{ width: "20px" }}
               />
             </div>
-          )}
-        </div>
+          </div>
+        )}
       </div>
     </div>
   );

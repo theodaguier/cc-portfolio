@@ -35,20 +35,21 @@ const projects_data = [
     description:
       'The packaging design pays tribute to the women of Bergasa, La Rioja, known as "Las Chiguitas," who harvested the vines in 1936 during the Spanish Civil War. Despite being left alone in the fields, these women were responsible for cultivating the vines in a natural way to ensure their growth and self-preservation.\nThis label design draws on the rich history of these women, and is based on a collage composition of photographs from 1909, taken from my own family archives. Through this nostalgic nod to the past, the design brings a touch of the past into the present, celebrating the bravery and resilience of these women.',
     thumbnail:
-      "https://res.cloudinary.com/dj9n9pffx/image/upload/v1679776444/02_WEB_PLANTILLA_MINIATURAS_fazot9.png",
+      "https://res.cloudinary.com/dj9n9pffx/image/upload/v1685400588/CC_Portfolio/LAS_CHIGUITAS/MINIAT-WEB_LASCHIGUITAS_pu2msu.png",
     cover:
-      "https://res.cloudinary.com/dj9n9pffx/image/upload/v1679776444/02_WEB_PLANTILLA_MINIATURAS_fazot9.png",
+      "https://res.cloudinary.com/dj9n9pffx/image/upload/v1685403039/CC_Portfolio/LAS_CHIGUITAS/COVER_CHIGUITAS_sreqhi.png",
     images: {
-      img1: "https://res.cloudinary.com/dj9n9pffx/image/upload/q_auto:best/v1678314534/CC_Portfolio/LAS_CHIGUITAS/chig_2_x9b7uu.png",
-      img2: "https://res.cloudinary.com/dj9n9pffx/image/upload/q_auto:best/v1678314541/CC_Portfolio/LAS_CHIGUITAS/chig_3_q3tmlg.png",
-      img3: "https://res.cloudinary.com/dj9n9pffx/image/upload/q_auto:best/v1678314546/CC_Portfolio/LAS_CHIGUITAS/chig_4_gy2d3e.jpg",
-      img4: "https://res.cloudinary.com/dj9n9pffx/image/upload/q_auto:best/v1678383418/CC_Portfolio/LAS_CHIGUITAS/tatarabuela_kh2r1c.jpg",
+      img1: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1685399309/CC_Portfolio/LAS_CHIGUITAS/06_CHIGUITAS_hueqdu.png",
+      img2: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1685399308/CC_Portfolio/LAS_CHIGUITAS/04_CHIGUITAS_jlvkly.jpg",
+      img3: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1685399308/CC_Portfolio/LAS_CHIGUITAS/05_CHIGUITAS_qyw1pg.jpg",
+      img4: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1685399308/CC_Portfolio/LAS_CHIGUITAS/01_CHIGUITAS_2_xwrfnq.gif",
+      img5: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1685399308/CC_Portfolio/LAS_CHIGUITAS/03_CHIGUITAS_ywo0bc.jpg",
     },
     year: 2021,
     author: "C. Casañas",
     tags: ["All", "Packaging"],
     coverCollage: "C. Casañas",
-    typeface: "Merchanto Reg, Baskerville No. 2 Regular",
+    typeface: "Merchanto Reg, Baskerville Regular",
     paper: "Laid 180gr",
     size: "89*100 /mm",
     award:
@@ -59,16 +60,16 @@ const projects_data = [
     description:
       "The cover design of this magazine serves as a visual representation of the cultural shift towards a 'new male gaze', characterized by the rejection of traditional gender norms and the embrace of individuality. The bold and striking nature of the design, combined with its message of self-expression, is accentuated by the use of a bold typography. The use of a bold typeface adds emphasis to the central message of the design and further emphasizes the defiance of traditional gender norms.\nThe cover design aims to spark a conversation about the evolving norms of masculinity. For example, the use of makeup, traditionally associated with femininity, and non-binary clothing, deviating from traditional masculine attire, serves to subvert dominant cultural norms and expectations surrounding masculinity. In doing so, the cover design serves as a catalyst for change and promotes a more inclusive and accepting society.",
     thumbnail:
-      "https://res.cloudinary.com/dj9n9pffx/image/upload/v1681418305/MINIATURA-OENA_i252rj.png",
+      "https://res.cloudinary.com/dj9n9pffx/image/upload/v1681418305/CC_Portfolio/OENA/MINIATURA-OENA_i252rj.png",
     cover:
-      "https://res.cloudinary.com/dj9n9pffx/image/upload/v1681419151/COVER-OENA_yvoaon.png",
+      "https://res.cloudinary.com/dj9n9pffx/image/upload/v1681418305/CC_Portfolio/OENA/OENA_COVERS_ho2jg2.gif",
     images: {
       img1: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1681422299/CC_Portfolio/OENA/0OENA-2_yhgdhj.png",
       img2: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1681422299/CC_Portfolio/OENA/01OENA-2_oolzpy.png",
       img3: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1681425710/CC_Portfolio/OENA/OENA-2_cdcjee.png",
-      img4: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1681418305/OENA_COVERS_ho2jg2.gif",
-      img5: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1681420649/02OENA_xgmqal.png",
-      img6: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1681418304/PROJECT_1LOGOGIF_ci9nhj.gif",
+      img4: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1681418305/CC_Portfolio/OENA/OENA_COVERS_ho2jg2.gif",
+      img5: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1681420649/CC_Portfolio/OENA/02OENA_xgmqal.png",
+      img6: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1681418304/CC_Portfolio/OENA/PROJECT_1LOGOGIF_ci9nhj.gif",
     },
     year: 2023,
     author: "C. Casañas",
@@ -83,6 +84,8 @@ const projects_data = [
     name: "She moves she",
     description:
       'The packaging design pays tribute to the women of Bergasa, La Rioja, known as "Las Chiguitas,"\n who harvested the vines in 1936 during the Spanish Civil War. Despite being left alone in the\nfields, these women were responsible for cultivating the vines in a natural way to ensure their\ngrowth and self-preservation.\nThis label design draws on the rich history of these women, and is based on a collage composition\nof photographs from 1909, taken from my own family archives.\nThrough this nostalgic nod to the past, the design brings a touch of the past into the present,\n celebrating the bravery and resilience of these women.',
+    thumbnail:
+      "https://res.cloudinary.com/dj9n9pffx/image/upload/v1681418305/CC_Portfolio/OENA/MINIATURA-OENA_i252rj.png",
     cover:
       "https://res.cloudinary.com/dj9n9pffx/image/upload/v1679792323/COVER_SHEMOVES_SHE-min_dcl9f4.gif",
     images: {
