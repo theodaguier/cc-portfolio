@@ -75,10 +75,10 @@ const ScrollGalleryImage = () => {
     >
       <div style={{ height: `${imageHeight}px` }} />{" "}
       {/* empty div to adjust the top position */}
-      {images.map((img) => (
+      {images.map((img, index) => (
         <img
           src={img.src}
-          key={shortid.generate()}
+          key={index}
           style={{
             height: `${imageHeight}px`,
             width: "100%",

@@ -67,7 +67,16 @@ function ProjectsPhoto({
 
       <div className="images-projects">
         {project.video ? ( // Check if the project has a video URL
-          <video className="video" src={project.video} controls />
+          <video
+            className="video"
+            src={project.video}
+            style={{ width: "100%" }}
+            controls
+            autoPlay
+            loop
+            muted
+            playsInline
+          />
         ) : (
           <div className="carousel">
             <div className="inner">
@@ -101,7 +110,7 @@ function ProjectsPhoto({
                   event.preventDefault(); // Prevent the default anchor tag behavior
                   sliderTopNav("prec", event);
                 }}
-                src={isLight === true ? ArrowLeftWhite : ArrowLeftBlack}
+                src={!isLight === true ? ArrowLeftWhite : ArrowLeftBlack}
                 alt=""
                 style={{ width: "20px" }}
               />
@@ -111,7 +120,7 @@ function ProjectsPhoto({
                   event.preventDefault(); // Prevent the default anchor tag behavior
                   sliderTopNav("suiv", event);
                 }}
-                src={isLight === true ? ArrowRightWhite : ArrowRightBlack}
+                src={!isLight === true ? ArrowRightWhite : ArrowRightBlack}
                 alt=""
                 style={{ width: "20px" }}
               />

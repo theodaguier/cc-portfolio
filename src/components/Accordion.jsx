@@ -19,10 +19,13 @@ function Accordion({ isLight, setLight, project }) {
           matches ? (
             <div className="accordion-container" onClick={toggleAccordion}>
               <div className="accordion">
+                <div className="title-project">
+                  <p>{project.name}</p>
+                </div>
                 <div className="accordion-i">
                   <img
                     className="chevron"
-                    src={isLight ? chevronLight : chevronDark}
+                    src={!isLight ? chevronDark : chevronLight}
                     alt="chevron"
                     style={{
                       width: 16,
@@ -30,9 +33,6 @@ function Accordion({ isLight, setLight, project }) {
                       transform: `rotate(${isExpanded ? 90 : 0}deg)`,
                     }}
                   />
-                </div>
-                <div className="title-project">
-                  <p>{project.name}</p>
                 </div>
               </div>
               {isExpanded && <AccordionContent project={project} />}

@@ -84,22 +84,33 @@
   border-bottom: solid 1px black;
 }
 
+.accordion-i {
+  display: none;
+}
+
 @media (max-width: 768px) {
-  .acccordion-content {
-    flex-direction: column;
+  .accordion-container {
+    .acccordion-content {
+      flex-direction: column;
 
-    .bloc {
-      width: 100%;
+      .bloc {
+        width: 100%;
+      }
+
+      .description {
+        width: 100%;
+        margin-top: 20px;
+      }
     }
-
-    .description {
-      width: 100%;
-      margin-top: 20px;
+    .accordion {
+      padding-left: 15px;
+      padding-right: 15px;
+      justify-content: space-between;
     }
   }
 
   .accordion-i {
-    display: none;
+    display: block;
   }
 
   .info {

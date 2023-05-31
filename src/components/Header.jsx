@@ -31,7 +31,6 @@ function Header({
   const [isHovered, setIsHovered] = useState(false);
   const [homeHovered, setHomeHovered] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState(i18n.language);
-  console.log("selectedLanguage", i18n.language);
 
   const toggleLight = () => {
     setLight(!isLight);
@@ -177,12 +176,7 @@ function Header({
                   className="button-menu-project-preview"
                   style={{ width: "25%", textAlign: "right" }}
                 >
-                  <div
-                    onClick={displaySelectProjectPreview}
-                    className="button-open-menu"
-                  >
-                    Bouton
-                  </div>
+                  <div className="button-open-menu">Bouton</div>
                 </div>
               </div>
               <div

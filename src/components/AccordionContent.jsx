@@ -1,12 +1,12 @@
 import "./../styles/components/accordion.scss";
 
-function AccordionContent({ project }) {
+export default function AccordionContent({ project }) {
   return (
     <>
       <div className="txt-container">
-        <p className="year">
+        <div className="year">
           <p>{project.year}</p>
-        </p>
+        </div>
         <div className="acccordion-content">
           <div className="bloc">
             <div className="info">
@@ -37,8 +37,8 @@ function AccordionContent({ project }) {
               {project.description
                 .toString()
                 .split("\n")
-                .map((line) => (
-                  <p>{line}</p>
+                .map((line, index) => (
+                  <p key={index}>{line}</p>
                 ))}
             </div>
           )}
@@ -47,5 +47,3 @@ function AccordionContent({ project }) {
     </>
   );
 }
-
-export default AccordionContent;

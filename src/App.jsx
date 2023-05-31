@@ -107,8 +107,6 @@ const App = () => {
                         setCurrentTag={setCurrentTag}
                         selectedTag={selectedTag}
                         setSelectedTag={setSelectedTag}
-                        isProjectSelected={isProjectSelected}
-                        setIsProjectSelected={setIsProjectSelected}
                         hoverProjectPreview={hoverProjectPreview}
                         setHoverProjectPreview={setHoverProjectPreview}
                         isProjectSelected={isProjectSelected}

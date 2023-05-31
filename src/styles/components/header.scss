@@ -116,6 +116,7 @@
     font-size: 12px;
     flex-direction: column;
     border-bottom: none;
+    border: none;
     .menu {
       width: 100%;
       .buttons {
@@ -126,6 +127,11 @@
   .line2 {
     padding-top: 5px;
     display: flex;
+  }
+  .dark {
+    .menu-container {
+      border: none;
+    }
   }
 }
 
