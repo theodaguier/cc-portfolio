@@ -1,11 +1,8 @@
 @import "./../base/partial.scss";
 
-.container-scroll-preview {
-  background-color: black;
-}
 .light {
   .container-scroll-preview {
-    background: white;
+    background: black;
   }
 }
 
@@ -13,7 +10,6 @@
   width: 16%;
   height: 100vh;
   overflow-y: scroll;
-  border-left: solid white 1px;
   padding-left: 5px;
   background-color: black;
   .container-scroll-preview {
@@ -40,6 +36,45 @@
     transition: background 1s ease-in-out;
   }
 }
+.dark {
+  .container-scroll-preview {
+    background-color: black;
+  }
+  .project-preview {
+    .project-preview-image {
+      background: black;
+      transition: background 1s ease-in-out;
+    }
+  }
+  .scroll-projects-menu {
+    background-color: black;
+  }
+  .container-scroll-preview {
+    background-color: white;
+  }
+  .scroll-projects-menu {
+    background-color: white;
+  }
+  .selected {
+    img {
+      background: white !important;
+    }
+  }
+}
+
+.light {
+  .project-preview {
+    .project-preview-image {
+      background: black;
+      transition: background 1s ease-in-out;
+    }
+  }
+  .selected {
+    img {
+      background: black !important;
+    }
+  }
+}
 
 .project-preview.selected:hover .project-preview-image {
   background: none;
@@ -54,13 +89,9 @@
 }
 
 .light {
-  .scroll-projects-menu {
-    background-color: white;
-    border-left: solid black 1px;
-  }
   .project-preview {
     .project-preview-image {
-      background: black;
+      background: white;
       transition: background 1s ease-in-out;
     }
   }

@@ -36,9 +36,11 @@ function Header({
   const toggleLight = () => {
     setLight(!isLight);
     if (isLight) {
+      document.querySelector(".App").classList.add("light");
       document.querySelector(".App").classList.remove("dark");
     } else {
       document.querySelector(".App").classList.add("dark");
+      document.querySelector(".App").classList.remove("light");
     }
     localStorage.setItem("isLight", !isLight.toString());
   };
@@ -58,17 +60,17 @@ function Header({
     setIsHovered(false);
   }, [showAbout]);
 
-  const displaySelectProjectPreview = () => {
-    hoverProjectPreview === true
-      ? setHoverProjectPreview(false)
-      : setHoverProjectPreview(true);
-  };
+  // const displaySelectProjectPreview = () => {
+  //   hoverProjectPreview === true
+  //     ? setHoverProjectPreview(false)
+  //     : setHoverProjectPreview(true);
+  // };
 
-  // Changer de langue
-  const handleLanguageClick = (lang) => {
-    i18n.changeLanguage(lang);
-    setSelectedLanguage(lang);
-  };
+  // // Changer de langue
+  // const handleLanguageClick = (lang) => {
+  //   i18n.changeLanguage(lang);
+  //   setSelectedLanguage(lang);
+  // };
 
   return (
     <nav className="menu-container" style={{ display: "flex", width: "100%" }}>
@@ -130,7 +132,7 @@ function Header({
                 </div>
                 <img
                   className="icon"
-                  src={isLight ? sun : moon}
+                  src={isLight ? moon : sun}
                   alt="sun"
                   onClick={toggleLight}
                 />

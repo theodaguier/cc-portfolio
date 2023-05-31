@@ -51,7 +51,7 @@ const MenuNav = ({
                   {" "}
                   <img
                     className="arrow"
-                    src={!isLight ? arrowDRB : arrowDRW}
+                    src={isLight ? arrowDRB : arrowDRW}
                     alt="icon"
                   />{" "}
                   Instagram
@@ -60,7 +60,7 @@ const MenuNav = ({
                   {" "}
                   <img
                     className="arrow"
-                    src={!isLight ? arrowDRB : arrowDRW}
+                    src={isLight ? arrowDRB : arrowDRW}
                     alt="icon"
                   />{" "}
                   Mail
@@ -69,7 +69,7 @@ const MenuNav = ({
                   {" "}
                   <img
                     className="arrow"
-                    src={!isLight ? arrowDRB : arrowDRW}
+                    src={isLight ? arrowDRB : arrowDRW}
                     alt="icon"
                   />{" "}
                   Numero

@@ -45,11 +45,11 @@ const CustomCursor = React.memo(
           backgroundImage: `url(${
             isHovering
               ? isLight
-                ? cursorBW
-                : cursorBB
+                ? cursorBB
+                : cursorBW
               : isLight
-              ? cursorAW
-              : cursorAB
+              ? cursorAB
+              : cursorAW
           })`,
           backgroundRepeat: "no-repeat",
           zIndex: 9999,

@@ -61,7 +61,7 @@ function About({ isLight, setLight, showAbout, setShowAbout }) {
           <p className="paragraph">
             <img
               className="arrow"
-              src={!isLight ? arrowDRB : arrowDRW}
+              src={isLight ? arrowDRB : arrowDRW}
               alt="icon"
             />{" "}
             Contact
@@ -98,7 +98,7 @@ function About({ isLight, setLight, showAbout, setShowAbout }) {
           <p className="paragraph">
             <img
               className="arrow"
-              src={!isLight ? arrowDRB : arrowDRW}
+              src={isLight ? arrowDRB : arrowDRW}
               alt="icon"
             />{" "}
             Awards
@@ -116,7 +116,7 @@ function About({ isLight, setLight, showAbout, setShowAbout }) {
           <p className="paragraph">
             <img
               className="arrow"
-              src={!isLight ? arrowDRB : arrowDRW}
+              src={isLight ? arrowDRB : arrowDRW}
               alt="icon"
             />{" "}
             Press
