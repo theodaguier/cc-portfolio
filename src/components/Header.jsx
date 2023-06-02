@@ -59,11 +59,11 @@ function Header({
     setIsHovered(false);
   }, [showAbout]);
 
-  // const displaySelectProjectPreview = () => {
-  //   hoverProjectPreview === true
-  //     ? setHoverProjectPreview(false)
-  //     : setHoverProjectPreview(true);
-  // };
+  const displaySelectProjectPreview = () => {
+    hoverProjectPreview === true
+      ? setHoverProjectPreview(false)
+      : setHoverProjectPreview(true);
+  };
 
   // // Changer de langue
   // const handleLanguageClick = (lang) => {
@@ -176,12 +176,17 @@ function Header({
                   className="button-menu-project-preview"
                   style={{ width: "25%", textAlign: "right" }}
                 >
-                  <div className="button-open-menu">Bouton</div>
+                  <div
+                    className="button-open-menu"
+                    onClick={displaySelectProjectPreview}
+                  >
+                    Bouton
+                  </div>
                 </div>
               </div>
               <div
                 className="menu line2"
-                style={{ position: "relative", top: "20px" }}
+                style={{ position: "relative", top: "10px" }}
               >
                 <MenuNav
                   currentTag={currentTag}

@@ -1,10 +1,6 @@
 @import "/src/styles/base/partial.scss";
 
 .about {
-  transition: height 0.5s, width 0.5s, opacity 0.5s;
-}
-
-.about {
   width: 445px;
   height: 100vh;
   position: fixed;
@@ -17,6 +13,7 @@
   padding: 17px;
   font-size: $font-XS;
   line-height: 15px;
+  transition: height 0.5s, width 0.5s, opacity 0.5s;
   a:hover {
     color: $color-pink;
   }
@@ -28,33 +25,6 @@
     p {
       padding-bottom: 15px;
     }
-  }
-}
-
-.arrow {
-  width: 8px;
-}
-
-.section {
-  padding-bottom: 15px;
-}
-
-.underline {
-  text-decoration: underline;
-}
-
-.dark {
-  .about {
-    background: linear-gradient(rgba(12, 13, 13, 13), rgba(12, 13, 13, 0.96));
-    border-right: solid 1px white;
-    transition: background-color 0.5s ease;
-  }
-}
-
-.dark {
-  .about-buttons {
-    background: linear-gradient(rgba(12, 13, 13, 13), rgba(12, 13, 13, 0.96));
-    border-bottom: solid 1px white;
   }
 }
 
@@ -76,11 +46,34 @@
   border: none;
 }
 
-// Responsive
+.arrow {
+  width: 8px;
+}
+
+.section {
+  padding-bottom: 15px;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.dark {
+  .about {
+    background: linear-gradient(rgba(12, 13, 13, 13), rgba(12, 13, 13, 0.96));
+    border-right: solid 1px white;
+    transition: background-color 0.5s ease;
+    .about-buttons {
+      background: linear-gradient(rgba(12, 13, 13, 13), rgba(12, 13, 13, 0.96));
+    }
+  }
+}
 
 .light .about {
   transition: all 0.5s;
 }
+
+// Responsive
 
 @media (max-width: 680px) {
   .about {
@@ -101,5 +94,12 @@
 @media screen and (max-width: 768px) {
   .about-buttons {
     display: block;
+  }
+  .dark {
+    .about {
+      background: linear-gradient(rgba(12, 13, 13, 13), rgba(12, 13, 13, 0.96));
+      border-right: none;
+      transition: background-color 0.5s ease;
+    }
   }
 }

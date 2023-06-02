@@ -5,7 +5,7 @@ import AccordionContent from "./AccordionContent";
 import chevronDark from "./../assets/icons/chevron-b.svg";
 import chevronLight from "./../assets/icons/chevron-w.svg";
 
-function Accordion({ isLight, setLight, project }) {
+export default function Accordion({ isLight, setLight, project }) {
   const [isExpanded, setIsExpanded] = useState(window.innerWidth > 768);
 
   const toggleAccordion = () => {
@@ -25,7 +25,7 @@ function Accordion({ isLight, setLight, project }) {
                 <div className="accordion-i">
                   <img
                     className="chevron"
-                    src={!isLight ? chevronDark : chevronLight}
+                    src={!isLight ? chevronLight : chevronDark}
                     alt="chevron"
                     style={{
                       width: 16,
@@ -52,5 +52,3 @@ function Accordion({ isLight, setLight, project }) {
     </>
   );
 }
-
-export default Accordion;

@@ -8,7 +8,7 @@ import arrowDRW from "./../assets/icons/arrow.up.right.white.svg";
 import sun from "./../assets/icons/sun.svg";
 import moon from "./../assets/icons/moon.svg";
 
-function About({ isLight, setLight, showAbout, setShowAbout }) {
+export default function About({ isLight, setLight, showAbout, setShowAbout }) {
   const toggleLight = () => {
     setLight(!isLight);
     if (isLight) {
@@ -159,5 +159,3 @@ function About({ isLight, setLight, showAbout, setShowAbout }) {
     </div>
   );
 }
-
-export default About;

@@ -61,7 +61,7 @@ function ProjectsPhoto({
             onMouseLeave={() => setIsHovering(false)}
             alt="image"
           />
-          <Accordion project={project} />
+          <Accordion project={project} isLight={isLight} setLight={setLight} />
         </div>
       )}
 
@@ -70,7 +70,7 @@ function ProjectsPhoto({
           <video
             className="video"
             src={project.video}
-            style={{ width: "100%" }}
+            style={{ width: "100%", padding: "60px" }}
             controls
             autoPlay
             loop
@@ -87,7 +87,11 @@ function ProjectsPhoto({
               >
                 {imagesArray.map((item, index) => (
                   <div key={shortid.generate()} className="column">
-                    <img className="sliderTopUnique_IMG" src={item} />
+                    <img
+                      className="sliderTopUnique_IMG"
+                      src={item}
+                      style={{ padding: "60px" }}
+                    />
                   </div>
                 ))}
               </Slider>

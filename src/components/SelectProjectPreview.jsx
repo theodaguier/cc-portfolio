@@ -80,7 +80,7 @@ function SelectProjectPreview({
                     onMouseLeave={() => setHoveredProject(null)}
                   >
                     <img
-                      src={project.thumnail}
+                      src={project.thumbnail}
                       alt={`${project.name} preview`}
                       className={`project-preview-image ${
                         isSelected(project) ? "selected-image" : ""

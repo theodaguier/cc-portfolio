@@ -111,10 +111,23 @@
 
 // Mobile
 
+.light {
+  .menu-mobile {
+    background-color: white;
+  }
+}
+
+.dark {
+  .menu-mobile {
+    background-color: black;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .menu-container {
     font-size: 12px;
     flex-direction: column;
+    height: 0;
     border-bottom: none;
     border: none;
     .menu {
