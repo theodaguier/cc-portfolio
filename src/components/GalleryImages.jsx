@@ -4,11 +4,15 @@ export const GalleryImages = () => {
   return (
     <div>
       <div className="gallery-container" style={{ overflowY: "scroll" }}>
-        {images_gallery.map((image, index) => (
-          <div className="image-wrapper" key={index}>
-            <img src={image.src} alt="gallery" />
-          </div>
-        ))}
+        <div className="grid">
+          {images_gallery.map((image, index) => (
+            <div className="image-wrapper" key={index}>
+              <div className="responsive-img">
+                <img src={image.src} alt="gallery" />
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

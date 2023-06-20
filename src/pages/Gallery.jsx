@@ -24,7 +24,7 @@ function Gallery({
   };
 
   return (
-    <div className="gallery">
+    <div className="gallery" style={{ overflow: "scroll", height: "100%" }}>
       <Header
         isLight={isLight}
         setLight={setLight}
