@@ -87,6 +87,14 @@ export default function About({ isLight, setLight, showAbout, setShowAbout }) {
           </div>
           <div className="paragraph">
             <a
+              href="https://www.behance.net/cristinacasaas?tracking_source=search_projects%7Coracle"
+              target="_blank"
+            >
+              behance
+            </a>
+          </div>
+          <div className="paragraph">
+            <a
               href="https://drive.google.com/file/d/1Xe_lj7vFDpEHbnSB_pa5nhwnSu2FmMpq/view?usp=sharing"
               target="_blank"
             >

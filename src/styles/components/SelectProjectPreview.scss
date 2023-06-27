@@ -2,7 +2,7 @@
 
 .light {
   .container-scroll-preview {
-    background: black;
+    background-color: #0c0d0d;
   }
 
   .project-preview {
@@ -23,8 +23,8 @@
   width: 16%;
   height: 100vh;
   overflow-y: scroll;
-  padding-left: 5px;
-  background-color: black;
+  padding-left: 6px;
+  background-color: #0c0d0d;
 
   .container-scroll-preview {
     width: 100%;
@@ -51,7 +51,7 @@
 
   .project-preview {
     .project-preview-image {
-      background: black;
+      background-color: #0c0d0d;
       transition: background 1s ease-in-out;
     }
   }

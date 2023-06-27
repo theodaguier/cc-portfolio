@@ -104,6 +104,28 @@ const projects_data = [
     award:
       " The label has received recognition in the 2020 EtiquetaNews\nPrize and the 2020 BAU Talents competition.",
   },
+  {
+    name: "OBJETA (Thesis)",
+    description:
+      "This project explores the objectification of women in Western society through the creation of four visual artifacts. Each artifact represents a distinct form of objectification, emphasizing the need for critical examination and societal transformation. The multifunctional fitment embodies the myth of the perfect woman, reflecting the pressure on women to fulfill multiple roles simultaneously. The double-sided glass symbolizes the eroticization of the female body in commercial packaging. A vase of flowers challenges the mistreatment of the female sexual organ, presenting it as a divine and sacred symbol of empowerment. Lastly, a porcelain tea service with a printed pornographic image confronts societal norms, highlighting the devaluation of the female body. Through these visual representations, the project aims to foster dialogue, provoke critical thought, and raise awareness about the consequences of objectifying women. It calls for a reevaluation of societal attitudes and behaviors, emphasizing empowerment, equality, and a departure from the objectification of women.",
+    thumbnail:
+      "https://res.cloudinary.com/dj9n9pffx/image/upload/v1681418305/CC_Portfolio/OENA/MINIATURA-OENA_i252rj.png",
+    cover:
+      "https://res.cloudinary.com/dj9n9pffx/image/upload/v1679792323/COVER_SHEMOVES_SHE-min_dcl9f4.gif",
+    images: {
+      img1: "./../assets/vid/COVER_SHEMOVES_SHE.mov",
+      img2: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1678317578/CC_Portfolio/OENA/oe_3_aliyqf.png",
+    },
+    video:
+      "https://res.cloudinary.com/dj9n9pffx/video/upload/v1684961628/CC_Portfolio/She%20moves%20she/Fashionfilm_1_iepfeg.mp4",
+    year: 2022,
+    author: "C. Casañas",
+    tags: ["All", "Degree’s thesis", "editorial", "objects", "3D"],
+    editorial: "C. Casañas",
+    portraits: "C. Casañas",
+    threeD: "Théo Daguier",
+    note: "This is my final degree’s project",
+  },
 ];
 
 export default projects_data;

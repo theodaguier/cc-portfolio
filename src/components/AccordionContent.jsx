@@ -16,6 +16,12 @@ export default function AccordionContent({ project }) {
                 <p>Cover Collage: {project.coverCollage}</p>
               )}
               {project.typeface && <p>Typeface: {project.typeface}</p>}
+              {project.editorial && <p>Editorial: {project.typeface}</p>}
+              {project.portraits && <p>Portraits: {project.portraits}</p>}
+              {project.threeD && <p>3D: {project.threeD}</p>}
+              {project.note && (
+                <p style={{ paddingTop: "15px" }}>{project.note}</p>
+              )}
               {project.paper && <p>Paper: {project.paper}</p>}
               {project.print && <p>Print: {project.print}</p>}
               {project.bind && <p>Bind: {project.bind}</p>}

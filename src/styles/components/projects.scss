@@ -25,6 +25,15 @@ $dark-color: #000000;
   overflow-y: scroll;
 }
 
+.tag-filter::-webkit-scrollbar {
+  display: none;
+}
+
+.tag-filter {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
 // Project
 .project {
   width: 100%;
