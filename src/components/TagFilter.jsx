@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
-
-import "./../styles/components/tagNav.scss";
+import Media from "react-media";
 
 const tags = [
   "All",

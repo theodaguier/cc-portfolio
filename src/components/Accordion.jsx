@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Media from "react-media";
-import "./../styles/components/accordion.scss";
+
 import AccordionContent from "./AccordionContent";
 import chevronDark from "./../assets/icons/chevron-b.svg";
 import chevronLight from "./../assets/icons/chevron-w.svg";

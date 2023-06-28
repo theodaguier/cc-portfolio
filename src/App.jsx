@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import Media from "react-media";
 
-import "./styles/base/base.scss";
+import "./styles/main.scss";
 
 import Header from "./components/Header";
 import Home from "./pages/Home";

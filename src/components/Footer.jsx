@@ -1,5 +1,3 @@
-import "./../styles/components/footer.scss";
-
 import arrowUB from "./../assets/icons/arrow.up.black.svg";
 import arrowUW from "./../assets/icons/arrow.up.white.svg";
 

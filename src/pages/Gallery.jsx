@@ -1,5 +1,3 @@
-import "./../styles/pages/gallery.scss";
-
 import ScrollGalleryImage from "../components/ScrollGalleryImage";
 import SelectedImage from "../components/SelectedImage";
 import { useState } from "react";

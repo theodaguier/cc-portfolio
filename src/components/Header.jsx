@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import i18n from "i18next";
 import Media from "react-media";
 
-import "../styles/components/header.scss";
 import Typewriter from "./Typewriter";
 
 import sun from "./../assets/icons/sun.svg";
@@ -180,7 +179,7 @@ function Header({
                     className="button-open-menu"
                     onClick={displaySelectProjectPreview}
                   >
-                    Bouton
+                    Projects
                   </div>
                 </div>
               </div>

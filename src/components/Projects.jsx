@@ -2,7 +2,6 @@ import { useState, useEffect, useRef } from "react";
 import Media from "react-media";
 
 import projects_data from "./../data/projects.js";
-import "./../styles/components/projects.scss";
 
 import TagFilter from "./TagFilter";
 import Accordion from "./Accordion";

@@ -6,8 +6,6 @@ import { gsap } from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger.js";
 gsap.registerPlugin(ScrollTrigger);
 
-import "./../styles/pages/gallery.scss";
-
 const ScrollGalleryImage = () => {
   const [images, setImages] = useState([...images_gallery, ...images_gallery]); // duplicate the array of images
   const containerRef = useRef(null);

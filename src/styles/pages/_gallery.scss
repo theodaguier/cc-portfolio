@@ -68,3 +68,11 @@
     width: calc(100% - 20px);
   }
 }
+
+@media (max-width: 768px) {
+  .gallery {
+    h2 {
+      font-size: 12px !important;
+    }
+  }
+}

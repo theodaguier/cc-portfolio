@@ -1,5 +1,3 @@
-import "./../styles/components/about.scss";
-
 import CustomCursor from "./../utils/CustomCursor";
 
 import arrowDRB from "./../assets/icons/arrow.up.right.black.svg";

@@ -1,8 +1,6 @@
 import { useState } from "react";
 import Media from "react-media";
 
-import "./../styles/pages/home.scss";
-
 import Accordion from "../components/Accordion";
 import About from "../components/About";
 import Header from "../components/Header";

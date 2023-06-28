@@ -1,5 +1,3 @@
-import "./../styles/components/accordion.scss";
-
 export default function AccordionContent({ project }) {
   return (
     <>

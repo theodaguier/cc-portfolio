@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import Media from "react-media";
-import "./../styles/components/SelectProjectPreview.scss";
 
 function SelectProjectPreview({
   projects,

@@ -43,7 +43,7 @@ const images_gallery = [
     serie: "denebola Amor",
     src: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1687810627/CC_Portfolio/GALLERY/b819442e8e31cb9f07d7dba184f950c3496e5cf1-2428x3035.jpg_pol0ky.png",
     flex: "calc(32% - 5px)",
-    mobile: "calc(45% - 5px)",
+    mobile: "",
   },
   {
     number: "n°0007",
@@ -90,7 +90,7 @@ const images_gallery = [
   },
   {
     number: "n°0012",
-    serie: "denebola Amor",
+    serie: "Hunikono Sakura",
     src: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1687810627/CC_Portfolio/GALLERY/sdlsdlsn%CC%83dd_fkntkw.png",
     flex: "calc(34% - 5px)",
     mobile: "",
@@ -101,7 +101,7 @@ const images_gallery = [
   },
   {
     number: "n°0013",
-    serie: "denebola Amor",
+    serie: "Hunikono Sakura",
     src: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1687810628/CC_Portfolio/GALLERY/dsn%CC%83dlsdn%CC%83lsdls_fymnc9.png",
     flex: "calc(64% - 5px)",
     mobile: "",
@@ -140,7 +140,6 @@ const images_gallery = [
     serie: "S.I.D.O.A.H",
     src: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1687867414/CC_Portfolio/GALLERY/dsdsdsds_miz56j.png",
     flex: "calc(32% - 5px)",
-    mobile: "calc(45% - 5px)",
   },
   {
     number: "n°0018",
@@ -154,7 +153,7 @@ const images_gallery = [
     serie: "S.I.D.O.A.H",
     src: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1687867414/CC_Portfolio/GALLERY/eb66949df8be141c06ffc0e84c6b9488933c2e01-2424x3031.jpg_ja5hru.png",
     flex: "calc(34% - 5px)",
-    mobile: "",
+    mobile: "calc(45% - 5px)",
   },
   {
     src: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1687807590/CC_Portfolio/GALLERY/blank.png",
@@ -179,7 +178,7 @@ const images_gallery = [
     serie: "she moves",
     src: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1687868483/CC_Portfolio/GALLERY/dsdsdss_eubkqr.png",
     flex: "calc(32% - 5px)",
-    mobile: "calc(45% - 5px)",
+    mobile: "",
   },
   {
     number: "n°0023",
@@ -227,7 +226,7 @@ const images_gallery = [
   {
     number: "n°0028",
     serie: "Le corps nu",
-    src: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1687868777/CC_Portfolio/GALLERY/fsdfdfgfhgjgggfgf_qlshhq.png",
+    src: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1687868777/CC_Portfolio/GALLERY/dsdsdsdsdssssd_ki1j9u.png",
     flex: "calc(34% - 5px)",
     mobile: "",
   },

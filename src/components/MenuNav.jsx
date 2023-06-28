@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react";
 import Media from "react-media";
 
-import "./../styles/components/menuNav.scss";
-
 import TagFilter from "./../components/TagFilter";
 import Typewriter from "./../components/Typewriter";
 import Header from "./../components/Header";

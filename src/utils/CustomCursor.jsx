@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-import "./../styles/cursor/cursor.scss";
 
 import cursorAW from "./../assets/cursor/CursorA_White.png";
 import cursorBB from "./../assets/cursor/CursorB_Black.svg";
