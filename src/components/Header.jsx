@@ -179,7 +179,7 @@ function Header({
                     className="button-open-menu"
                     onClick={displaySelectProjectPreview}
                   >
-                    Projects
+                    {hoverProjectPreview ? "Close" : "Projects"}
                   </div>
                 </div>
               </div>

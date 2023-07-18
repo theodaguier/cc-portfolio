@@ -8,6 +8,7 @@ import Header from "./components/Header";
 import Home from "./pages/Home";
 import Gallery from "./pages/Gallery";
 import CustomCursor from "./utils/CustomCursor";
+import Footer from "./components/Footer";
 
 const App = () => {
   const appRef = useRef();
@@ -88,6 +89,8 @@ const App = () => {
                       setLight={setLight}
                       isHovering={isHovering}
                       setIsHovering={setIsHovering}
+                      hoverProjectPreview={hoverProjectPreview}
+                      setHoverProjectPreview={setHoverProjectPreview}
                     />
                   }
                 />
@@ -141,6 +144,8 @@ const App = () => {
                       setLight={setLight}
                       isHovering={isHovering}
                       setIsHovering={setIsHovering}
+                      hoverProjectPreview={hoverProjectPreview}
+                      setHoverProjectPreview={setHoverProjectPreview}
                     />
                   }
                 />
@@ -149,7 +154,6 @@ const App = () => {
           }
         </Media>
       </div>
-
       <Media query="(max-width: 768px)">
         {(matches) =>
           !matches ? (

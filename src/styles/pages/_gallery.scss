@@ -60,6 +60,11 @@
     flex-basis: calc(50% - 20px);
     width: calc(50% - 20px);
   }
+  .gallery {
+    h2 {
+      font-size: 12px !important;
+    }
+  }
 }
 
 @media (max-width: 480px) {
@@ -69,10 +74,8 @@
   }
 }
 
-@media (max-width: 768px) {
-  .gallery {
-    h2 {
-      font-size: 12px !important;
-    }
+.gallery {
+  button-open-menu {
+    display: none !important;
   }
 }

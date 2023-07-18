@@ -14,6 +14,8 @@ function Gallery({
   setShowAbout,
   isHovering,
   setIsHovering,
+  hoverProjectPreview,
+  setHoverProjectPreview,
 }) {
   const [selectedImage, setSelectedImage] = useState(null);
 
@@ -28,6 +30,8 @@ function Gallery({
         setLight={setLight}
         setShowAbout={setShowAbout}
         showAbout={showAbout}
+        hoverProjectPreview={hoverProjectPreview}
+        setHoverProjectPreview={setHoverProjectPreview}
       />
       {showAbout && (
         <About
