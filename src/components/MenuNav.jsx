@@ -52,7 +52,12 @@ const MenuNav = ({
                     src={isLight ? arrowDRB : arrowDRW}
                     alt="icon"
                   />{" "}
-                  Instagram
+                  <a
+                    href="https://www.instagram.com/casanascristine/"
+                    target="_blank"
+                  >
+                    Instagram
+                  </a>
                 </li>
                 <li>
                   {" "}
@@ -61,7 +66,12 @@ const MenuNav = ({
                     src={isLight ? arrowDRB : arrowDRW}
                     alt="icon"
                   />{" "}
-                  Mail
+                  <a
+                    href="https://www.behance.net/cristinacasaas?tracking_source=search_projects%7Coracle"
+                    target="_blank"
+                  >
+                    Behance
+                  </a>
                 </li>
                 <li>
                   {" "}
@@ -70,7 +80,16 @@ const MenuNav = ({
                     src={isLight ? arrowDRB : arrowDRW}
                     alt="icon"
                   />{" "}
-                  Numero
+                  <a href="mailto:info@cristinacasanas.com">Mail </a>
+                </li>
+                <li>
+                  {" "}
+                  <img
+                    className="arrow"
+                    src={isLight ? arrowDRB : arrowDRW}
+                    alt="icon"
+                  />{" "}
+                  <a href="sms:/+33656698355">0656698355</a>
                 </li>
               </ul>
             </div>

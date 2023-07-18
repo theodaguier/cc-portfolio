@@ -187,3 +187,12 @@ $dark-color: #000000;
     }
   }
 }
+
+.sliderTopUnique_IMG {
+  display: block !important;
+  margin: 0 auto !important;
+}
+
+.sliderTopUnique_IMG.active {
+  transform: scale(2);
+}

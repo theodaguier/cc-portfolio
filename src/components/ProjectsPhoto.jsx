@@ -1,11 +1,8 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import shortid from "shortid";
-
 import Slider from "react-slick";
-
 import Accordion from "./Accordion";
 import { CarouselItem } from "./CarouselItem";
-
 import ArrowLeftWhite from "./../assets/icons/arrow.left.svg";
 import ArrowRightWhite from "./../assets/icons/arrow.right.svg";
 import ArrowLeftBlack from "./../assets/icons/arrow.left-black.svg";
@@ -19,11 +16,8 @@ function ProjectsPhoto({
   setLight,
   backToTop,
 }) {
-  const sliderTop = useRef();
-  const sliderBot = useRef();
-
+  const sliderTop = useRef(null);
   const imagesArray = project ? Object.values(project.images) : [];
-
   const [activeIndex, setActiveIndex] = useState(0);
 
   const sliderTopSettings = {
@@ -37,14 +31,15 @@ function ProjectsPhoto({
     autoplaySpeed: 2500,
   };
 
-  const sliderTopNav = (direction, event) => {
-    event.preventDefault(); // Prevent the default anchor tag behavior
-    event.stopPropagation();
-    if (sliderTop && sliderTop.current) {
+  const handleImageClick = (index) => {
+    setActiveIndex(index);
+  };
+
+  const handleArrowClick = (direction) => {
+    if (sliderTop.current) {
       if (direction === "prec") {
         sliderTop.current.slickPrev();
-      }
-      if (direction === "suiv") {
+      } else if (direction === "suiv") {
         sliderTop.current.slickNext();
       }
     }
@@ -66,7 +61,7 @@ function ProjectsPhoto({
       )}
 
       <div className="images-projects">
-        {project.video ? ( // Check if the project has a video URL
+        {project.video ? (
           <video
             className="video"
             src={project.video}
@@ -86,11 +81,16 @@ function ProjectsPhoto({
                 className="SliderTop"
               >
                 {imagesArray.map((item, index) => (
-                  <div key={shortid.generate()} className="column">
+                  <div
+                    key={shortid.generate()}
+                    className="column"
+                    onClick={() => handleImageClick(index)}
+                  >
                     <img
                       className="sliderTopUnique_IMG"
                       src={item}
                       style={{ padding: "60px" }}
+                      alt="carousel-item"
                     />
                   </div>
                 ))}
@@ -101,6 +101,8 @@ function ProjectsPhoto({
               className="carousel-buttons"
               style={{
                 position: "absolute",
+                top: "50%",
+                transform: "translateY(-50%)",
                 width: "100%",
                 display: "flex",
                 justifyContent: "space-between",
@@ -110,21 +112,15 @@ function ProjectsPhoto({
             >
               <img
                 className="button-arrow"
-                onClick={(event) => {
-                  event.preventDefault(); // Prevent the default anchor tag behavior
-                  sliderTopNav("prec", event);
-                }}
-                src={!isLight === true ? ArrowLeftWhite : ArrowLeftBlack}
+                onClick={() => handleArrowClick("prec")}
+                src={!isLight ? ArrowLeftWhite : ArrowLeftBlack}
                 alt=""
                 style={{ width: "20px" }}
               />
               <img
                 className="button-arrow"
-                onClick={(event) => {
-                  event.preventDefault(); // Prevent the default anchor tag behavior
-                  sliderTopNav("suiv", event);
-                }}
-                src={!isLight === true ? ArrowRightWhite : ArrowRightBlack}
+                onClick={() => handleArrowClick("suiv")}
+                src={!isLight ? ArrowRightWhite : ArrowRightBlack}
                 alt=""
                 style={{ width: "20px" }}
               />

@@ -10,6 +10,7 @@ export default function AccordionContent({ project }) {
             <div className="info">
               <p>{project.tag}</p>
               {project.author && <p>Design/Concept: {project.author}</p>}
+              {project.layout && <p>Layout: {project.layout}</p>}
               {project.coverCollage && (
                 <p>Cover Collage: {project.coverCollage}</p>
               )}
@@ -21,12 +22,15 @@ export default function AccordionContent({ project }) {
               )}
               {project.setDesign && <p>Set Design: {project.setDesign}</p>}
               {project.styling && <p>Styling: {project.styling}</p>}
-              {project.typeface && <p>Typography: {project.typeface}</p>}
               {project.collage && <p>Collage: {project.collage}</p>}
               {project.editorial && <p>Editorial: {project.editorial}</p>}
               {project.portraits && <p>Portraits: {project.portraits}</p>}
               {project.threeD && <p>3D: {project.threeD}</p>}
-              {project.photography && <p>Photography: {project.photography}</p>}
+              {project.photography && (
+                <p>Photographies: {project.photography}</p>
+              )}
+              {project.typeface && <p>Typography: {project.typeface}</p>}
+              {project.words && <p>Words: {project.words}</p>}
               {project.illustration && (
                 <p>Illustration: {project.illustration}</p>
               )}

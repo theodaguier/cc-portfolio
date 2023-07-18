@@ -89,15 +89,10 @@ const projects_data = [
     images: {},
     video:
       "https://res.cloudinary.com/dj9n9pffx/video/upload/v1684961628/CC_Portfolio/She%20moves%20she/Fashionfilm_1_iepfeg.mp4",
-    year: 2021,
-    author: "C. Casañas",
-    tags: ["All", "Art Direction", "Photography", "Graphic Design"],
-    typeface: "Merchanto Reg, Baskerville No. 2 Regular",
-    paper: "Laid 180gr",
-    print: "Paperam",
-    size: "130*170*23 /mm",
-    award:
-      " The label has received recognition in the 2020 EtiquetaNews\nPrize and the 2020 BAU Talents competition.",
+    year: 2020,
+    tags: ["All", "Fashionfilm", "Art Direction", "Photography Direction"],
+    directed: "Nereis Ferrer, Berta Borrell, Didac Bompart & Cristina Casañas",
+    artDirection: "Berta Borrell & Cristina Casañas",
   },
   {
     name: "OBJETA (Thesis)",
@@ -183,10 +178,11 @@ const projects_data = [
     },
     year: 2023,
     author: "C. Casañas",
-    tags: ["Branding", "Packaging"],
+    tags: ["All", "Branding", "Packaging"],
     editorial: "C. Casañas",
     collage: "C. Casañas",
     typeface: "Lovelace Regular, Light Italic, Medium",
+    illustrations: "C. Casañas",
   },
   {
     name: "Amelie Pichard x Fella Schilling",
@@ -229,13 +225,12 @@ const projects_data = [
       img5: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689633192/CC_Portfolio/Francesca_Woodman/05FRANCESCA_WOODMAN-EDITO_w7a8dt.png",
     },
     year: 2022,
+    tags: ["All", "Editorial"],
     author: "C. Casañas",
-    tags: ["Art Direction", "Visual Design", "Image Design"],
-    editorial: "C. Casañas",
-    photography: "C. Casañas",
-    illustration: "Fella",
-    product: "Amelie Pichard",
-    note: "This is an imaginary project. Not copywriting intended.",
+    layout: "C. Casañas",
+    photography: "Francesca Woodman",
+    typeface:
+      "Majesti Banner Medium, Light, Italic. Founders Grotesk Regular, Semibold",
   },
   {
     name: "SIDOAH",
@@ -282,13 +277,34 @@ const projects_data = [
       img8: "./../../public/assets/gif/MARIOSOREBTI-EDITO.gif",
     },
     year: 2022,
+    tags: ["All", "Editorial"],
     author: "C. Casañas",
-    tags: ["Art Direction", "Visual Design", "Image Design"],
-    editorial: "C. Casañas",
-    photography: "C. Casañas",
-    illustration: "Fella",
-    product: "Amelie Pichard",
-    note: "This is an imaginary project. Not copywriting intended.",
+    layout: "C. Casañas",
+    words: "C. Casañas",
+    photography: "Mario Sorrenti",
+    typeface:
+      "Helvetica Neue LT 53, Lovelace Medium Italic, Acumin Variable Concept Wide Regular",
+  },
+  {
+    name: "ECOLOMAG",
+    description:
+      "This editorial project focuses on creating an article for Ecomag magazine. The article will follow a grid divided into three sections, with a design consisting of two columns in the center and an additional column on the right. The text will be justified for an aesthetic and readable presentation. The fonts used will be Baskerville MT Std, Adelle Sans Condensed, and Romie Regular, ensuring a cohesive and appealing visual appearance.      ",
+    thumbnail:
+      "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689715019/CC_Portfolio/ECOMAG/MINIATURA_VERT_a2ecys.png",
+    cover:
+      "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689715019/CC_Portfolio/ECOMAG/04ECO_Brochure_Mockup_03_j2kk5j.png",
+    images: {
+      img1: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689715019/CC_Portfolio/ECOMAG/1ECO_Brochure_Mockup_03_qmzeqi.png",
+      img2: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689715019/CC_Portfolio/ECOMAG/3_odrn1d.png",
+      img4: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689715018/CC_Portfolio/ECOMAG/02ECO_Brochure_Mockup_03_f1nzm2.png",
+      img5: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689715018/CC_Portfolio/ECOMAG/0ECO_Brochure_Mockup_03_rfldsm.png",
+    },
+    year: 2021,
+    tags: ["All", "Editorial"],
+    author: "C. Casañas",
+    layout: "C. Casañas",
+    photography: "Natalie Karpushenko",
+    typeface: "Baskerville MT Std, Adelle Sans Condensed, Romie Regular",
   },
 ];
 
