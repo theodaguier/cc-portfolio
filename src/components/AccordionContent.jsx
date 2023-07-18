@@ -9,10 +9,18 @@ export default function AccordionContent({ project }) {
           <div className="bloc">
             <div className="info">
               <p>{project.tag}</p>
-              <p>Design/Concept: {project.author}</p>
+              {project.author && <p>Design/Concept: {project.author}</p>}
               {project.coverCollage && (
                 <p>Cover Collage: {project.coverCollage}</p>
               )}
+              {project.directed && (
+                <p>Directed and produced by {project.directed}</p>
+              )}
+              {project.artDirection && (
+                <p>Art Direction by {project.artDirection}</p>
+              )}
+              {project.setDesign && <p>Set Design: {project.setDesign}</p>}
+              {project.styling && <p>Styling: {project.styling}</p>}
               {project.typeface && <p>Typography: {project.typeface}</p>}
               {project.collage && <p>Collage: {project.collage}</p>}
               {project.editorial && <p>Editorial: {project.editorial}</p>}

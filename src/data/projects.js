@@ -81,15 +81,12 @@ const projects_data = [
   {
     name: "She moves she",
     description:
-      'The packaging design pays tribute to the women of Bergasa, La Rioja, known as "Las Chiguitas,"\n who harvested the vines in 1936 during the Spanish Civil War. Despite being left alone in the\nfields, these women were responsible for cultivating the vines in a natural way to ensure their\ngrowth and self-preservation.\nThis label design draws on the rich history of these women, and is based on a collage composition\nof photographs from 1909, taken from my own family archives.\nThrough this nostalgic nod to the past, the design brings a touch of the past into the present,\n celebrating the bravery and resilience of these women.',
+      '"She Moves, She" is a short film that delves into the captivating journey of the human body as it undergoes a transformative experience through its interaction with both the surrounding space and the forces of nature. This experimental film aims to capture the essence of movement, exploring the profound connection between the body and its environment.\n"She Moves, She" invites audiences to embark on a sensory journey, encouraging them to contemplate the profound impact that space and nature can have on the human body and spirit. Through its experimental approach and artful direction, the film aims to inspire a deeper appreciation for the harmony between the physical self and the surrounding environment.',
     thumbnail:
-      "https://res.cloudinary.com/dj9n9pffx/image/upload/v1681418305/CC_Portfolio/OENA/MINIATURA-OENA_i252rj.png",
+      "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689700032/CC_Portfolio/She%20moves%20she/MINIAT-WEB_kubdtz.gif",
     cover:
-      "https://res.cloudinary.com/dj9n9pffx/image/upload/v1679792323/COVER_SHEMOVES_SHE-min_dcl9f4.gif",
-    images: {
-      img1: "./../assets/vid/COVER_SHEMOVES_SHE.mov",
-      img2: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1678317578/CC_Portfolio/OENA/oe_3_aliyqf.png",
-    },
+      "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689700032/CC_Portfolio/She%20moves%20she/HORIZ_WEBSHEMOVESSHE_zlkkdt.png",
+    images: {},
     video:
       "https://res.cloudinary.com/dj9n9pffx/video/upload/v1684961628/CC_Portfolio/She%20moves%20she/Fashionfilm_1_iepfeg.mp4",
     year: 2021,
@@ -108,10 +105,9 @@ const projects_data = [
       "This project explores the objectification of women in Western society through the creation of four visual artifacts. Each artifact represents a distinct form of objectification, emphasizing the need for critical examination and societal transformation. The multifunctional fitment embodies the myth of the perfect woman, reflecting the pressure on women to fulfill multiple roles simultaneously. The double-sided glass symbolizes the eroticization of the female body in commercial packaging. A vase of flowers challenges the mistreatment of the female sexual organ, presenting it as a divine and sacred symbol of empowerment. Lastly, a porcelain tea service with a printed pornographic image confronts societal norms, highlighting the devaluation of the female body. Through these visual representations, the project aims to foster dialogue, provoke critical thought, and raise awareness about the consequences of objectifying women. It calls for a reevaluation of societal attitudes and behaviors, emphasizing empowerment, equality, and a departure from the objectification of women.",
     thumbnail:
       "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689687678/CC_Portfolio/TFG/MINIAT-WEB_hnodpf.gif",
-    cover:
-      "https://res.cloudinary.com/dj9n9pffx/image/upload/v1679792323/COVER_SHEMOVES_SHE-min_dcl9f4.gif",
+    cover: "./../../public/assets/gif/TGFMEM.gif",
     images: {
-      img1: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689687683/CC_Portfolio/TFG/TFG_MEMcoverlibro-01_ulhc4z.png",
+      img1: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689687681/CC_Portfolio/TFG/TFG_MEMcoverlibro-02_al4h4w.png",
       img2: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689687682/CC_Portfolio/TFG/TGFMEM2_ac2fp6.png",
       img3: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689687681/CC_Portfolio/TFG/TFG_MEM-03_qzm3lu.png",
       img4: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689687682/CC_Portfolio/TFG/TGFMEM4_j0ykcc.png",
@@ -231,6 +227,59 @@ const projects_data = [
       img3: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689634130/CC_Portfolio/Francesca_Woodman/03FRANCESCA_WOODMAN-EDITO_e3dcjd.gif",
       img4: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689633191/CC_Portfolio/Francesca_Woodman/04FRANCESCA_WOODMAN-EDITO_wakgvt.png",
       img5: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689633192/CC_Portfolio/Francesca_Woodman/05FRANCESCA_WOODMAN-EDITO_w7a8dt.png",
+    },
+    year: 2022,
+    author: "C. Casañas",
+    tags: ["Art Direction", "Visual Design", "Image Design"],
+    editorial: "C. Casañas",
+    photography: "C. Casañas",
+    illustration: "Fella",
+    product: "Amelie Pichard",
+    note: "This is an imaginary project. Not copywriting intended.",
+  },
+  {
+    name: "SIDOAH",
+    description:
+      'The fashion film "Sometimes I Dream I Am Over A Hill" is a visual experience that combines art direction and photography direction. Inspired by the nostalgia of being on a wild beach, the collection showcased in the film pays tribute to the exhilaration of seeing the sea again after a long time.',
+    thumbnail:
+      "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689700298/CC_Portfolio/SIDOAH/MINIATURA_WEB_SIDOAH_wn0bl0.gif",
+    cover:
+      "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689700295/CC_Portfolio/SIDOAH/COVER_SIDOAH_m2hhdq.png",
+    images: {},
+    video:
+      "https://res.cloudinary.com/dj9n9pffx/video/upload/v1689701325/CC_Portfolio/SIDOAH/FashionFilm_-VMC_1_j9rym3.mp4",
+    year: 2023,
+    tags: [
+      "All",
+      "Fashionfilm",
+      "Art Direction",
+      "Photography Direction",
+      "Graphic Design",
+    ],
+    directed: "Marta Carolina, Valentina Stahnke & Cristina Casañas",
+    artDirection: "Marta Carolina, Valentina Stahnke & Cristina Casañas",
+    setDesign: "Valentina Stahnke & Cristina Casañas",
+    styling: "Marta Carolina & Valentína Stahnke",
+    typeface: "Generish Mono Book",
+  },
+  {
+    name: "Mario Sorrenti",
+    description:
+      "The monograph of photographer MARIO SORRENTI has been conceived as a unique publication with a dual purpose. Designed as a photobook, it allows the expansive pages to showcase his work chronologically, while the smaller pages narrate his story. This format creates a dynamic and fluid publication, offering a comprehensive visual and narrative experience.\nThe combination of these two formats in a single editorial piece achieves a harmonious balance between the visual and narrative aspects of the monograph. The meticulous design and chronological layout provide a captivating and immersive reading experience, enabling readers to explore and comprehend Mario Sorrenti's creative evolution.",
+    thumbnail:
+      "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689701705/CC_Portfolio/MARIO_SORRENTI/MINIAT-WEB_zfbxac.png",
+    cover:
+      "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689701705/CC_Portfolio/MARIO_SORRENTI/MARIOSOREBTI-EDITO_i3dyst.png",
+    images: {
+      img1: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689701696/CC_Portfolio/MARIO_SORRENTI/2_MARIOSORREBTI-EDITO_emly8x.png",
+      img2: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689701691/CC_Portfolio/MARIO_SORRENTI/3_MARIOSORREBTI-EDITO_nfyhgh.png",
+      img3: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689701687/CC_Portfolio/MARIO_SORRENTI/4_MARIOSORREBTI-EDITO_lwv686.png",
+      img4: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689701694/CC_Portfolio/MARIO_SORRENTI/5_MARIOSORREBTI-EDITO_ycei0d.png",
+      img5: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689701696/CC_Portfolio/MARIO_SORRENTI/6_MARIOSORREBTI-EDITO_u4fd62.png",
+      img6: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689701692/CC_Portfolio/MARIO_SORRENTI/7_MARIOSORREBTI-EDITO_ehi7yo.png",
+      img7: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689701694/CC_Portfolio/MARIO_SORRENTI/8_MARIOSORREBTI-EDITO_at3qnc.png",
+      img8: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689701689/CC_Portfolio/MARIO_SORRENTI/9_MARIOSORREBTI-EDITO_xrrmke.png",
+      img8: "./../../public/assets/gif/MARIOSOREBTI-EDITO.gif",
     },
     year: 2022,
     author: "C. Casañas",
