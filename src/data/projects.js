@@ -1,5 +1,34 @@
 const projects_data = [
   {
+    name: "Mario Sorrenti",
+    description:
+      "The monograph of photographer MARIO SORRENTI has been conceived as a unique publication with a dual purpose. Designed as a photobook, it allows the expansive pages to showcase his work chronologically, while the smaller pages narrate his story. This format creates a dynamic and fluid publication, offering a comprehensive visual and narrative experience.\nThe combination of these two formats in a single editorial piece achieves a harmonious balance between the visual and narrative aspects of the monograph. The meticulous design and chronological layout provide a captivating and immersive reading experience, enabling readers to explore and comprehend Mario Sorrenti's creative evolution.",
+    thumbnail:
+      "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689701705/CC_Portfolio/MARIO_SORRENTI/MINIAT-WEB_zfbxac.png",
+    cover: "./../../public/assets/gif/MARIOSOREBTI-EDITO.gif",
+
+    images: {
+      img1: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689701696/CC_Portfolio/MARIO_SORRENTI/2_MARIOSORREBTI-EDITO_emly8x.png",
+      img2: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689701691/CC_Portfolio/MARIO_SORRENTI/3_MARIOSORREBTI-EDITO_nfyhgh.png",
+      img3: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689701687/CC_Portfolio/MARIO_SORRENTI/4_MARIOSORREBTI-EDITO_lwv686.png",
+      img4: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689701694/CC_Portfolio/MARIO_SORRENTI/5_MARIOSORREBTI-EDITO_ycei0d.png",
+      img5: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689701696/CC_Portfolio/MARIO_SORRENTI/6_MARIOSORREBTI-EDITO_u4fd62.png",
+      img6: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689701692/CC_Portfolio/MARIO_SORRENTI/7_MARIOSORREBTI-EDITO_ehi7yo.png",
+      img7: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689701694/CC_Portfolio/MARIO_SORRENTI/8_MARIOSORREBTI-EDITO_at3qnc.png",
+      img8: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689701689/CC_Portfolio/MARIO_SORRENTI/9_MARIOSORREBTI-EDITO_xrrmke.png",
+      img9: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689701705/CC_Portfolio/MARIO_SORRENTI/MARIOSOREBTI-EDITO_i3dyst.png",
+      img10: "./../../public/assets/gif/MARIOSOREBTI-EDITO.gif",
+    },
+    year: 2022,
+    tags: ["All", "Editorial"],
+    author: "C. Casañas",
+    layout: "C. Casañas",
+    words: "C. Casañas",
+    photography: "Mario Sorrenti",
+    typeface:
+      "Helvetica Neue LT 53, Lovelace Medium Italic, Acumin Variable Concept Wide Regular",
+  },
+  {
     name: "Feminae",
     description:
       "This project presents an oracle that is designed to celebrate the important women in our lives and the role they play in guiding and nurturing us. The oracle aims to rescue the memory of these women from obscurity and to serve as a source of inspiration and empowerment for other women. The oracle takes the form of a book that is packaged in a unique and meaningful way, allowing for an interactive experience.\nThe book contains illustrations and stories of important women from history, as well as interactive elements such as questions and prompts that allow the reader to reflect on their own personal experiences. This oracle is a powerful tool for personal growth and self-discovery, and serves as a reminder of the invaluable contributions of women throughout history.",
@@ -22,7 +51,7 @@ const projects_data = [
     },
     year: 2021,
     author: "C. Casañas",
-    tags: ["All", "Editorial", "Objects", "Visual Communication"],
+    tags: ["All", "Editorial", "Objects", "Visual Communication", "Packaging"],
     coverCollage: "C. Casañas",
     typeface: "Lovelace Italic, Century Gothic Regular",
     paper: "Pearl paper 120 g Elementa 280g",
@@ -31,6 +60,30 @@ const projects_data = [
     size: "130*170*23 /mm",
     supervisor: "Marina Salazar",
     imageCollected: "Jon Whitcomb & unknown vintage american artists",
+  },
+  {
+    name: "Francesca Woodman, MONOGRAPHY",
+    description:
+      "This collaboration highlights the dynamic between fashion designer Amelie Pichard and visual artist Fenna Schilling. Combining Pichard's eclectic fashion designs with Schilling's expertise in collage, the collaboration produces captivating and conceptually rich creations. Through immersive workshops and a seamless integration of their artistic styles, the duo crafts visually striking pieces that engage and intrigue. The collaborative artworks find their place across various brand touchpoints, captivating audiences with their innovative and transformative fusion of fashion and art.",
+    thumbnail:
+      "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689633192/CC_Portfolio/Francesca_Woodman/MINIAT-WEB_ptrwbu.png",
+    cover:
+      "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689633192/CC_Portfolio/Francesca_Woodman/01FRANCESCA_WOODMAN-EDITO_mfpecs.png",
+    images: {
+      img1: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689633485/CC_Portfolio/Francesca_Woodman/FRANCESCA_WOODMAN-EDITO-min_xeh3d0.gif",
+      img2: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689633192/CC_Portfolio/Francesca_Woodman/01FRANCESCA_WOODMAN-EDITO_mfpecs.png",
+      img3: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689633192/CC_Portfolio/Francesca_Woodman/02FRANCESCA_WOODMAN-EDITO_t5zfgy.png",
+      img4: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689634130/CC_Portfolio/Francesca_Woodman/03FRANCESCA_WOODMAN-EDITO_e3dcjd.gif",
+      img5: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689633191/CC_Portfolio/Francesca_Woodman/04FRANCESCA_WOODMAN-EDITO_wakgvt.png",
+      img6: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689633192/CC_Portfolio/Francesca_Woodman/05FRANCESCA_WOODMAN-EDITO_w7a8dt.png",
+    },
+    year: 2022,
+    tags: ["All", "Editorial"],
+    author: "C. Casañas",
+    layout: "C. Casañas",
+    photography: "Francesca Woodman",
+    typeface:
+      "Majesti Banner Medium, Light, Italic. Founders Grotesk Regular, Semibold",
   },
   {
     name: "Las Chiguitas",
@@ -49,54 +102,13 @@ const projects_data = [
     },
     year: 2021,
     author: "C. Casañas",
-    tags: ["All", "Packaging"],
+    tags: ["All", "Packaging", "Branding"],
     coverCollage: "C. Casañas",
     typeface: "Merchanto Reg, Baskerville Regular",
     paper: "Laid 180gr",
     size: "89*100 /mm",
     award:
       "The label has received recognition in the 2020 EtiquetaNews\nPrize and the 2020 BAU Talents competition.",
-  },
-  {
-    name: "Oena",
-    description:
-      "The cover design of this magazine serves as a visual representation of the cultural shift towards a 'new male gaze', characterized by the rejection of traditional gender norms and the embrace of individuality. The bold and striking nature of the design, combined with its message of self-expression, is accentuated by the use of a bold typography. The use of a bold typeface adds emphasis to the central message of the design and further emphasizes the defiance of traditional gender norms.\nThe cover design aims to spark a conversation about the evolving norms of masculinity. For example, the use of makeup, traditionally associated with femininity, and non-binary clothing, deviating from traditional masculine attire, serves to subvert dominant cultural norms and expectations surrounding masculinity. In doing so, the cover design serves as a catalyst for change and promotes a more inclusive and accepting society.",
-    thumbnail:
-      "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689718750/CC_Portfolio/OENA/MINIATURA-OENA_i3u9nh.png",
-    cover:
-      "https://res.cloudinary.com/dj9n9pffx/image/upload/v1681418305/CC_Portfolio/OENA/OENA_COVERS_ho2jg2.gif",
-    images: {
-      img1: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1681422299/CC_Portfolio/OENA/0OENA-2_yhgdhj.png",
-      img2: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1681422299/CC_Portfolio/OENA/01OENA-2_oolzpy.png",
-      img3: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1681425710/CC_Portfolio/OENA/OENA-2_cdcjee.png",
-      img4: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1681418305/CC_Portfolio/OENA/OENA_COVERS_ho2jg2.gif",
-      img5: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1681420649/CC_Portfolio/OENA/02OENA_xgmqal.png",
-      img6: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1681418304/CC_Portfolio/OENA/PROJECT_1LOGOGIF_ci9nhj.gif",
-    },
-    year: 2023,
-    author: "C. Casañas",
-    tags: ["All", "Art Direction", "Graphic Design", "Logo"],
-    typeface: "Klose Slab Semi Expanded",
-    paper: "Glossy 180gr",
-    print: "Paperam",
-    size: "297*420*22 /mm ",
-    talent: "Manu Mateos",
-  },
-  {
-    name: "She moves she",
-    description:
-      '"She Moves, She" is a short film that delves into the captivating journey of the human body as it undergoes a transformative experience through its interaction with both the surrounding space and the forces of nature. This experimental film aims to capture the essence of movement, exploring the profound connection between the body and its environment.\n"She Moves, She" invites audiences to embark on a sensory journey, encouraging them to contemplate the profound impact that space and nature can have on the human body and spirit. Through its experimental approach and artful direction, the film aims to inspire a deeper appreciation for the harmony between the physical self and the surrounding environment.',
-    thumbnail:
-      "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689700032/CC_Portfolio/She%20moves%20she/MINIAT-WEB_kubdtz.gif",
-    cover:
-      "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689700032/CC_Portfolio/She%20moves%20she/HORIZ_WEBSHEMOVESSHE_zlkkdt.png",
-    images: "",
-    video:
-      "https://res.cloudinary.com/dj9n9pffx/video/upload/v1684961628/CC_Portfolio/She%20moves%20she/Fashionfilm_1_iepfeg.mp4",
-    year: 2020,
-    tags: ["All", "Fashionfilm", "Art Direction", "Photography Direction"],
-    directed: "Nereis Ferrer, Berta Borrell, Didac Bompart & Cristina Casañas",
-    artDirection: "Berta Borrell & Cristina Casañas",
   },
   {
     name: "OBJETA (Thesis)",
@@ -148,7 +160,14 @@ const projects_data = [
     year: 2022,
     typeface: "Voyage, Degular & Kepler",
     author: "C. Casañas",
-    tags: ["All", "Degree’s thesis", "editorial", "objects", "3D"],
+    tags: [
+      "All",
+      "Degree’s thesis",
+      "Editorial",
+      "Objects",
+      "3D",
+      "Art Direction",
+    ],
     editorial: "C. Casañas",
     portraits: "C. Casañas",
     threeD: "Théo Daguier",
@@ -192,6 +211,60 @@ const projects_data = [
     illustrations: "C. Casañas",
   },
   {
+    name: "Oena",
+    description:
+      "The cover design of this magazine serves as a visual representation of the cultural shift towards a 'new male gaze', characterized by the rejection of traditional gender norms and the embrace of individuality. The bold and striking nature of the design, combined with its message of self-expression, is accentuated by the use of a bold typography. The use of a bold typeface adds emphasis to the central message of the design and further emphasizes the defiance of traditional gender norms.\nThe cover design aims to spark a conversation about the evolving norms of masculinity. For example, the use of makeup, traditionally associated with femininity, and non-binary clothing, deviating from traditional masculine attire, serves to subvert dominant cultural norms and expectations surrounding masculinity. In doing so, the cover design serves as a catalyst for change and promotes a more inclusive and accepting society.",
+    thumbnail:
+      "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689718750/CC_Portfolio/OENA/MINIATURA-OENA_i3u9nh.png",
+    cover:
+      "https://res.cloudinary.com/dj9n9pffx/image/upload/v1681418305/CC_Portfolio/OENA/OENA_COVERS_ho2jg2.gif",
+    images: {
+      img1: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1681422299/CC_Portfolio/OENA/0OENA-2_yhgdhj.png",
+      img2: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1681422299/CC_Portfolio/OENA/01OENA-2_oolzpy.png",
+      img3: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1681425710/CC_Portfolio/OENA/OENA-2_cdcjee.png",
+      img4: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1681418305/CC_Portfolio/OENA/OENA_COVERS_ho2jg2.gif",
+      img5: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1681420649/CC_Portfolio/OENA/02OENA_xgmqal.png",
+      img6: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1681418304/CC_Portfolio/OENA/PROJECT_1LOGOGIF_ci9nhj.gif",
+    },
+    year: 2023,
+    author: "C. Casañas",
+    tags: [
+      "All",
+      "Art Direction",
+      "Graphic Design",
+      "Logo",
+      "Editorial",
+      "Branding",
+    ],
+    typeface: "Klose Slab Semi Expanded",
+    paper: "Glossy 180gr",
+    print: "Paperam",
+    size: "297*420*22 /mm ",
+    talent: "Manu Mateos",
+  },
+  {
+    name: "She moves she",
+    description:
+      '"She Moves, She" is a short film that delves into the captivating journey of the human body as it undergoes a transformative experience through its interaction with both the surrounding space and the forces of nature. This experimental film aims to capture the essence of movement, exploring the profound connection between the body and its environment.\n"She Moves, She" invites audiences to embark on a sensory journey, encouraging them to contemplate the profound impact that space and nature can have on the human body and spirit. Through its experimental approach and artful direction, the film aims to inspire a deeper appreciation for the harmony between the physical self and the surrounding environment.',
+    thumbnail:
+      "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689700032/CC_Portfolio/She%20moves%20she/MINIAT-WEB_kubdtz.gif",
+    cover:
+      "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689700032/CC_Portfolio/She%20moves%20she/HORIZ_WEBSHEMOVESSHE_zlkkdt.png",
+    images: "",
+    video:
+      "https://res.cloudinary.com/dj9n9pffx/video/upload/v1684961628/CC_Portfolio/She%20moves%20she/Fashionfilm_1_iepfeg.mp4",
+    year: 2020,
+    tags: [
+      "All",
+      "Fashionfilm",
+      "Art Direction",
+      "Photography Direction",
+      "Video",
+    ],
+    directed: "Nereis Ferrer, Berta Borrell, Didac Bompart & Cristina Casañas",
+    artDirection: "Berta Borrell & Cristina Casañas",
+  },
+  {
     name: "Amelie Pichard x Fella Schilling",
     description:
       "This collaboration highlights the dynamic between fashion designer Amelie Pichard and visual artist Fenna Schilling. Combining Pichard's eclectic fashion designs with Schilling's expertise in collage, the collaboration produces captivating and conceptually rich creations. Through immersive workshops and a seamless integration of their artistic styles, the duo crafts visually striking pieces that engage and intrigue. The collaborative artworks find their place across various brand touchpoints, captivating audiences with their innovative and transformative fusion of fashion and art.",
@@ -217,30 +290,6 @@ const projects_data = [
     note: "This is an imaginary project. Not copywriting intended.",
   },
   {
-    name: "Francesca Woodman, MONOGRAPHY",
-    description:
-      "This collaboration highlights the dynamic between fashion designer Amelie Pichard and visual artist Fenna Schilling. Combining Pichard's eclectic fashion designs with Schilling's expertise in collage, the collaboration produces captivating and conceptually rich creations. Through immersive workshops and a seamless integration of their artistic styles, the duo crafts visually striking pieces that engage and intrigue. The collaborative artworks find their place across various brand touchpoints, captivating audiences with their innovative and transformative fusion of fashion and art.",
-    thumbnail:
-      "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689633192/CC_Portfolio/Francesca_Woodman/MINIAT-WEB_ptrwbu.png",
-    cover:
-      "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689633192/CC_Portfolio/Francesca_Woodman/01FRANCESCA_WOODMAN-EDITO_mfpecs.png",
-    images: {
-      img1: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689633485/CC_Portfolio/Francesca_Woodman/FRANCESCA_WOODMAN-EDITO-min_xeh3d0.gif",
-      img2: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689633192/CC_Portfolio/Francesca_Woodman/01FRANCESCA_WOODMAN-EDITO_mfpecs.png",
-      img3: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689633192/CC_Portfolio/Francesca_Woodman/02FRANCESCA_WOODMAN-EDITO_t5zfgy.png",
-      img4: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689634130/CC_Portfolio/Francesca_Woodman/03FRANCESCA_WOODMAN-EDITO_e3dcjd.gif",
-      img5: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689633191/CC_Portfolio/Francesca_Woodman/04FRANCESCA_WOODMAN-EDITO_wakgvt.png",
-      img6: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689633192/CC_Portfolio/Francesca_Woodman/05FRANCESCA_WOODMAN-EDITO_w7a8dt.png",
-    },
-    year: 2022,
-    tags: ["All", "Editorial"],
-    author: "C. Casañas",
-    layout: "C. Casañas",
-    photography: "Francesca Woodman",
-    typeface:
-      "Majesti Banner Medium, Light, Italic. Founders Grotesk Regular, Semibold",
-  },
-  {
     name: "SIDOAH",
     description:
       'The fashion film "Sometimes I Dream I Am Over A Hill" is a visual experience that combines art direction and photography direction. Inspired by the nostalgia of being on a wild beach, the collection showcased in the film pays tribute to the exhilaration of seeing the sea again after a long time.',
@@ -258,41 +307,13 @@ const projects_data = [
       "Art Direction",
       "Photography Direction",
       "Graphic Design",
+      "Video",
     ],
     directed: "Marta Carolina, Valentina Stahnke & Cristina Casañas",
     artDirection: "Marta Carolina, Valentina Stahnke & Cristina Casañas",
     setDesign: "Valentina Stahnke & Cristina Casañas",
     styling: "Marta Carolina & Valentína Stahnke",
     typeface: "Generish Mono Book",
-  },
-  {
-    name: "Mario Sorrenti",
-    description:
-      "The monograph of photographer MARIO SORRENTI has been conceived as a unique publication with a dual purpose. Designed as a photobook, it allows the expansive pages to showcase his work chronologically, while the smaller pages narrate his story. This format creates a dynamic and fluid publication, offering a comprehensive visual and narrative experience.\nThe combination of these two formats in a single editorial piece achieves a harmonious balance between the visual and narrative aspects of the monograph. The meticulous design and chronological layout provide a captivating and immersive reading experience, enabling readers to explore and comprehend Mario Sorrenti's creative evolution.",
-    thumbnail:
-      "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689701705/CC_Portfolio/MARIO_SORRENTI/MINIAT-WEB_zfbxac.png",
-    cover: "./../../public/assets/gif/MARIOSOREBTI-EDITO.gif",
-
-    images: {
-      img1: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689701696/CC_Portfolio/MARIO_SORRENTI/2_MARIOSORREBTI-EDITO_emly8x.png",
-      img2: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689701691/CC_Portfolio/MARIO_SORRENTI/3_MARIOSORREBTI-EDITO_nfyhgh.png",
-      img3: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689701687/CC_Portfolio/MARIO_SORRENTI/4_MARIOSORREBTI-EDITO_lwv686.png",
-      img4: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689701694/CC_Portfolio/MARIO_SORRENTI/5_MARIOSORREBTI-EDITO_ycei0d.png",
-      img5: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689701696/CC_Portfolio/MARIO_SORRENTI/6_MARIOSORREBTI-EDITO_u4fd62.png",
-      img6: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689701692/CC_Portfolio/MARIO_SORRENTI/7_MARIOSORREBTI-EDITO_ehi7yo.png",
-      img7: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689701694/CC_Portfolio/MARIO_SORRENTI/8_MARIOSORREBTI-EDITO_at3qnc.png",
-      img8: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689701689/CC_Portfolio/MARIO_SORRENTI/9_MARIOSORREBTI-EDITO_xrrmke.png",
-      img9: "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689701705/CC_Portfolio/MARIO_SORRENTI/MARIOSOREBTI-EDITO_i3dyst.png",
-      img10: "./../../public/assets/gif/MARIOSOREBTI-EDITO.gif",
-    },
-    year: 2022,
-    tags: ["All", "Editorial"],
-    author: "C. Casañas",
-    layout: "C. Casañas",
-    words: "C. Casañas",
-    photography: "Mario Sorrenti",
-    typeface:
-      "Helvetica Neue LT 53, Lovelace Medium Italic, Acumin Variable Concept Wide Regular",
   },
   {
     name: "ECOLOMAG",

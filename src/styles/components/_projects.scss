@@ -34,6 +34,10 @@ $dark-color: #000000;
   scrollbar-width: none; /* Firefox */
 }
 
+.project-container {
+  margin-top: 20px;
+}
+
 // Project
 .project {
   width: 100%;
@@ -162,7 +166,7 @@ $dark-color: #000000;
 }
 
 // Responsive
-@media (max-width: 768px) {
+@media (max-width: 950px) {
   .project {
     min-height: 100vh;
 

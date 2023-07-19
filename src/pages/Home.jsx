@@ -31,7 +31,7 @@ function Home({
 
   return (
     <div className="home" id="main-container">
-      <Media query="(max-width: 768px)">
+      <Media query="(max-width: 950px)">
         {(matches) =>
           !matches ? (
             <>

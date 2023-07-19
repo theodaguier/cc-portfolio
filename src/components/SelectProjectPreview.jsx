@@ -31,7 +31,7 @@ function SelectProjectPreview({
 
   return (
     <div className="container-scroll-preview">
-      <Media query="(max-width: 768px)">
+      <Media query="(max-width: 950px)">
         {(matches) =>
           !matches ? (
             <>

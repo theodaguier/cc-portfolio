@@ -5,8 +5,7 @@ let deletingTimer;
 
 function Typewriter() {
   const [currentText, setCurrentText] = useState("");
-  const originalText =
-    "is a Graphic Designer living and working between Paris and Barcelona.";
+  const originalText = "aims to design with purpose.";
 
   function startTyping() {
     let index = 0;
@@ -49,7 +48,7 @@ function Typewriter() {
   }, []);
 
   return (
-    <span className="typewriter">
+    <span className="typewriter" style={{ fontSize: "16px" }}>
       {currentText}
       <span className="cursor">|</span>
     </span>

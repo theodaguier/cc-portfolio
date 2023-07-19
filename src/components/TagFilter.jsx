@@ -8,6 +8,7 @@ const tags = [
   "Art Direction",
   "Packaging",
   "Objects",
+  "Video",
   // "Visual Communication",
 ];
 

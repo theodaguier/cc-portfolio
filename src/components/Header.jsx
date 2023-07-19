@@ -83,8 +83,15 @@ function Header({
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}
                   >
-                    <p style={{ width: "112px" }}>
-                      {isHovered ? "Home" : "Cristina Casañas"}
+                    <p style={{ width: "100%" }}>
+                      {isHovered ? (
+                        "Home"
+                      ) : (
+                        <div>
+                          <span>Cristina Casañas</span>
+                          <Typewriter />
+                        </div>
+                      )}
                     </p>
                   </Link>
                 </div>

@@ -59,15 +59,14 @@ function Projects({
         ? currentTag === "All"
           ? [...projects_data]
           : projects_data.filter(
-              (project) =>
-                project.tags &&
-                project.tags.includes(currentTag) &&
-                project.images
+              (project) => project.tags && project.tags.includes(currentTag)
             )
         : [...projects_data]
     );
     setSelectedProject(null); // Réinitialise selectedProject
   }, [currentTag]);
+
+  console.log("filteredProjects", selectedProject);
 
   const handleTagClick = (tag) => {
     setCurrentTag(tag);
@@ -81,7 +80,7 @@ function Projects({
 
   return (
     <>
-      <Media query="(max-width: 768px)">
+      <Media query="(max-width: 950px)">
         {(matches) => (
           <>
             {!matches ? (

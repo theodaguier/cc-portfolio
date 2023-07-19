@@ -20,6 +20,9 @@ const App = () => {
   const [isProjectSelected, setIsProjectSelected] = useState(false);
   const [hoverProjectPreview, setHoverProjectPreview] = useState(false);
 
+  console.log("selectedTag", selectedTag);
+  console.log("currentTag", currentTag);
+
   const handleMouseMove = (event) => {
     setCursorPosition({ x: event.clientX, y: event.clientY });
   };
@@ -44,7 +47,7 @@ const App = () => {
         ref={appRef}
         onMouseMove={handleMouseMove}
       >
-        <Media query="(max-width: 768px)">
+        <Media query="(max-width: 950px)">
           {(matches) =>
             !matches ? (
               <Routes>
@@ -154,7 +157,7 @@ const App = () => {
           }
         </Media>
       </div>
-      <Media query="(max-width: 768px)">
+      <Media query="(max-width: 950px)">
         {(matches) =>
           !matches ? (
             <CustomCursor

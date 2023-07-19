@@ -14,7 +14,7 @@ export default function Accordion({ isLight, setLight, project }) {
 
   return (
     <>
-      <Media query="(max-width: 768px)">
+      <Media query="(max-width: 950px)">
         {(matches) =>
           matches ? (
             <div className="accordion-container" onClick={toggleAccordion}>

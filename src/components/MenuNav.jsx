@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import Media from "react-media";
 
 import TagFilter from "./../components/TagFilter";
@@ -26,7 +27,7 @@ const MenuNav = ({
   }
 
   return (
-    <Media query="(max-width: 768px)">
+    <Media query="(max-width: 950px)">
       {(matches) =>
         !matches ? (
           <>
@@ -36,6 +37,9 @@ const MenuNav = ({
             >
               {/* <Typewriter /> */}
               <ul className="work">
+                <Link to="/gallery" style={{ width: "75%" }}>
+                  <li>Photography</li>
+                </Link>
                 <li>Work</li>
                 <TagFilter
                   currentTag={currentTag}
