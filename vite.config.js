@@ -13,4 +13,19 @@ export default defineConfig({
       localsConvention: "camelCaseOnly",
     },
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: true,
+      },
+      input: {
+        Editorial_New_Regular_400:
+          "../../assets/fonts/Editorial_New_Regular_400.otf",
+        Editorial_New_Ultrabold_800:
+          "../../assets/fonts/Editorial_New_Ultrabold_800.otf",
+        Editorial_New_Ultralight_200:
+          "../../assets/fonts/Editorial_New_Ultralight_200.otf",
+      },
+    },
+  },
 });
