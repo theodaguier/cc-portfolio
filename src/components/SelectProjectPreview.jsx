@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Media from "react-media";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 function SelectProjectPreview({
   projects,
@@ -45,7 +46,7 @@ function SelectProjectPreview({
                     onMouseEnter={() => setHoveredProject(project)}
                     onMouseLeave={() => setHoveredProject(null)}
                   >
-                    <img
+                    <LazyLoadImage
                       src={project.thumbnail}
                       alt={`${project.name} preview`}
                       className={`project-preview-image ${
@@ -61,6 +62,8 @@ function SelectProjectPreview({
                           : {}
                       }
                       key={`${project.cover}-${key}`}
+                      effect="blur"
+                      placeholderSrc={project.thumbnail}
                     />
                   </div>
                 ))}

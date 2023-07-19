@@ -115,7 +115,7 @@ function Header({
                   >
                     (En)
                   </p>
-                  <p
+                  {/* <p
                     onClick={() => handleLanguageClick("fr")}
                     className={selectedLanguage === "fr" ? "active" : ""}
                   >
@@ -126,7 +126,7 @@ function Header({
                     className={selectedLanguage === "es" ? "active" : ""}
                   >
                     (Es)
-                  </p>
+                  </p> */}
                 </div>
                 <img
                   className="icon"

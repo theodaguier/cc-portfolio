@@ -29,6 +29,7 @@ function ProjectsPhoto({
     slidesToScroll: 1,
     autoplay: false,
     autoplaySpeed: 2500,
+    lazyLoad: true,
   };
 
   const handleImageClick = (index) => {
@@ -60,7 +61,10 @@ function ProjectsPhoto({
         </div>
       )}
 
-      <div className="images-projects">
+      <div
+        className="images-projects"
+        onClick={(event) => event.stopPropagation()}
+      >
         {project.video ? (
           <video
             className="video"
@@ -73,7 +77,10 @@ function ProjectsPhoto({
             playsInline
           />
         ) : (
-          <div className="carousel">
+          <div
+            className="carousel"
+            onClick={(event) => event.stopPropagation()}
+          >
             <div className="inner">
               <Slider
                 {...sliderTopSettings}

@@ -41,6 +41,7 @@ $dark-color: #000000;
   .grid {
     display: flex;
     flex-direction: column;
+    position: relative;
 
     .presentation {
       width: 100%;
