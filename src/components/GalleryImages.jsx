@@ -26,42 +26,19 @@ export const GalleryImages = () => {
     <Media query="(max-width: 950px)">
       {(matches) => (
         <div className="gallery-container">
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat
-            illum doloremque vero ab odit ullam, dolor illo optio est
-            consectetur quia eligendi ad quasi culpa libero quis hic, deserunt
-            non! Quasi enim quaerat, laudantium ullam recusandae molestiae
-            possimus iusto totam architecto cum? Totam alias odit dolorem
-            officia perferendis quas maiores voluptatem aut illum rem ipsa,
-            dolore qui! Ratione, sed qui. Dignissimos at ea eaque quaerat sequi
-            error tenetur nam suscipit aliquam repellat, provident earum,
-            distinctio blanditiis magni laborum ducimus obcaecati ab tempore
-            perferendis quae eveniet laboriosam praesentium! In, iusto sapiente!
-            Illum fugit, rerum quaerat quos ad repellendus cumque error quae,
-            aliquid quis adipisci. Ullam enim at provident doloribus ex
-            doloremque itaque voluptatem porro, mollitia, corrupti illum tempore
-            necessitatibus asperiores perspiciatis! Unde voluptatibus voluptas
-            optio odit at deleniti reiciendis, dicta voluptatem necessitatibus
-            amet quo eius distinctio labore quos quas soluta debitis! Placeat
-            autem fugiat repudiandae architecto quaerat dicta ullam sunt minus?
-            Aut quas pariatur dignissimos exercitationem quasi, nostrum eveniet
-            totam natus assumenda sunt similique fugit, voluptate et, cumque
-            eaque ab earum rem quam. Quibusdam veniam quod et mollitia deleniti?
-            Et, delectus. Saepe iure quas, sit voluptates eligendi iste fuga
-            quaerat? Dignissimos, fugit doloribus? Nesciunt temporibus deserunt
-            sunt magnam delectus soluta fugit incidunt praesentium excepturi
-            sapiente? Voluptas nam et esse iure corrupti? Modi voluptatibus
-            ipsum non reprehenderit eveniet consequuntur quas corporis vitae
-            iure accusamus odio provident fugiat laboriosam atque illo quibusdam
-            corrupti vel vero error quam, explicabo quaerat maiores? Quas,
-            debitis nisi? Minima possimus natus rerum voluptatum, itaque a
-            distinctio repudiandae placeat sed, perspiciatis ipsum molestiae ut
-            commodi. Dolor necessitatibus temporibus, voluptatibus amet tenetur
-            velit saepe vero facilis excepturi repudiandae et mollitia.
-            Veritatis eaque magni sint est facilis temporibus, libero corporis
-            ipsam, delectus voluptates quam soluta minima architecto.
-            Voluptatem, aperiam! A minus dolorum praesentium consequuntur vero.
-            Possimus corrupti facere aliquid blanditiis sit.
+          <p style={{ paddingBottom: "20px" }}>
+            Welcome to the Photography section of my portfolio. As a passionate
+            graphic designer with a keen eye for aesthetics and visual
+            storytelling, I find great joy in translating the world around me
+            into captivating images. Photography has been an integral part of my
+            creative journey because it enables me to channel and express my
+            creativity. Infusing a graphic designer's perspective into my
+            photography, I strive to go beyond merely capturing reality. By
+            skillfully playing with colors, contrast, and texture, I aim to
+            craft images that evoke a unique and emotive response, seamlessly
+            blending the art of photography with graphic design. Now, I am
+            thrilled to share some of the images I have captured through the
+            lens.
           </p>
           <div className="grid">
             {(!matches ? images_gallery : images_gallery_filtered).map(
