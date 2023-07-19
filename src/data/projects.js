@@ -90,7 +90,7 @@ const projects_data = [
       "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689700032/CC_Portfolio/She%20moves%20she/MINIAT-WEB_kubdtz.gif",
     cover:
       "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689700032/CC_Portfolio/She%20moves%20she/HORIZ_WEBSHEMOVESSHE_zlkkdt.png",
-    images: {},
+    images: "",
     video:
       "https://res.cloudinary.com/dj9n9pffx/video/upload/v1684961628/CC_Portfolio/She%20moves%20she/Fashionfilm_1_iepfeg.mp4",
     year: 2020,
@@ -248,7 +248,7 @@ const projects_data = [
       "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689700298/CC_Portfolio/SIDOAH/MINIATURA_WEB_SIDOAH_wn0bl0.gif",
     cover:
       "https://res.cloudinary.com/dj9n9pffx/image/upload/v1689700295/CC_Portfolio/SIDOAH/COVER_SIDOAH_m2hhdq.png",
-    images: {},
+    images: "",
     video:
       "https://res.cloudinary.com/dj9n9pffx/video/upload/v1689701325/CC_Portfolio/SIDOAH/FashionFilm_-VMC_1_j9rym3.mp4",
     year: 2023,
